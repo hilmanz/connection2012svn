@@ -1,0 +1,122 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="gold2">Badges</h1>
+    </div><!-- end .head -->
+    <div class="title">
+    	<h2>Redeem Badges</h2>
+    </div><!-- end .title -->
+    <div class="whiteBox">
+    	<div class="chart" id="redeem_badges" style="height:248px">
+        	
+        </div>
+    </div><!-- end .whiteBox -->
+    <div class="title">
+    	<h2>Badges Percentage</h2>
+    </div><!-- end .title -->
+    <div class="whiteBox">
+        <div class="chart" id="badgePercentageChart" style="position: relative;">
+            
+        </div>
+    </div><!-- end .whiteBox -->
+    <div class="whiteBox">
+        	<table id="badgeListPercentage" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges" style="position: relative;"></table>
+    </div><!-- end .whiteBox -->
+    <div class="col2">
+        <div class="title">
+            <h2>Single Badges</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="single_badges" style="width:350px;">
+        	<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=t loop=$single_badges}
+              <tr>
+                <td><a class="theTolltip" href="#" title="{$single_badges[t].badge_name}"><img src="img/badge/{$single_badges[t].image}" /></a></td>
+                <td width="60%"><div class="bar b{$single_badges[t].badgeid}" style="width:{$single_badges[t].percent}%"></div><span>{$single_badges[t].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col2 last">
+        <div class="title">
+            <h2>Badges Set</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="badges_set" style="width:350px;height:500px;">
+        	
+        </div><!-- end .whiteBox -->
+    </div>
+</div><!-- end #content -->
+
+<script type="text/javascript">
+
+var reedem_badges={$reedem_badges};
+var badges_percentage={$badges_percentage};
+var single_badges={$single_badges};
+var badges_set={$badges_set};
+
+
+{literal}
+
+
+//console.log(badges_percentage);
+$(document).ready(function() {
+//redeem badges
+var categorieRedeemBadges = [];
+var dataRedeemBadges  = [];
+for(var idxRedeem in reedem_badges ){
+	categorieRedeemBadges.push(String(reedem_badges[idxRedeem].channel_name));
+	dataRedeemBadges.push(parseInt(reedem_badges[idxRedeem].redeem_num,10));
+}
+// badges percentages
+var dataBadgesPercentage = [];
+var categoryBadgesPercentage = [];
+var html ="";
+var x=1;
+for(var idxBadgePercentages in badges_percentage ){
+
+	dataBadgesPercentage.push(parseInt(badges_percentage[idxBadgePercentages].redeem_percent,10));
+	categoryBadgesPercentage.push(String(badges_percentage[idxBadgePercentages].badge_name));
+	//for templates badges
+	//console.log(idxBadgePercentages);
+	if (idxBadgePercentages%4==0) html+='<tr>';
+	html+='	<td><div class="thumbBadges" ><a class="theTolltip" href="#" title="'+badges_percentage[idxBadgePercentages].badge_name+'"><img src="img/badge/'+badges_percentage[idxBadgePercentages].image+'" /></a></div>';
+	html+='	<div class="bar b'+badges_percentage[idxBadgePercentages].badge_id+'"><span>'+badges_percentage[idxBadgePercentages].redeem_num+'</span></div>';
+	html+='</td>';
+	x++;
+	if(x>=5){x=1;  html+='</tr>';	}
+		$(function(){
+			$('.theTolltip').poshytip();
+		});
+}
+$("#badgeListPercentage").html(html);
+// badges single
+var datasingle_badges = [];
+var categoriessingle_badges= [];
+for(var idxsingle_badges in single_badges ){
+	categoriessingle_badges.push(single_badges[idxsingle_badges].badge_name);
+	datasingle_badges.push(parseInt(single_badges[idxsingle_badges].redeem_num,10));
+}
+
+// badges set
+var databadges_set = [];
+var categoriesbadges_set= [];
+for(var idxsbadges_set in badges_set ){
+	categoriesbadges_set.push(badges_set[idxsbadges_set].set_name);
+	databadges_set.push(parseInt(badges_set[idxsbadges_set].redeem_num,10));
+}
+	
+	//reedem_badges chart
+	gethighChart('column','badge redeem','redeem_badges', dataRedeemBadges, categorieRedeemBadges);
+
+	//badges_percentage chart
+	gethighChart('column','Badge percentage','badgePercentageChart',dataBadgesPercentage,categoryBadgesPercentage);
+
+	//single_badges	
+	//gethighChart('bar','Single Badges','single_badges',datasingle_badges,categoriessingle_badges);
+	//badges_set
+	gethighChart('bar','Badges Set','badges_set',databadges_set,categoriesbadges_set);
+	
+
+    
+});
+</script>
+{/literal}

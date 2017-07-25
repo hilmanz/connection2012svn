@@ -1,0 +1,2108 @@
+/*
+Theme Name: MARLBORO CONNECTIONS
+Version: 1.0.2
+Author: ACIT JAZZ - 2012
+*/
+@import url(https://fonts.googleapis.com/css?family=Coda);
+
+@font-face {
+	font-family: 'BebasNeueRegular';
+	src: url('../font/bebasneue-webfont.eot');
+	src: url('../font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../font/bebasneue-webfont.woff') format('woff'),  
+	     url('../font/bebasneue-webfont.ttf') format('truetype'),  
+	     url('../font/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'DINMediumRegular';
+    src: url('../font/din-webfont.eot');
+    src: url('../font/din-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/din-webfont.woff') format('woff'),
+         url('../font/din-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BlackoutMidnight';
+    src: url('../font/Blackout-Midnight-webfont.eot');
+    src: url('../font/Blackout-Midnight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Blackout-Midnight-webfont.woff') format('woff'),
+         url('../font/Blackout-Midnight-webfont.ttf') format('truetype'),
+         url('../font/Blackout-Midnight-webfont.svg#BlackoutMidnight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Blackout2AM';
+    src: url('../font/Blackout-2am-webfont.eot');
+    src: url('../font/Blackout-2am-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Blackout-2am-webfont.woff') format('woff'),
+         url('../font/Blackout-2am-webfont.ttf') format('truetype'),
+         url('../font/Blackout-2am-webfont.svg#Blackout2AM') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	background:url(../img/bg_white.jpg) repeat #eaeaea;
+	margin:0;
+	padding:0 0 120px 0;
+	font-family: 'Coda', cursive;
+	font-size:14px;
+	line-height:1.4;
+}
+form{
+	margin:0;
+	padding:0;
+}
+img{
+	border:none;
+	outline:none;
+}
+a{
+	color:#996600;
+	outline:none;
+}
+.yellow{
+	color:#edb100;
+}
+.red{
+	color:#db1006;
+}
+.blue{
+	color:#0564cc;
+}
+h3.grey{
+	color:#333;
+	font-size:16px;
+	margin:0 0 20px 0;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+.block{
+	display:block;
+}
+.centerText{
+	text-align:center;
+}
+#logo{
+	width:277px; height:81px; 
+	position:relative;
+}
+.logo{
+	background:url(../img/logo.png) no-repeat;
+	width:277px; height:81px; display:block;
+	text-decoration:none;
+	position:absolute;
+}
+#universal{
+	width:1000px;
+	margin:0 auto;
+}
+#header{
+	height:100px;
+	padding:20px 0;
+	position:relative;
+}
+/* ============ NAVIGATION =================*/
+#navigation{
+	text-transform:uppercase;
+	position:absolute;
+	width:700px;
+	top:20px;
+	left:300px;
+	letter-spacing:-0.06em;
+}
+#navigation ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#navigation ul li{
+	float:left;
+	margin:0 25px 0 0;
+}
+#navigation ul li.last{
+	margin:0;
+}
+#navigation ul ul li{
+	letter-spacing:-0.05em;
+	float:none;
+	margin:0;
+}
+#navigation a{
+	color:#000;
+	font-size:18px;
+	padding:0 0 8px 0;
+	margin:0 0 5px 0;
+	display:block;
+	text-decoration:none;
+}
+#navigation a.current{
+	background:url(../img/line.png) no-repeat bottom;
+	color:#666;
+}
+#navigation ul ul li a.current{
+	background:url(../img/arrow_menu.png) no-repeat  -5px 2px ;
+	color:#000;
+}
+#navigation ul ul li a{
+	font-size:12px;
+	padding:0 0 0 15px;
+	margin:0;
+	color:#666;
+}
+#subnavigation{
+	padding:30px 10px 0 0;
+	clear:both;
+	position:absolute;
+	z-index:2;
+	margin:0 0 0 105px;
+	width:800px;
+	right:0;
+text-align:right;
+}
+#subnavigation a{
+	font-size:13px;
+	color:#333;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:0 10px;
+}
+#navigation a:hover,#navigation ul ul li a:hover,#subnavigation a:hover,#subnavigation a.current{
+	color:#C00;
+}
+/* ============ CONTAINER =================*/
+#container{
+	background:url(../img/bg_content.png) no-repeat;
+	width:1000px;
+	height:571px;
+	position:relative;
+}
+#content{
+	width:1000px;
+	height: 600px;
+	position:relative;
+}
+#prize img{
+	position:absolute;
+	top:20px;
+}
+.postPrize{
+	position:absolute;
+	top:-30px;
+	z-index:1;
+	font-family: 'BebasNeueRegular';
+	font-size:24px;
+	line-height:35px;
+}
+.postPrize .postText{
+	color:#666666;
+}
+.postPrize .postText strong{
+	color:#deac00;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.textNewyork{
+	position:absolute;
+	z-index:5;
+	padding:200px 0 0 60px;
+}
+.textIstanbul{
+	position:absolute;
+	z-index:5;
+	padding:140px 0 0 500px;
+}
+.textBerlin{
+	position:absolute;
+	z-index:5;
+	padding:135px 0 0 470px;
+}
+.postTos{
+	position:relative;
+	padding:50px;
+	letter-spacing: 0.03em;
+}
+.postTos li{
+	margin:0 0 10px 0;
+}
+.postTos strong{
+	text-transform:uppercase;
+	font-size:20px;
+}
+.postAbout,.postUpdateClues,.postActivity,.postMessages,.postGame,
+.postInputCodes,.postMyprofile,.postBadges,.postTrade,.postRedeem,
+.postRedeemSuccess,.postBadgeAuction,.postBadgeAuctionBid,.postYellowCab,
+.postBadgeAuctions,.postTrades,.postRedeemFailed,.postBadgeAuctionChoose,.postAuctionWinner{
+	background:url(../img/bg_about.png) no-repeat 0 60px;
+	width:1000px;
+	height:600px;
+	position:relative;
+}
+.postUpdateClues{
+	background:url(../img/bg_clues_news.png) no-repeat 0 0;
+}
+.postActivity{
+	background:url(../img/bg_connection_activity.png) no-repeat 0 20px;
+}
+.postYellowCab{
+	background:url(../img/bg_yellowCab.png) no-repeat 30px 75px;
+}
+.postGame{
+	background:url(../img/bg_games.png) no-repeat 55px 55px;
+}
+.postMessages{
+	background:url(../img/bg_message.png) no-repeat 90px 55px;
+}
+.postInputCodes{
+	background:url(../img/input_con_code.png) no-repeat 30px 85px;
+}
+.postMyprofile{
+	background:url(../img/bg_profile.png) no-repeat -30px 0;
+}
+.postBadges{
+	background:url(../img/bg_badge.png) no-repeat 0 0;
+}
+.postAuctionWinner{
+	background:url(../img/bg_winner.png) no-repeat 0 0;
+}
+.postTrade{
+	background:url(../img/bg_badgeTrade.png) no-repeat 46px 60px;
+}
+.postRedeem{
+	background:url(../img/bg_redeem.png) no-repeat 40px 60px;
+}
+.postRedeemSuccess{
+	background:url(../img/bg_redeem_sukses.png) no-repeat 0 20px;
+}
+.postRedeemFailed{
+	background:url(../img/bg_redeem_failed.png) no-repeat 0 20px;
+}
+.postBadgeAuction{
+	background:url(../img/bg_badgeAuction.png) no-repeat;
+}
+.postBadgeAuctionChoose{
+	background:url(../img/bg_badgeAuctionChoose.png) no-repeat;
+}
+.postBadgeAuctions{
+	background:url(../img/bg_auction.png) no-repeat 0 10px;
+	display:block;
+	position:absolute;
+}
+.postTrades{
+	background:url(../img/bg_trade.png) no-repeat 0 10px;
+	display:block;
+	position:absolute;
+}
+.postBadgeAuctionBid{
+	background:url(../img/bg_badgeAuctionBid.png) no-repeat 40px 60px;
+}
+.postTrade h1.pagetitle{
+	position:absolute;
+	top:114px;
+	left:50px;
+	font-size:18px;
+}
+.hw18plus{
+	background:url(../img/18plus.png) no-repeat;
+	position:absolute;
+	width:63px; height:24px;
+	top:500px;
+	right:30px;
+}
+.imgRedeem{
+	background:url(../img/people_redeem.png) no-repeat;
+	width:602px; height:422px;
+	position:absolute;
+	bottom:0;
+	left:-200px;
+}
+.peopleMessages{
+	background:url(../img/people_message.png) no-repeat;
+	width:274px; height:552px;
+	position:absolute;
+	right:-50px;
+	top:100px;
+}
+.messagesIcon{
+	background:url(../img/message_icon.png) no-repeat;
+	width:432px; height:256px;
+	position:absolute;
+	left:-250px;
+	top:300px;
+}
+.trash{
+	background:url(../img/trash.png) no-repeat;
+	width:40px; height:40px;
+	display:block;
+	text-decoration:none;
+	position:absolute;
+	top:10px;
+	right:-30px;
+}
+.townGame{
+	background:url(../img/town_game.png) no-repeat;
+	width:718px; height:482px;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+.city{
+	background:url(../img/bg_city.png) no-repeat;
+	width:849px; height:347px;
+	position:fixed;
+	bottom:50px;
+	left:0;
+}
+.pesawat{
+	background:url(../img/pesawat.png) no-repeat;
+	width:237px; height:239px;
+	position:absolute;
+	top:280px;
+}
+.taxi{
+	background:url(../img/taxi.png) no-repeat;
+	width:538px; height:333px;
+	position:absolute;
+	top:280px;
+	right:-100px;
+}
+.pesawat2{
+	background:url(../img/pesawat_redeem.png) no-repeat;
+	width:218px; height:182px;
+	position:absolute;
+	top:80px;
+	right:0;
+}
+.imgRedeem2{
+	background:url(../img/img_redeempize.png) no-repeat;
+	width:180px; height:229px;
+	position:absolute;
+	top:50px;
+	right:20px;
+}
+.imgbadges{
+	background:url(../img/badges.png) no-repeat;
+	width:312px; height:399px;
+	position:absolute;
+	right:-30px;
+	top:200px;
+}
+.boxGame{
+	background:url(../img/thumb_game.png) no-repeat;
+	width:166px; height:149px;
+	position:absolute;
+	z-index:2;
+    font-family: 'DINMediumRegular';
+}
+.popupContent .yellowTapes{
+	background:url(../img/yellowTape.png) no-repeat;
+	width:265px; height:251px;
+	position:absolute;
+	left:0;
+	top:220px;
+}
+.yellowTapes{
+	background:url(../img/yellowTape2.png) no-repeat;
+	width:300px; height:284px;
+	position:absolute;
+	left:0;
+	top:220px;
+}
+.popupContainer .yellowTapes{
+	left:-240px;
+	top:120px;
+}
+#popupContent .yellowTape{
+	font-size:11px;
+	color:#666;
+	padding:20px 40px;
+}
+.yellowTape{
+	font-size:11px;
+	color:#666;
+	padding:20px 30px 0 40px;
+}
+.entryDesc img{
+	float:left;
+}
+.popupYellowCab .poupContent h1{
+	color:#007de7;
+	text-transform:uppercase;
+	font-size:25px;
+}
+.popupYellowCab .poupContent h3{
+	text-transform:uppercase;
+	margin:0;
+}
+.petaYellowcab{
+	width:510px; height:315px;
+	position:relative;
+}
+.petaYellowcab img{
+	width:510px; height:315px;
+	position:absolute;
+}
+.fullzise{
+	position:absolute;
+	background:url(../images/trans.png) repeat;
+	padding:5px;
+	bottom:0px;
+	width:500px;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+.boxGame h1{
+	font-size:12px;
+	font-weight:normal;
+	margin:0;
+}
+.contentGame{
+	position:relative;
+	width:166px; height:149px;
+}
+.titleGame{
+	position:absolute;
+	bottom:11px;
+	left:12px;
+}
+#game1{
+	top:130px;
+	left:330px;
+	color:#0140c0;
+}
+#game2{
+	top:100px;
+	left:520px;
+	color:#9f7f00;
+}
+#game3{
+	top:140px;
+	left:700px;
+	color:#ca0000;
+}
+#game4{
+	top:300px;
+	left:350px;
+	color:#9f7f00;
+}
+#game5{
+	top:280px;
+	left:530px;
+	color:#ca0000;
+}
+#game6{
+	top:310px;
+	left:700px;
+	color:#0140c0;
+}
+#game7{
+	top:310px;
+	left:700px;
+	color:#0140c0;
+}
+#game8{
+	top:290px;
+	left:790px;
+	color:#9f7f00;
+}
+.thumbGame{
+	display:block;
+	width:140px;
+	height:90px;
+	position:absolute;
+	overflow:hidden;
+	top:31px; left:12px;
+	background:#ccc;
+}
+.lockGame{
+	position:absolute;
+	z-index:3;
+	top:31px; left:12px;
+}
+.trash:hover{
+	background:url(../img/trash.png) no-repeat 0 -40px;
+}
+.kapal{
+	background:url(../img/kapal.png) no-repeat;
+	position:absolute;
+	width:335px; height:169px;
+	top:370px;
+	right:-50px;
+}
+.imgabout{
+	background:url(../img/img_about.png) no-repeat;
+	position:absolute;
+	width:197px; height:187px;
+	top:370px;
+	right:0px;
+}
+.seeDetail:hover{
+	color:#C00;
+}
+.postAbout .text{
+	width:420px;
+	padding:200px 40px 0 40px;
+	color:#666666;
+}
+.list{
+	background:url(../img/bg_list_news.png) no-repeat;
+	width:500px; height:56px;
+	position:relative;
+}
+.list a{
+	color:#0066cc;
+	text-decoration:none;
+}
+.list p{
+	margin:0;
+	padding:8px 40px;
+}
+#listUpdateClues{
+	width:500px;
+	position:absolute;
+	height:300px;
+	top:160px;
+	right:40px;
+}
+.contentInputCodes{
+	width:500px;
+	height:200px;
+	position:absolute;
+	left:250px;
+	top:200px;
+	z-index:10;
+}
+#inputCodes{
+	background:url(../img/bg_city.png) no-repeat 5px 250px;
+}
+#inputCode{
+	background:url(../img/bg_inputcode.png) no-repeat 0 30px;
+	width:420px; height:181px;
+	position:relative;
+	color:#666666;
+	
+}
+#inputCode .btnsubmit{
+	left:384px;
+	top:120px;
+}
+.thecode{
+	background:none;
+    border: medium none;
+    height: 40px;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 32px;
+    width: 365px;
+	font-size:30px;
+	font-family: 'BebasNeueRegular';
+	color:#666666;
+}
+.chaptcha{
+	background:none;
+    border: medium none;
+    height: 30px;
+    right: 43px;
+    padding: 5px;
+    position: absolute;
+    top: 120px;
+	font-size:30px;
+    width: 175px;
+	font-family: 'BebasNeueRegular';
+	color:#666666;
+}
+#chaptcha{
+	font-size:36px;
+    font-family: 'DINMediumRegular';
+	width:180px;
+	height:40px;
+	position:absolute;
+    top: 121px;
+	left:0;
+}
+#chaptcha img{
+	width:180px;
+	height:40px;
+}
+#inputCode1{
+	background:url(../img/bg_input_code1.png) no-repeat;
+	width:250px; height:108px;
+	position:absolute;
+	top:325px;
+	left:25px;
+}
+#inputCode1 form{
+	margin:0;
+	padding:0;
+	width:250px;
+	height:100px;
+	position:relative;
+}
+.inputCode1,#inputCapcaClues{
+	border:solid 1px #ccc;
+	left:132px;
+	background:#fff;
+	box-shadow:0px 2px 7px #666 inset;
+	font-size:30px;
+    height: 28px;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 68px;
+    width: 230px;
+	font-family: 'BebasNeueRegular';
+}
+#inputCapcaClues{
+	width:98px;
+	top:120px;
+	left:132px;
+}
+#inputCode1 .btnsubmit{
+	left:244px;
+	top:120px;
+}
+#inputCode1 #chaptcha{
+	top:120px;
+}
+#inputCode1 #chaptcha #capcaClues{
+	border: 1px solid #CCCCCC;
+    height: 38px;
+    position: absolute;
+    width: 125px;
+}
+.btnsubmit,.btnupload{
+	background:url(../img/btn_submit.png) no-repeat;
+	border:none;
+    cursor: pointer;
+    height: 42px;
+    left: 186px;
+    position: absolute;
+    top: 67px;
+    width: 117px;
+}
+.btnupload{
+	background:url(../img/btn_upload.png) no-repeat;
+}
+.btnupload:hover{
+	background:url(../img/btn_upload.png) no-repeat 1px -42px;
+}
+.btnsubmit:hover{
+	background:url(../img/btn_submit.png) no-repeat 0 -44px;
+}
+#listActivity{
+	width:580px;
+	margin:175px 0 0 -290px;
+	position:absolute;
+	z-index:2;
+	left:50%;
+}
+.postYellowCab #listActivity{
+	margin:175px 0 0 -222px;
+}
+.postYellowCab .thumbPhoto{
+	visibility:hidden;
+}
+.town{
+	background:url(../img/town.png) no-repeat;
+	width:508px; height:405px;
+	position:absolute;
+	left:-180px; top:200px;
+	z-index:1;
+}
+#listActivity .list{
+	float:left;
+}
+.thumbPhoto{
+	background:url(../img/thumb_photo.png) no-repeat;
+	width:45px; height:55px;
+	float:left;
+	padding:9px 11px;
+}
+.postMyprofile .card #thumbPhoto a{
+	display:block;
+	width:110px;
+	height:167px;
+	overflow:hidden;
+}
+.postMyprofile .card #thumbPhoto a img{
+	height:180px;
+	position:relative;
+}
+.thumbPhoto .crop{
+	width:45px; height:40px;
+	overflow:hidden;
+}
+.thumbPhoto .crop img{
+	width:45px; height:40px;
+}
+#card{
+	background:url(../img/profile_card.png) no-repeat;
+	width:536px; height:294px;
+	position:absolute;
+	left:230px;
+	top:80px;
+}
+.profileText{
+	position:absolute;
+	width:500px;
+	top:237px;
+	left:26px;
+	overflow:hidden;
+}
+.profileText h3{
+	margin:0;
+	font-size:20px;
+	font-weight:normal;
+}
+#badgeList,.badgeListBid{
+	position:absolute;
+	width:800px;
+	height:120px;
+	left:230px;
+	top:400px;
+}
+.badgeBox{
+	width:55px;
+	padding:0 3px;
+	float:left;
+	position:relative;
+}
+.badgesIcon{
+	width:55px; height:55px;
+	display:block;
+	text-decoration:none;
+	position:relative;
+}
+.badgesCount{
+	background:url(../img/badgesCount.png) no-repeat;
+	width:32px; height:32px;
+	text-align:center;
+	line-height:32px;
+	font-size:24px;
+	margin:10px auto;
+	color:#C00;
+	border:none;
+	padding:0;
+}
+#actProfile{
+	width:220px;
+	position:absolute;
+	right:0;
+	top:90px;
+}
+#actProfile a{
+	background:url(../img/btn.png) no-repeat;
+	display:block;
+	width:179px; height:38px;
+	color:#000;
+	text-decoration:none;
+	font-size:18px;
+	line-height:38px;
+	text-transform:uppercase;
+	text-indent:20px;
+	margin:0 0 20px 0;
+}
+#actProfile a.redeemBadge{
+	margin:145px 0 0 0;
+}
+#actProfile a:hover{
+	color:#900;
+}
+.card{
+	padding:15px;
+	width:506px; height:264px;
+	position:relative;
+}
+#thumbPhoto,#thumbPhotoBig{
+	background:#fff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+	width:110px;
+	position:absolute;
+	border:solid 1px #ccc;
+	top:25px;
+	left:25px;
+}
+#thumbPhotoBig{
+	left: 20px;
+    min-width: 185px;
+    top: 50px;
+}
+#thumbPhotoBig a{
+	display: block;
+    left: 20px;
+    max-height: 260px;
+    min-width: 185px;
+    overflow: hidden;
+}
+#thumbPhotoBig a img{
+	position:relative;
+	min-width:130%;
+}
+#dataProfile{
+	width:180px;
+	position:absolute;
+	left:160px;
+	top:25px;
+}
+#dataProfile p{
+	margin:0;
+	font-size:12px;
+	text-transform:uppercase;
+}
+.bold{
+	font-weight:bold;
+}
+#piala{
+	width:255px;
+	left:270px;
+	position:absolute;
+}
+.piala{
+	background:url(../img/piala.png) no-repeat;
+	width:40px;
+	text-align:center;
+	float:right;
+	height:45px;
+	display:block;
+	text-decoration:none;
+	margin:5px;
+}
+.piala:hover{
+	background:url(../img/piala.png) no-repeat -44px 0;
+}
+#dataProfile p.values{
+	font-size:24px;
+}
+.changePhotoContent{
+	background:#8e9192;
+	padding:20px;
+	height:300px;
+	width:500px;
+	position:relative;
+	margin:0 0 40px 0;
+}
+.uploadFoto{
+	position:absolute;
+	width:300px;
+	left:235px;
+	top:70px;
+}
+.uploadFoto label{
+	color:#666;
+	font-size:20px;
+}
+.btnupload{
+	left:0;
+	top:90px;
+}
+.changePhotoContent h1{
+	margin:0;
+	font-size:20px;
+}
+a.btnStartTrade{
+	display:block;
+	background:url(../img/btn_start_trading.png) no-repeat;
+	width:275px; height:70px;
+	position:absolute;
+	top:300px;
+	right:95px;
+	text-decoration:none;
+}
+a.btnStartTrade:hover{
+	background:url(../img/btn_start_trading.png) no-repeat 0 -73px;
+}
+.theBadges{
+	background:url(../img/boxBadge.png) no-repeat;
+	width:56px; height:52px;
+	margin:0 auto;
+	padding:10px;
+}
+.boxBadges{
+	width:80px;
+	float:left;
+	margin:0 8px 10px 8px ;
+}
+.listBadges{
+	width:390px;
+}
+#listBadges{
+    left: 37px;
+    position: absolute;
+    top: 160px;
+}
+#listBadges h1{
+	font-size:20px;
+	margin:0 0 10px 0;
+	padding:0 12px;
+	color:#555555;
+}
+.boxBadges .count{
+	float:left;
+	font-size:20px;
+	color:#555555;
+	padding:0 7px;
+}
+.boxBadges .radio{
+	float:right;
+	clear:none;
+}
+#listBadges #errorMsg{
+	color: red;
+    font-size: 12px;
+    margin: 0 0 0 27px;
+    padding-top: 107px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100px;
+    z-index: -100000;
+}
+.tradeNowButton,.finish,.tradeOK{
+	background:url(../img/btnTrade.png) no-repeat;
+	width:150px; height:100px;
+	border:none;
+	margin:0 auto;
+	cursor:pointer;
+}
+.tradeNowButton:hover{
+	background:url(../img/btnTrade.png) no-repeat 0 -100px;
+}
+.finish{
+	background:url(../img/btnFinish.png) no-repeat;
+}
+.finish:hover{
+	background:url(../img/btnFinish.png) no-repeat 0 -100px;
+}
+.tradeOK{
+	background:url(../img/ok.png) no-repeat;
+	width:120px; height:120px;
+}
+.tradeOK:hover{
+	background:url(../img/ok.png) no-repeat 0 -120px;
+}
+.BadgeNeed .radio{
+	float:none;
+	margin:0 auto;
+}
+.popupTrade .poupContent{
+	background:url(../img/bg_popupTrade.gif) repeat-x;
+	height:260px;
+	padding:40px 0;
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+}
+.popupFinishBid .poupContent{
+	text-align:center;
+}
+.popupTrade .poupContent h2{
+	font-size:26px;
+	margin:30px 0 0 0;
+}
+.popupTrade .poupContent h3{
+	font-size:14px;
+	margin:0;
+}
+.popupTrade .poupContent h1{
+	color:#055dbf;
+	text-shadow:3px 4px 10px #888888;
+	font-size:36px;
+	margin:40px 0 0 0;
+}
+.popupFinishBid .poupContent h1{
+	color:#dc0000;
+	font-size:36px;
+	margin:40px 0 0 0;
+}
+.popupTrade .poupContent h1 a{
+	color:#efb400;
+	text-decoration:none;
+}
+.popupTrade .poupContent h1 a:hover{
+	color:#C00;
+}
+.btnConfirmRequest{
+	text-decoration:none;
+	color:#333;
+	padding:10px 0;
+}
+.btnConfirmRequest:hover{
+	color:#C00;
+}
+#badgesRedeem{
+	padding:0 0 50px 0;
+	height:700px;
+}
+.postRedeem h1{
+	font-size:16px;
+	position:absolute;
+	top:140px;
+	left:80px;
+	text-transform:uppercase;
+}
+#thePrize{
+	width:550px;
+	position:absolute;
+	z-index:5;
+	top:225px;
+	left:275px;
+}
+.thumbPrize,.blank{
+	background:url(../img/bg_thumb_prize.png) no-repeat;
+	width:264px; height:223px;
+	float:left;
+	position:relative;
+}
+.thumbPrize a{
+	width:220px; height:168px;
+	overflow:hidden;
+	display:block;
+	position:absolute;
+	top:42px;
+	left:22px;
+}
+.blank span{
+	text-transform:uppercase;
+	color:#333;
+	text-align:center;
+	display:block;
+	font-family:BlackoutMidnight;
+	text-shadow:0 1px 1px #fff;
+	padding:80px 0;
+	font-size:24px;
+}
+.clickOn{
+	background:url(../img/clickOn.png) no-repeat;
+	width:140px; height:130px;
+	right:43px;
+	top:288px;
+	position:absolute;
+	margin:0;
+}
+#redeemForm{
+	position:absolute;
+	width:410px;
+	left:300px;
+	top:220px;
+	z-index:5;
+}
+#redeemForm input[type=text],
+#redeemForm input[type=mail]{
+	background:url(../img/bg_input.png) no-repeat;
+	width:261px; height:41px;
+	padding:10px 30px;
+	height:20px;
+	border:none;
+	font-family:'Coda',cursive;
+	font-size:14px;
+}
+.row{
+	clear:both;
+	overflow:hidden;
+	padding:5px 0;
+}
+#redeemForm label{
+	width:80px;
+	float:left;
+	display:block;
+	line-height:40px;
+}
+#redeemForm .agree label{
+	float:none;
+	display:inline;
+	font-size:12px;
+	padding:0 0 0 30px;
+}
+#redeemForm .checkbox{
+	position:absolute;
+	margin:8px 0 0 -9px;
+}
+#redeemForm .button{
+	float:right;
+	margin:0 10px 0 0;
+}
+.button{
+	background:url(../img/bg_btn.png) no-repeat;
+	width:166px; height:41px;
+	text-align:center;
+	color:#000;
+	font-family:'Coda',cursive;
+	cursor:pointer;
+	line-height:41px;
+	border:none;
+	font-size:12px;
+}
+.button:hover{
+	color:#C00;
+}
+.boxBadge{
+	width:55px; height:55px;
+	padding:10px;
+}
+#requireBadge{
+	width:215px;
+	position:absolute;
+	right:5px;
+	top:200px;
+}
+#requireBadge .boxBadge{
+	float:left;
+	height:80px;
+	text-align:center;
+	padding:0;
+	margin:0 30px 10px 0;
+}
+#requireBadge h2{
+	margin:20px 0 10px 0;
+	font-size:14px;
+}
+#requireBadge .checkbox{
+	position:absolute;
+	margin:-10px 0 0 45px;
+}
+.postRedeemSuccess h1,.postRedeemFailed h1{
+	position:absolute;
+	margin:0;
+	left:52px;
+	top:165px;
+	font-size:20px;
+}
+.postRedeemSuccess h1 a,.postRedeemFailed h1 a{
+	color:#03C;
+	text-decoration:none;
+}
+.postBadgesList h1,.postBadgesMessage h1{
+	color:#f10000;
+    font-family: 'BlackoutMidnight';
+	font-weight:normal;
+	font-size:60px;
+	margin:0;
+	position:absolute;
+	top:75px;
+	line-height:55px;
+	left:200px;
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+}
+.postBadgesList h2,.postBadgesMessage h2{
+	margin:0;
+	text-transform:uppercase;
+	font-size:18px;
+	top:184px;
+	left:486px;
+	position:absolute;
+}
+.postBadgesMessage h1{
+	top:100px;
+}
+.postBadgesMessage h2{
+    font-family: 'BlackoutMidnight';
+	font-weight:normal;
+	font-size:30px;
+	top:250px;
+	left:400px;
+	z-index:20;
+}
+.postBadgesMessage h2 a:hover{
+	color:#06F;
+}
+.imgBadgesList{
+	background:url(../img/bg_tradeList.png) no-repeat;
+	width:687px; height:459px;
+	position:absolute;
+	bottom:0;
+	left:-130px;
+}
+#listTrader{
+	position:absolute;
+	z-index:5;
+	top:220px;
+	left:270px;
+}
+#listTrader .tall{
+	height:300px;
+}
+.thumbTrader{
+	background:url(../img/bgThumbPhoto.png) no-repeat;
+	width:95px; height:116px;
+	position:relative;
+	float:left;
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+}
+.thumbTrader a{
+	display:block;
+	width:82px; height:79px;
+	overflow:hidden;
+	position:absolute;
+	top:10px;
+	left:6px;
+}
+.thumbTrader img{
+	width:82px;
+}
+.boxTrader{
+	width:270px;
+	float:left;
+	position:relative;
+	margin:0 20px 40px 0;
+}
+.boxName{
+	position:absolute;
+	background:url(../img/bgName.png) no-repeat;
+	width:145px; height:42px;
+	left:95px;
+	top:65px;
+}
+.boxName span.nameTrader{
+	display:block;
+	padding:0 0 0 20px;
+	line-height:42px;
+	width:80px;
+}
+.boxName .tradeMyBadge,.boxName .checkbox{
+	position:absolute;
+	right:0;
+	top:10px;
+}
+.postBadgesList .kapal{
+	top:45px;
+}
+.popupTradeMyBadge .poupContent{
+	padding:0;
+}
+.popupTradeMyBadge .poupContent h1{
+	color:#007de7;
+	font-size:45px;
+	margin:40px 0 10px 0;
+	text-align:center;
+}
+.popupTradeMyBadge .boxTrader{
+	margin:0;
+}
+.popupProfile .poupContent h1{
+	font-size:40px;
+	line-height:40px;
+}
+.popupProfile .poupContent h2{
+	font-size:16px;
+	margin:40px 0  20px 0;
+}
+.popupBid .poupContent h2{
+	font-size:18px;
+	margin:10px 0;
+	color:#0564cd;
+}
+.popupBid .poupContent h1{
+	font-size:22px;
+	line-height:20px;
+	text-transform:uppercase;
+	margin:20px 0 20px 0;
+    font-family: 'DINMediumRegular';
+}
+.popupProfile #card{
+	position:relative;
+	left:0;
+	width:auto;
+	top:0;
+	height:200px;
+	background:none;
+}
+.popupProfile .card{
+	height:200px;
+	width:auto;
+}
+.popupProfile #piala{
+	left:auto;
+	right:0;
+}
+.popupProfile #badgeList,.popupBid .badgeListBid{
+	position:relative;
+	left:0;
+	top:0;
+}
+.popupProfile #thumbPhoto{
+	left:0;
+}
+.popupProfile #dataProfile{
+	left:140px;
+}
+.popupProfile #popupContent,.popupBid #popupContent{
+	padding:20px;
+}
+.popupProfile .poupContent,.popupBid .poupContent{
+	background:url(../img/transparent-grey4.png) repeat;
+	overflow:inherit;
+	padding:20px 20px 0 20px;
+}
+.btnTrade,.btnPlaceBid{
+	font-size:40px;
+	float:right;
+	display:block;
+	text-decoration:none;
+    font-family: 'BlackoutMidnight';
+	padding:10px 0;
+}
+.btnPlaceBid{
+	margin:10px 0;
+	cursor:pointer;
+}
+.btnTrade:hover,.btnPlaceBid:hover{
+	color:#06C;
+}
+.postBadgeAuction .entry,.postBadgeAuctionChoose .entry{
+    font-size: 16px;
+    left: 236px;
+    position: absolute;
+    top: 175px;
+    width: 200px;
+}
+.badgeAuctionList{
+	width:550px;
+	position:absolute;
+	top:195px;
+	left:0;
+}
+.badgeAuctionList h1{
+	text-transform:uppercase;
+	font-size:18px;
+	margin:15px;
+}
+#badgeAuction .theBadges,#badgeAuctionBid .theBadges{
+	background:url(../img/boxBadge2.png) no-repeat;
+}
+#badgeAuction .boxBadges{
+	margin:0 20px 15px;
+}
+.icontheBadges{
+	background:url(../img/thebadges.png) no-repeat;
+	width:426px; height:150px;
+	position:absolute;
+	right:50px;
+	top:365px;
+}
+#badgeAuctionBid{
+}
+#lastWeekWinner{
+	width:245px;
+	left:40px;
+	top:150px;
+	position:absolute;
+}
+#lastWeekWinner h1{
+	margin:10px 5px;
+	font-size:18px;
+	font-weight:normal;
+	text-align:center;
+}
+#lastWeekWinner .boxBadges{
+	margin:6px 0 0 0;
+}
+#lastWeekWinner h2{
+	font-size:20px;
+	float:left;
+	width:70px;
+	margin:0;
+	padding:25px 0;
+	text-align:center;
+}
+.smallBox .boxTrader{
+	width:95px;
+	margin:0;
+}
+.smallBox .boxName{
+	position:relative;
+	background:url(../img/bg_name.png) repeat-y;
+	width:120px;
+	height:auto;
+	left:0;
+	padding:5px 0;
+	float:none;
+	top:0;
+}
+.smallBox .thumbTrader{
+	background:url(../img/bgThumbPhoto2.png) no-repeat;
+	float:none;
+	width:82px;
+	height:98px;
+}
+.smallBox .thumbTrader img{
+    width: 69px;
+}
+.smallBox .thumbTrader a{
+    height: 67px;
+    left: 5px;
+    top: 8px;
+    width: 69px;
+}
+.smallBox .boxName span.nameTrader{
+    line-height:20px;
+    padding: 0 0 0 10px;
+    width: auto;
+}
+.viewAllWinner{
+    color: #000000;
+    font-family: 'DINMediumRegular';
+    font-size: 18px;
+    font-weight: bold;
+    left: 162px;
+    position: absolute;
+    text-decoration: none;
+    top: 195px;
+    width: 100px;
+}
+.viewAllWinner:hover{
+	color:#F90;
+}
+#boxBid{
+	width:138px;
+	position:absolute;
+	top:195px;
+	left:340px;
+}
+.boxBid{
+	background:url(../img/bg_bidNow.png) no-repeat;
+	width:138px; height:148px;
+}
+.bidNow{
+	background:url(../img/btnBid.png) no-repeat;
+	display:block;
+	width:112px; height:37px;
+	line-height:37px;
+	text-align:center;
+	color:#000;
+	text-decoration:none;
+	font-weight:bold;
+	margin:10px auto;
+}
+.bidNow:hover{
+	color:#C00;
+}
+#currentBid{
+	position:absolute;
+	left:730px;
+	top:158px;
+	width:285px;
+}
+#currentBid h1{
+	margin:0;
+	font-size:26px;
+}
+#currentBid h1 span{
+	padding:0 15px;
+}
+#currentBid h2{
+	margin:0;
+	font-size:20px;
+	position:absolute;
+	font-weight:bold;
+}
+ #badgeAuctionBid #currentBid .theBadges{
+	 background:none;
+	 width:55px;
+	 padding:0;
+}
+#currentBid .boxBadges{
+	 width:55px;
+}
+.countBid{
+	font-size:16px;
+	text-align:center;
+	padding:5px 0 0 0;
+}
+#bidBy{
+	position:absolute;
+	width:175px;
+	right:30px;
+	top:200px;
+}
+#bidBy  h2{
+	font-size:20px;
+	float:left;
+	width:70px;
+	margin:0;
+	padding:25px 0;
+	text-align:center;
+}
+#yesterdayWinner{
+	position:absolute;
+	width:310px;
+	right:0;
+	top:150px;
+}
+#yesterdayWinner h1{
+	margin:0;
+	font-size:20px;
+	text-transform:uppercase;
+	padding:0 0 0 32px;
+}
+.yesterdayWinner{
+	position:relative;
+}
+#yesterdayWinner .theBadges{
+	position:absolute;
+	top:50px;
+}
+#yesterdayWinner h2{
+	position:absolute;
+	top:50px;
+	left:79px;
+	font-size:17px;
+	width:80px;
+	text-align:center;
+}
+#yesterdayWinner .boxTrader{
+	position:absolute;
+	left:160px;
+	top:37px;
+}
+#boxhadiah{
+	background:url(../img/bg_hadiah.png) no-repeat;
+	width:318px; height:310px;
+	position:absolute;
+	top:160px;
+	left:40px;
+}
+.btnBack{
+	font-size:18px;
+	color:#000;
+	position:absolute;
+	top:484px;
+	left:42px;
+	text-decoration:none;
+	z-index:80;
+}
+.btnBack:hover{
+	color:#C00;
+}
+.postAuctionWinner .btnBack{
+	left:85px;
+	top:512px;
+}
+.boxhadiah{
+	position:relative;
+	width:318px; height:310px;
+}
+.boxhadiah img{
+	width:276px; height:276px;
+	margin:20px;
+}
+#halfBox{
+	width:300px;
+	position:absolute;
+	top:215px;
+	left:400px;
+}
+.halfBox{
+	width:300px;
+	position:relative;
+}
+.totalPoint{
+	background:url(../img/totalpoint.png) no-repeat;
+	width:221px; height:69px;
+	position:absolute;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;
+	line-height:70px;
+}
+.boxTotalPoint{
+	background:url(../img/boxtotal.png) no-repeat;
+	width:65px; height:57px;
+	text-align:center;
+	font-size:30px;
+	text-align:center;
+	font-weight:bold;
+	line-height:70px;
+	position:absolute;
+	left:335px;
+	top:4px;
+}
+.currentBid{
+	float:left;
+	margin:25px 0 0 0;
+	line-height:50px;
+}
+.yourBid{
+	margin:25px 0 0 0;
+	float:left;
+	line-height:50px;
+	color:#0564cd;
+	padding:0 0 0 40px;
+}
+.timeRemaining{
+	position:absolute;
+	top:100px;
+	width:250px;
+	text-align:center;
+}
+.timeRemaining h1,.timeRemaining h2{
+	margin:0;
+	font-size:26px;
+}
+.timeRemaining h1{
+	float:left;
+	padding:0;
+}
+.timeRemaining span{
+	padding:0 10px 0 0;
+	width:50px;
+	float:left;
+	display:block;
+}
+.bidNows{
+	background:url(../img/bg_placebidbtn.png) no-repeat;
+	text-align:center;
+	color:#000;
+	text-decoration:none;
+	display:block;
+	width:240px; height:52px;
+	position:absolute;
+	top:200px;
+	line-height:52px;
+	font-size:20px;
+	font-weight:bold;
+}
+.bidNows:hover{
+	color:#C00;
+}
+#imgBadgesIcon{
+	background:url(../img/thebadgesicon.png) no-repeat;
+	width:400px;
+	height:418px;
+	position:absolute;
+	top:82px;
+	left:525px;
+}
+#popupConfirmRedeem .poupContent{
+	padding:20px 20px 0 20px;
+}
+.userWin{
+	width:280px;
+	float:left;
+	position:relative;
+	margin:20px 10px;
+}
+.userWin .smallBox{
+	width:180px;
+	float:left;
+}
+.userWin .smallBox h2{
+	width:80px;
+	float:left;
+	text-align:center;
+	font-size:16px;
+}
+.boxPoin{
+	color: #000;
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    width: 80px;
+}
+#yesterdayWinner .boxPoin{
+	top:129px;
+}
+.boxPoin h3{
+	margin:0;
+	font-size:18px;
+}
+.boxPoin h3 small{
+	display:block;
+	font-size:12px;
+}
+#badgeAuction .userWin .boxBadges{
+	margin:0;
+}
+.postAuctionWinner .jcarousel-skin-tango .jcarousel-item{
+	height: 345px;
+    padding: 160px 0 0 65px;
+    width: 925px;
+}
+.postAuctionWinner .jcarousel-skin-tango .jcarousel-prev-disabled,.postAuctionWinner .jcarousel-skin-tango .jcarousel-next-disabled{
+	visibility:hidden;
+}
+/* ============ TOOLTIP =================*/
+.tip {
+    color: #fff;
+    background:#222;
+    display:none; /*--Hides by default--*/
+    padding:10px;
+	position:absolute;
+    z-index:1000;
+    font-size:11px;
+    text-shadow:none;
+	top:-90px;
+	width:100px;
+	left:30px;
+	text-align:center;
+}
+.tip p{
+	margin:0 0 5px 0;
+}
+.tip img{
+	background:#fff;
+}
+.tip .arrow {
+    display:block;
+    position:absolute;
+    background:url(../img/arrow_tip.png) no-repeat;
+    width:15px;
+    height:13px;
+    margin:0 0 -11px -8px;
+    left:8px;
+	bottom:0;
+}
+.tip_trigger{
+	position:relative;
+}
+
+.tip-yellow {
+	z-index:1000;
+	text-align:left;
+	padding:8px;
+	min-width:50px;
+	max-width:180px;
+	font-size:11px;
+	color:#fff;
+	background:#222;
+}
+.tip-yellow .tip-inner {
+	margin-top:-2px;
+	padding:0 3px 1px 3px;
+}
+
+/* Configure an arrow image - the script will automatically position it on the correct side of the tip */
+.tip-yellow .tip-arrow-top {
+	margin-top:-7px;
+	margin-left:15px;
+	top:0;
+	left:0;
+	width:16px;
+	height:10px;
+    background:url(../img/arrow_tip.png) no-repeat;
+}
+.tip-yellow .tip-arrow-right {
+	margin-top:-9px; /* approx. half the height to center it */
+	margin-left:-4px;
+	top:50%;
+	left:100%;
+	width:10px;
+	height:20px;
+    background:url(../img/arrow_tip.png) no-repeat;
+}
+.tip-yellow .tip-arrow-bottom {
+	margin-top:-6px;
+	margin-left:15px;
+	top:100%;
+	left:0;
+	width:16px;
+	height:13px;
+    background:url(../img/arrow_tip.png) no-repeat;
+}
+.tip-yellow .tip-arrow-left {
+	margin-top:-9px; /* approx. half the height to center it */
+	margin-left:-6px;
+	top:50%;
+	left:0;
+	width:10px;
+	height:20px;
+    background:url(../img/arrow_tip.png) no-repeat;
+}
+
+
+/* ============ CUSTOM FORM =================*/
+.checkbox, .radio ,.tradeMyBadge{
+	width: 35px;
+	height: 24px;
+	padding: 0 5px 0 0;
+	background: url(../img/checkbox.png) no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+.tradeMyBadge:hover,.tradeMyBadge.active{
+	background: url(../img/checkbox.png) no-repeat 0 -50px;
+}
+.radio {
+	background: url(../img/radioButton.png) no-repeat;
+}
+.select {
+	position: absolute;
+	width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 21px;
+	padding: 0 24px 0 8px;
+	color: #fff;
+	font: 12px/21px arial,sans-serif;
+	background: url(select.png) no-repeat;
+	overflow: hidden;
+}
+/* ============ POP UP =================*/
+.popupContainer{
+	display:none;
+	background:url(../img/bg_popup.png) repeat-y;
+	width:580px;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -290px;
+	z-index:101;
+	top:-50px;
+	-moz-box-shadow:5px 10px 20px #000;
+	-webkit-box-shadow:5px 10px 20px #000;
+	box-shadow:5px 10px 20px #000;
+}
+#popupHead{
+	background:url(../img/bg_top_popup.png) top no-repeat;
+	width:580px;
+	position:relative;
+}
+#popupBottom{
+	background:url(../img/bg_bottom_popup.png) bottom no-repeat;
+	padding:20px;
+}
+#bgPopup{
+	display:none;
+	background:url(../img/trans.png) repeat;
+	position:fixed;
+	width:100%; height:100%;
+	z-index:100;
+	left:0;
+	top:0;
+	padding:0 0 200px 0;
+}
+.poupContent{
+	overflow:hidden;
+	padding:20px;
+}
+.poupContentHome{
+	background:url(../img/bg_popupHome.jpg) no-repeat;
+	width:516px; height:320px;
+	margin:0 auto;
+	text-align:center;
+	text-transform:uppercase;
+	color:#333333;
+}
+.poupContentHome h1{
+	color:#fff;
+	font-size:20px;
+	margin:0;
+	padding:40px 0 0 0;
+	font-weight:normal;
+}
+.poupContentHome h2{
+    font-family: 'BlackoutMidnight';
+	font-weight:normal;
+	font-size:35px;
+	margin:0;
+}
+#navWelcomePage{
+	overflow:hidden;
+	padding:20px 20px 0 20px;
+}
+#navWelcomePage a{
+	color:#333;
+	font-size:20px;
+	text-decoration:none;
+	display:block;
+	padding:5px 0;
+}
+#navWelcomePage a:hover{
+	color:#C00;
+}
+a.navprize{
+	width:250px;
+	float:left;
+}
+
+
+.poupContent h1{
+    font-family: 'BlackoutMidnight';
+	font-weight:normal;
+	margin:10px 0 0 0;
+	color:#C00;
+}
+.selotip{
+	background:url(../img/selotip.png) no-repeat;
+	width:170px; height:101px;
+	left:50%;
+	top:-50px;
+	margin:0 0 0 -90px;
+	position:absolute;
+	z-index:10;
+}
+a.closePopup{
+	background:url(../img/close_popup.png) no-repeat;
+	width:63px; height:63px;
+	display:block;
+	text-decoration:none;
+	position:absolute;
+	right:-10px;
+	top:-30px;
+	z-index:10;
+}
+a.closePopup:hover{
+	right:-12px;
+	top:-28px;
+}
+#popupGame{
+	background:#fff;
+	width:820px;
+	height:620px;
+	margin:0 0 0 -410px;
+}
+#popupGame a.closePopup{
+	right: -39px;
+    top: -35px;
+}
+#popupGame a.closePopup:hover{
+	right: -39px;
+    top: -35px;
+}
+#popupGame .poupContent{
+	padding:10px;
+}
+.popupProfile,.popupBid{
+	background:url(../img/bgPopup.jpg) repeat;
+	width:800px;
+	margin:100px 0 0 -400px;
+}
+.photoError{
+	color: #FFFFFF;
+    display: block;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    top: 30px;
+    width: 500px;
+}
+/* ============ FOOTER =================*/
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	border-bottom: none;
+	width:100%;
+	height:135px;
+	text-transform:uppercase;
+}
+#hw {
+	background:url(../img/hw.png) center #000 no-repeat;
+	height:90px;
+}
+.menu-footer {
+	background:url(../img/transparent-white.png) repeat;
+	text-align:center;
+	border:solid 1px #ccc;
+	line-height: 15px;
+	font-size:8pt;
+}
+.menu-footer a {
+	color:#333;
+	display: inline-block;
+	padding: 5px 20px;
+	text-decoration: none;
+}
+.menu-footer a:hover{
+	color:#666;
+}
+#site-info {
+	background:url(../img/transparent-white2.png) repeat;
+	text-align:center;
+	line-height: 24px;
+	font-size:8pt;
+}
+#marlboroVideos{
+	position:absolute;
+	width:480px;
+	top:220px;
+	right:34px;
+}
+#finishMessageSub{
+	display: block;
+    font-family: 'BlackoutMidnight';
+    font-size: 50px;
+    padding: 40px 0 0;
+}
+#finishTradeMessage h1{
+	margin:40px 0 60px 0;
+}
+.messageClick{
+    font-family: 'BlackoutMidnight';
+	font-size:20px;
+	padding:15px 0 0 120px;
+}
+.messageClick a{
+	color:#0066CC;
+}
+.messageClick a:hover{
+	color:#333;
+}
+.errors{
+	background:#ffebeb;
+	color:#C00;
+	border:solid 1px #ffb2b2;
+	border-radius:2px;
+	padding:3px 15px;
+	height:18px;
+	line-height:18px;
+	position:absolute;
+	left:410px;
+	width:210px;
+	margin:10px 0 0 0;
+	display:none;
+	font-size:11px;
+}
+.visible{
+	display:block;
+}
+.imgLanding1{
+	position:absolute;
+	bottom:-80px;
+	right:-100px;
+}
+.imgLanding2{
+	position:absolute;
+	bottom:-80px;
+	left:-95px;
+}
+#popupLanding h1{
+	font-size:26px;
+	margin:30px 0;
+	letter-spacing:1px;
+	line-height:35px;
+}
+.clickHere{
+	color:#c79500;
+	text-decoration:none;
+    font-family: 'BlackoutMidnight';
+	font-size:26px;
+	display:block;
+	letter-spacing:1px;
+	margin:30px 0;
+	line-height:35px;
+}
+.clickHere:hover{
+	color:#7d5e00;
+}
+#popupLanding .poupContent{
+	font-size:14px;
+	line-height:30px;
+}
+#cptxBid{
+	color:#0564CD;
+	font-size:18px;
+}

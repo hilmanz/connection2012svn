@@ -1,0 +1,89 @@
+{literal}
+<style>
+#listCode td {text-align:center}
+</style>
+{/literal}
+
+<form>
+	<input type="hidden" name="s" value="code" />
+<table>
+<tr><td><label>Code : </label>
+</td><td>
+<input type="text" name="kode" value="{$editing->kode}" size="10"/></td></tr>
+<tr><td>
+<label>Class : </label>
+</td><td>
+<select name="tier" id="tier">
+  <option value="1" {if $editing->tier=="1" }selected{/if} >A</option>
+  <option value="2" {if $editing->tier=="2" }selected{/if} >B</option>
+  <option value="3" {if $editing->tier=="3" }selected{/if} >C</option>
+</select>
+</td></tr>
+
+<tr><td>
+<label>Channel a: </label>
+</td><td>
+<select name="channel" id="channel">
+{section name=i loop=$channel}
+  <option value="{$channel[i].channel_id}" >{$channel[i].channel_name}</option>
+{/section}
+</select>
+</td></tr>
+
+<tr><td>
+<label>Location : </label>
+</td><td>
+<select name="location" id="location">
+  <option value="nasional" {if $editing->location=="nasional" }selected{/if} >Nasional</option>
+  <option value="jakarta" {if $editing->location=="jakarta" }selected{/if} >Jakarta</option>
+</select>
+</td></tr>
+
+<tr><td valign="top">
+Description : 
+</td><td>
+<textarea  name="description" > {$editing->description}
+</textarea>
+</td></tr>
+
+<tr><td>
+<label>Reusable ? </label>
+</td><td>
+<select name="type" id="type">
+  <option value="1"  {if $editing->type=="1" }selected{/if} > Yes</option>
+  <option value="0" {if $editing->type=="2" }selected{/if} >No</option>
+
+</select>
+</td></tr>
+
+<tr><td>
+<label>Badge Available : </label>
+</td><td>
+<input type="text" name="startDate" value="{$editing->start_date}" /> - <input type="text" name="endDate" value="{$editing->end_date}" />
+</td></tr>
+
+<tr><td>
+<input type="hidden" name="add" value="1" />
+<input type="submit" name="Generate" value="Insert Code"/>
+</td></tr>
+</table>
+</form>
+
+<div>
+  <p>&nbsp;</p>
+  <table width="100%" border="1" cellspacing="0" cellpadding="0" id="listCode">
+    <tr>
+		<td width="1%" ><strong>No</strong>.</td>
+		<td width="5%"><strong>Kode</strong></td>
+		<td width="5%"><strong>Channel</strong></td>
+		<td width="1%"><strong>Class</strong></td>
+		<td width="10%"><strong>Location</strong></td>
+		<td width="5%"><strong>Start Date</strong></td>
+		<td width="5%"><strong>End Date</strong></td>
+		<td width="20%"><strong>Description</strong></td>
+		<td width="4%" colspan="2"><strong>Action</strong></td>
+    </tr>
+	{$code}
+	
+    </table>
+</div>

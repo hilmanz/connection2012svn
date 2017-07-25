@@ -1,0 +1,94 @@
+/*
+Theme Name: MARLBORO CONNECTIONS
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+body{
+	background:url(../img/bg_all.jpg) repeat #eaeaea;
+	font-family: 'Oswald', sans-serif;
+	font-size:28px;
+	color:#333;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	outline:none;
+}
+#landing{
+	width:960px;
+	height:400px;
+	position:relative;
+	margin:0 auto;
+}
+#textLanding{
+	background:url(../img/txt_landing.png) no-repeat;
+	width:853px; height:408px;
+	position:absolute;
+	display:block;
+	top:20px;
+}
+a#btnLanding{
+	background:url(../img/btn_landing.png) no-repeat;
+	width:368px; height:42px;
+	display:block;
+	bottom:-90px;
+	position:absolute;
+	right:50px;
+}
+a#btnLanding:hover{
+	background:url(../img/btn_landing.png) no-repeat 0 -42px;
+}
+#rainbow{
+	background:url(../img/wall_rainbow.png) center top no-repeat;
+	width:100%;
+	height:600px;
+}
+/* ============ FOOTER =================*/
+
+.footer {
+	padding:20px 0 0 0;
+	font-size:18px;
+}
+.footer ul {
+	margin:0;
+	padding:0;
+}
+.footer ul li {
+	display:inline;
+}
+#footer {
+	font-size:16px;
+	text-align:center;
+	border-bottom: none;
+	width:100%;
+	height:250px;
+	text-transform:capitalize;
+}
+#hw {
+	background:url(../img/hw.png) center #000 no-repeat;
+	height:90px;
+}
+.menu-footer {
+	background:url(../img/transparent-white.png) repeat;
+	text-align:center;
+	border:solid 1px #ccc;
+	line-height: 15px;
+	font-size:8pt;
+}
+#footer a {
+	color:#C00;
+	display: inline-block;
+	padding: 5px 20px;
+	text-decoration:underline;
+}
+#footer a:hover{
+	color:#666;
+}
+#site-info {
+	background:url(../img/transparent-white2.png) repeat;
+	text-align:center;
+	line-height: 24px;
+	font-size:8pt;
+}

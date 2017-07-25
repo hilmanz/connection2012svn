@@ -1,0 +1,77 @@
+<div id="badgeAuction">
+    <div id="content">
+    	<div class="post postAuctionWinner">
+           <a class="btnBack" href="index.php?page=badges&act=auction#postBadgeAuction">&lt;&lt; BACK</a>
+          <ul id="first-carousel" class="prize jcarousel-skin-tango">
+			{assign var="rows" value=1}
+			{section name=i loop=$winner}
+				{if $smarty.section.i.index%6 == 0 }<li>{/if}
+			    <div class="userWin">
+                    <div class="boxBadges">
+                        <div class="theBadges"><img src="img/auction/{$winner[i].auction->img}" style="height:53px;width:56px" /></div>
+                    </div><!-- end .boxBadges -->
+                    <div class="boxPoin">
+                    	<h3> {$winner[i].bid} <small>POINTS</small></h3>
+                    </div><!-- end .boxPoin -->
+                    <div class="smallBox">
+                        <h2>Claimed BY</h2>
+                        <div class="boxTrader">
+                            <div class="thumbTrader">
+                                <a href="#popupProfile" class="popProfile" onCLick="getUserProfile({$winner[i].user->registerid})"><img  {if $winner[i].user->photourl=='' }{if $winner[i].user->sex== 'F'}src="avatar/thumb/small_avatar/avatar-woman.jpg"{else}src="avatar/thumb/small_avatar/avatar-man.jpg"{/if}{else}src="{$winner[i].user->photourl}"{/if} /></a>
+                            </div><!-- end .thumbTrader -->
+                            <div class="boxName">
+                                <span class="nameTrader">{$winner[i].user->name}</span>
+                            </div><!-- end .boxName -->
+                        </div><!-- end .boxTrader -->
+                    </div><!-- end .smallBox -->
+                </div><!-- end .userWin -->
+            	{assign var="rows" value=$rows+1}
+          		 {if $rows >= 7 }{assign var="rows" value=1}</li>{/if}<!-- end .LIST WINNER 6 USER -->
+            {/section}
+          </ul>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #prize -->
+{include file="marlboro/profile.html"}
+{literal}
+<script>
+function getUserProfile(id){
+$("#loadingProfile").show();
+$(".poupContent").hide();
+$.post("index.php?page=myprofile&act=profilePopup", { register_id: id},
+			   function(data) {
+					$("#loadingProfile").hide();
+					$(".poupContent").show();
+					var html='';
+					$("#usernameID").html(data.name); 
+					$("#ageID").html(data.age); 
+					$("#townsID").html(data.kota); 	
+					$("#connectDateID").html(data.date); 
+					$("#badgesValuesID").html(data.totalBadge); 
+					$("#imageAvatar").attr('src',data.avatar_sm);
+					$("#hasTradeCount").html(""); 
+					$("#headerNameProfile").html(data.name+" PROFILE"); 
+					for (var i in data.badge){
+						html += "<div class='badgeBox'>";
+                        html += '<a class="badgesIcon tip_trigger" href="#"><img src="img/badge/'+data.badge[i].image+'" /><span class="tip"><span class="arrow"></span>Vulputate Ornare Dolor Risus</span></a>';
+                        html += '<div class="badgesCount">'+data.badge[i].total+'</div>';
+                        html += '</div>';
+					
+					}
+					var auctionReward ='';
+					for (var j in data.auctionwin){
+						auctionReward += '<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p> '+data.name+' WIN 1 IPAD</p><img src="img/auction/'+data.auctionwin[j].auction_detail.img+'" /></span></a>';
+                    }
+					$("#piala").html(auctionReward);
+					$("#badgeList").html(html);
+					$("#popupProfile").fadeIn();
+					$("#bgPopup").fadeIn();
+				
+		});
+
+
+}
+
+
+</script>
+{/literal}

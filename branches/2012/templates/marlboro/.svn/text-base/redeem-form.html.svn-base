@@ -1,0 +1,122 @@
+<div id="badgesRedeem">
+    <div id="content">
+    	<div class="post postRedeem">
+        	<h1>You have chosen the <span class="blue">{$merchandise->item_name}</span><br />
+				please confirm or update the following delivery address </h1>
+             <form id="redeemForm" action="index.php?page=redeem&act=submit_form_redeem_prize" method="post">
+             	<div class="redeemForm">
+                    <div class="row">
+                        <label>Street </label>
+                        <input type="text" name="street" value="{$StreetName}" id="street"  onBlur="clearWarning('street')" />
+						<span id='errstreet' class="errors"></span>
+                    </div>
+                    <div class="row">
+                        <label>City </label>
+                        <input type="text" name="city"  value="{$cityName}" id="city"  onBlur="clearWarning('city')"/>
+						<span id='errcity' class="errors"></span>
+                    </div>
+                    <div class="row">
+                        <label>Province </label>
+                        <input type="text" name="province"  id="province" onBlur="clearWarning('province')"/>
+						<span id='errprovince' class="errors"></span>
+                    </div>
+                    <div class="row">
+                        <label>ZIP Code </label>
+                        <input type="text" name="complex" id="complex"onBlur="clearWarning('complex')" />
+						<span id='errcomplex' class="errors"></span>
+					</div>
+                    <div class="row">
+                        <label>Phone </label>
+                        <input type="text" name="phone"  id="phone" onBlur="clearWarning('phone')"/>
+						<span id='errphone' class="errors"></span>
+                    </div>
+                    <div class="row">
+                        <label>Mobile </label>
+                        <input type="text" name="mobile" value="{$MobilePhone}" id="mobile" onBlur="clearWarning('mobile')" />
+						<span id='errmobile' class="errors"></span>
+                    </div>
+                    <div class="row agree">
+                        <input type="checkbox" class="styled" id="checkTOS" />
+                        <label>Agree to the <a href="index.php?page=tos" target="_blank">terms and conditions</a></label>
+						<input type="hidden" name="merchandise_id" value="{$merchandise->id}" />
+						<input type="hidden" name="prefix_prize" value="{$merchandise->prefix_name}" />
+                       <input type="submit" value="Confirm &amp; Redeem" class="button confirm-redeem" />
+						<span id='errtos' class="errors"></span>
+                    </div>
+                </div><!-- end .redeemForm -->
+             </form>
+             {*}
+             <div id="requireBadge">
+             	<h2>REQUIRED BADGES</h2>
+               {foreach from=$merchandise->needBadge key=k item=v}
+			   <div class="boxBadge">
+                    <img src="img/badge/badge{$k}.png" />
+                    <input type="checkbox" class="styled" checked="checked" disabled="disabled" />
+                </div>
+             {/foreach}
+             </div>
+             {/*}
+        	<div class="imgRedeem"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #badgesRedeem -->
+
+{literal}
+<script>
+	$('.confirm-redeem').click(function(){
+var checkTOS = $('#checkTOS').is(':checked');
+var street = $('#street').val();
+var complex = $('#complex').val();
+var province = $('#province').val();
+var city = $('#city').val();
+var phone = $('#phone').val();
+var mobile = $('#mobile').val();
+if(checkTOS!=true){
+  $('#errtos').html('Please agree to the  Term and Conditions');  
+  $('#errtos').fadeIn();  
+return false;
+}
+if(street==''){
+$('#errstreet').html('Please fill street');
+$('#errstreet').fadeIn();  
+return false;
+}
+if(city==''){
+$('#errcity').html('Please fill city');
+$('#errcity').fadeIn();  
+return false;
+}
+if(province==''){
+$('#errprovince').html('Please fill province');
+$('#errprovince').fadeIn();  
+return false;
+}
+
+if(complex==''){
+$('#errcomplex').html(' Please fill ZipCode');
+$('#errcomplex').fadeIn();  
+return false;
+}
+if(phone==''){
+$('#errphone').html('Please fill phone number');
+$('#errphone').fadeIn();  
+return false;
+}
+if(mobile==''){
+$('#errmobile').html(' Please fill mobile number');
+$('#errmobile').fadeIn();  
+return false;
+}
+
+return $('#redeemForm').submit();
+});
+
+function clearWarning(id){
+
+$('#err'+id).html('');
+$('#err'+id).fadeOut();  
+}
+
+</script>
+
+{/literal}

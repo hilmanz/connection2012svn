@@ -1,0 +1,254 @@
+<script src="js/charts/highcharts.js" type="text/javascript"></script>
+<script type="text/javascript">
+{literal}
+jQuery(document).ready(function() {
+			function loadDataDSTRedeem(){
+				
+				var options = null;
+				options = {
+					chart: {
+						renderTo: 'dstredeem',
+						type: 'column'
+					},
+					credits: {
+				        enabled: false
+				    },
+					title: {
+						text: ''
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.series.name +'</b>: '+ this.y;
+						}
+					},
+					xAxis: {
+						categories: []
+					},
+					yAxis: {
+						title: {
+							text: ''
+						}
+					},
+					legend: {
+						enabled: false
+					},
+					series: []
+				};
+				
+				// Load the data from the XML file 
+				$.get('index.php?s=reporting&act=xmldstredeem', function(xml) {
+					
+					// Split the lines
+					var $xml = $(xml);
+					
+					// push categories
+					$xml.find('categories item').each(function(i, category) {
+						options.xAxis.categories.push($(category).text());
+					});
+					
+					// push series
+					$xml.find('series').each(function(i, series) {
+						var seriesOptions = {
+							name: $(series).find('name').text(),
+							data: []
+						};
+						
+						// push data points
+						$(series).find('data point').each(function(i, point) {
+							seriesOptions.data.push(
+								parseInt($(point).text())
+							);
+						});
+						
+						// add it to the options
+						options.series.push(seriesOptions);
+					});
+					var chart = null;
+					chart = new Highcharts.Chart(options);
+				});
+			}
+			loadDataDSTRedeem();
+			
+			function loadDataPerChannel(param,id){
+				
+				var options = null;
+				options = {
+					chart: {
+						renderTo: id,
+						type: 'column'
+					},
+					credits: {
+				        enabled: false
+				    },
+					title: {
+						text: ''
+					},
+					xAxis: {
+						categories: []
+					},
+					yAxis: {
+						title: {
+							text: ''
+						}
+					},
+					tooltip: {
+						formatter: function() {
+							return '<b>'+ this.series.name +'</b>: '+ this.y;
+						}
+					},
+					legend: {
+						enabled: false
+					},
+					series: []
+				};
+				
+				// Load the data from the XML file 
+				$.get('index.php?s=reporting&act=xmlperchannel'+param, function(xml) {
+					
+					// Split the lines
+					var $xml = $(xml);
+					
+					// push categories
+					$xml.find('categories item').each(function(i, category) {
+						options.xAxis.categories.push($(category).text());
+					});
+					
+					// push series
+					$xml.find('series').each(function(i, series) {
+						var seriesOptions = {
+							name: $(series).find('name').text(),
+							data: []
+						};
+						
+						// push data points
+						$(series).find('data point').each(function(i, point) {
+							seriesOptions.data.push(
+								parseInt($(point).text())
+							);
+						});
+						
+						// add it to the options
+						options.series.push(seriesOptions);
+					});
+					var chart = null;
+					chart = new Highcharts.Chart(options);
+				});
+			}
+			loadDataPerChannel('&channel=1','baliho');
+			loadDataPerChannel('&channel=2','magazine');
+			loadDataPerChannel('&channel=10','lamp');
+			loadDataPerChannel('&channel=6','digital');
+			loadDataPerChannel('&channel=7','rich');
+			loadDataPerChannel('&channel=4','poster');
+			loadDataPerChannel('&channel=3','pog');
+});
+{/literal}
+</script>
+
+<div style="padding:10px 25px 10px 10px;clear:both;">
+	<div id="title-bar">
+		<h2>CODE REDEMPTIONS</h2>  
+		<hr>   
+	</div>
+	
+	<div>
+		<div style="float:left;width:400px">
+			<h2><span class="dot-square"></span>WEBSITE</h2>
+			<div class="box">
+				<div class="box-title"><strong>Registration</strong></div>
+				<div class="box-value orange">{$total_badge_register|intval}</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><strong>Games</strong></div>
+				<div class="box-value darkblue">{$total_badge_game|intval}</div>
+			</div>
+			
+			<h2><span class="dot-square"></span>DST</h2>
+			<div style="display:inline-block; position:relative;">
+				<div class="box2">
+					<div class="box-title"><strong>Number of Codes</strong></div>
+					<div>Generated for registration</div>
+					<div style="margin:16px 0 0;" class="box-value green">{$total_dst_register|intval}</div>
+				</div>
+				<div class="box2">
+					<div class="box-title"><strong>Number of Codes</strong></div>
+					<div>Generated for games / quiz</div>
+					<div style="margin:16px 0 0;" class="box-value purple">{$total_dst_quiz|intval}</div>
+				</div>
+				<div class="box" style="height: 242px;left: 198px;position: absolute;top: 0;">
+					<div class="box-title"><strong>Total Redeemed</strong></div>
+					<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_total'" />
+					<div id="dstredeem" style="height:220px"></div>
+				</div>
+			</div>
+			
+			
+			<h2><span class="dot-square"></span>SBA</h2>
+			<div class="box">
+				<div class="box-title"><strong>Number of Codes</strong></div>
+				<div>Generated (total)</div>
+				<div style="margin:16px 0 0;" class="box-value red">{$total_sba|intval}</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><strong>Total Redeemed</strong></div>
+				<div class="box-value red">{$total_sba_redeem|intval}</div>
+			</div>
+		</div>
+		<div style="float:left; width:53%">
+			<h2 style="margin-bottom:20px"><span class="dot-square"></span>CHANNELS</h2>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Baliho</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_baliho'" />
+				<div id="baliho" style="height: 300px;"></div>
+			</div>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Magazine</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_magazine'" />
+				<div id="magazine" style="height: 300px;"></div>
+			</div>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Poster</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_poster'" />
+				<div id="poster" style="height: 300px;"></div>
+			</div>
+			
+			<div class="box2">
+				<div class="box-title"><strong>POG</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_pog'" />
+				<div id="pog" style="height: 300px;"></div>
+			</div>
+			
+			<!--
+			<div class="box">
+				<div class="box-title"><strong>Poster</strong></div>
+				<div class="box-value orange">{$total_poster|intval}</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><strong>POG</strong></div>
+				<div class="box-value darkblue">{$total_pog|intval}</div>
+			</div>
+			-->
+			
+			<div class="box2">
+				<div class="box-title"><strong>Lamp</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_lamp'" />
+				<div id="lamp" style="height: 300px;"></div>
+			</div>
+			<div class="box2">
+				<div class="box-title"><strong>Digital Banners</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_digital'" />
+				<div id="digital" style="height: 300px;"></div>
+			</div>
+			<div class="box2">
+				<div class="box-title"><strong>Rich Media Banners</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=redeemtion_rich'" />
+				<div id="rich" style="height: 300px;"></div>
+			</div>
+			
+		</div>
+	</div>
+	
+</div>

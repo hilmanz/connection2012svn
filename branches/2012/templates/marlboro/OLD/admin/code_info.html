@@ -1,0 +1,40 @@
+<div style="padding:10px;">
+{if $msg}
+<div style="color:red;">
+<h3>{$msg}</h3>
+</div>
+{/if}
+<h2>Code Info</h2>
+<hr>
+<form method="POST" enctype="application/x-www-form-urlencoded">
+Code : <input type="text" name="kode" value=""/><input type="submit" name="btn" value="CHECK"/>
+</form>
+<h3>{$result.status}</h3>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Code</strong></td>
+	<td><strong>Type</strong></td>
+	
+	</tr>
+	<tr><td>{$result.info.kode}</td><td>{$result.info.type}</td></tr>
+</table>
+<h4>Redeemed By : </h4>
+{section name=i loop=$result.redeemed_by}
+<div>{$result.redeemed_by[i]}</div>
+{sectionelse}
+<div>N/A</div>
+{/section}
+<h4>Booked By : </h4>
+{section name=i loop=$result.booked_by}
+<div>{$result.booked_by[i]}</div>
+{sectionelse}
+<div>N/A</div>
+{/section}
+<h4>Redeemed Time : </h4>
+{section name=i loop=$result.redeemed_time}
+<div>{$result.redeemed_time[i]}</div>
+{sectionelse}
+<div>N/A</div>
+{/section}
+</div>

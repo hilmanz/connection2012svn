@@ -1,0 +1,149 @@
+{literal}
+<script type="text/javascript">
+var most = 0;
+jQuery(document).ready(function() {
+	jQuery('#mostnext').click(function(){
+		var before = most;
+		most = most + 1;
+		if(most > 2){
+			most = 2;
+		}
+		jQuery('#most-'+before).fadeOut('slow',function(){
+			jQuery('#most-'+most).fadeIn('slow');
+		});
+	});
+	jQuery('#mostprev').click(function(){
+		var before = most;
+		most = most - 1;
+		if(most < 0){
+			most = 0;
+		}
+		jQuery('#most-'+before).fadeOut('slow',function(){
+			jQuery('#most-'+most).fadeIn('slow');
+		});
+	});
+	jQuery('#most1').click(function(){
+		var before = most;
+		most = 0;
+		jQuery('#most-'+before).fadeOut('slow',function(){
+			jQuery('#most-'+most).fadeIn('slow');
+		});
+	});
+	jQuery('#most2').click(function(){
+		var before = most;
+		most = 1;
+		jQuery('#most-'+before).fadeOut('slow',function(){
+			jQuery('#most-'+most).fadeIn('slow');
+		});
+	});
+	jQuery('#most3').click(function(){
+		var before = most;
+		most = 2;
+		jQuery('#most-'+before).fadeOut('slow',function(){
+			jQuery('#most-'+most).fadeIn('slow');
+		});
+	});
+});
+</script>
+{/literal}
+
+<div style="padding:10px;clear:both;">
+	<div id="title-bar">
+		<h2>BADGES & TRADING</h2>
+		<hr>     
+	</div>
+	
+	<div>
+		<div style="float:left;width:650px;">
+			<h2><span class="dot-square"></span>BADGES LIST</h2>
+			<div style="display:inline-block;">
+				<div class="box">
+					<div class="box-title">
+					<strong>Users Collecting Badges</strong>
+					<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=badge_user_collecting'" />
+					</div>
+					<ul style="list-style-type:none;padding:0;">
+						{section name=i loop=$collect}
+						<li>
+							<img src="../images/badge/badge{$collect[i].id}.png" />
+							<b class="badge-count orange">{$collect[i].total|intval}</b>
+						</li>
+						{/section}
+					</ul>
+				</div>
+				<div class="box">
+					<div class="box-title">
+					<strong>Generated Badges</strong>
+					<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=badge_generate'" />
+					</div>
+					<ul style="list-style-type:none;padding:0;">
+						{section name=i loop=$generated}
+						<li>
+							<img src="../images/badge/badge{$generated[i].id}.png" />
+							<b class="badge-count darkblue">{$generated[i].jumlah|intval}</b>
+						</li>
+						{/section}
+					</ul>
+				</div>
+				<div class="box">
+					<div class="box-title">
+						<strong>Badges Being Traded</strong>
+						<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=badge_being_trade'" />
+					</div>
+					<ul style="list-style-type:none;padding:0;">
+						{section name=i loop=$being}
+						<li>
+							<img src="../images/badge/badge{$being[i].badge_id}.png" />
+							<b class="badge-count purple">{$being[i].total|intval}</b>
+						</li>
+						{/section}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="float:left; width:25%">
+			<h2 style="margin-bottom:20px;"><span class="dot-square"></span>TRADING</h2>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Total Trading Activities</strong></div>
+				<div class="box-value red">{$trades.trade_post|intval}</div>
+			</div>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Most Traded Badges</strong>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=badge_most_trade'" />
+				</div>
+				<div>
+					
+						{section name=i loop=$most}
+							{if $smarty.section.i.index % 4 eq 0}
+								{if $smarty.section.i.index != 0}
+								</ul>
+								{/if}
+								<ul style="list-style-type:none;padding:0;{if $smarty.section.i.index != 0}display:none{/if}" id="most-{$smarty.section.i.index/4}">
+							{/if}
+							<li>
+								<img src="../images/badge/badge{$most[i].badge_id}.png" />
+								<b class="badge-count red">{$most[i].total|intval}</b>
+							</li>
+						{/section}
+						</ul>
+						
+						<div style="text-align:center">
+							<span id="mostprev" style="cursor:pointer;">&lt;&lt;</span>&nbsp;
+							<span id="most1" style="cursor:pointer;">1</span>&nbsp;
+							<span id="most2" style="cursor:pointer;">2</span>&nbsp;
+							<span id="most3" style="cursor:pointer;">3</span>&nbsp;
+							<span id="mostnext" style="cursor:pointer;">&gt;&gt;</span>
+						</div>
+				</div>
+			</div>
+			
+			<div class="box2">
+				<div class="box-title"><strong>Successful Trades</strong></div>
+				<div class="box-value green">{$trades.trade_success|intval}</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

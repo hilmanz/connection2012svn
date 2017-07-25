@@ -1,0 +1,53 @@
+<div style="padding:10px;">
+<h2>Badge Add New</h2>
+<hr>
+<form action="index.php?s=badge&act=add" method="post" enctype="multipart/form-data">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	{if $err}
+	<tr>
+		<td colspan="2"><font color="#ff0000"><b>{$err}</b></font></td>
+	</tr>
+	{/if}
+	<tr>
+		<td>Name</td>
+		<td><input type="text" name="name" maxlength="35" /></td>
+	</tr>
+	<tr>
+		<td>Prob Rate</td>
+		<td><input type="text" name="rate" /></td>
+	</tr>
+	<tr>
+		<td>Class</td>
+		<td><select name="tier" id="tier" >
+			<option value="1" >A</option>
+			<option value="2" >B</option>
+			<option value="3" >C</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Series</td>
+		<td>	
+			<select name="series">
+				{section name=i loop=$series}
+				<option value="{$series[i].id}">{$series[i].name}</option>
+				{/section}
+			</select>
+		</td>
+	</tr>
+	<tr>
+	  <td>Images</td>
+	  <td><input type="file" name="img" id="img" /> </td>
+	</tr>
+	<tr>
+		<td valign="top">Description</td>
+		<td><textarea name="description" cols="50" rows="10"></textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="add" value="1" />
+			<input type="submit" name="save" value=" Save " />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

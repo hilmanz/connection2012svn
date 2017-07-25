@@ -1,0 +1,214 @@
+<div id="listBadgeRequest" class="requestBadge">
+    				<div class="contentBadge">
+    					<a class="popup-close toggleBox universalClose"></a>
+    					<div class="head">
+    						<h3>BADGE TRADE</h3>
+    						<p>Select a badge from left to trade with a badge on the right</p>
+    					</div>
+    					<form id="formRequestTrade">
+    					<div class="badgeKiri">
+    					<p>My Badges</p>
+    						<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge1.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge2.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge3.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge4.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge5.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge6.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge7.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge8.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge9.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge10.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge11.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge12.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+    					</div>
+    					
+    					<div class="badgeKanan">
+    					<p>What I Need</p>
+    						<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge1.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge2.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge3.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge4.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge5.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge6.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge7.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge8.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge9.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge10.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge11.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+                        	<div class="badge-box">
+                        		<div class="badge-img">
+                            		<img src="images/badge/badge12.png" />
+                            	</div>
+                            	<div class="badge-cek">
+                            		 <input type="checkbox" name="thing" id="checkbox" />
+                            	</div>
+                        	</div>
+    					</div>
+    					<div class="controlTrade">
+    						<img alt="Trade" src="images/content/arrow.png">
+    						<input class="request" type="button" value="">
+    					</div>
+    					</form>
+    				</div>
+    			</div>

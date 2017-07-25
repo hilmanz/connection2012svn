@@ -1,0 +1,82 @@
+
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats-active">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+              <div class="side-submenu">
+                <a href="#" class="active">Clues and Hot News</a>     
+              	<a href="index.php?page=news&act=trade">Connections Activity</a>
+              </div>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            {*}
+            <div class="nav-reedem">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            {/*}
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+  
+    <div id="content">
+    	<div id="news">
+        	<div class="content" style="position:relative;">
+            	<div id="scrollcApp" class="newsfeed" style="height: 320px;">  
+               	 	<div class="scrollcApp">
+                    
+					<!-- START CONTENT LIST -->
+					{section name=i loop=$list}
+					
+                        <div class="row">
+                            <div class="entry">
+                                <p>
+									<span class="time">{$list[i].time}</span>
+									{$list[i].news_brief|stripslashes|strip_tags}
+									<a class="detail" href="#" no="{$list[i].news_id}">Details &raquo;</a></p>
+									
+                            </div>
+                        </div>
+                    
+					{/section}
+                    
+
+					<!-- END CONTENT LIST -->
+					
+                  
+                	</div>
+                </div><!-- .newsfeed -->
+                <div style="position:relative;">            	  	
+        			<input id="up" type="button" style=" bottom: 275px;right: -35px;">
+					<input id="down" type="button" style="bottom: 275px; right: -65px;">  
+				</div>
+                {section name=i loop=$list}
+                  <div class="badge-box-medium news-{$list[i].news_id}" style="z-index:760; width: 515px; padding-top:15px;">
+                                <a class="popup-close detail" no="{$list[i].news_id}" style="right: -9px;top: -25px;">&nbsp;</a>
+                                <div>
+                                    <p style="font-size:20px">{$list[i].news_content|stripslashes}</p>
+                                </div>
+                  </div>
+                  {/section}
+            </div><!-- .content -->
+        </div><!-- #news -->
+    </div><!-- #content -->
+	<script>
+	{literal}
+	$(".detail").click( function() {
+		var no = $(this).attr('no');
+        $(".news-"+no).fadeToggle("slow");
+        
+		});
+	{/literal}
+	</script>
+   <div class="page-news"></div>

@@ -1,0 +1,254 @@
+
+<script src="js/charts/highcharts.js" type="text/javascript"></script>
+<script type="text/javascript">
+{literal}
+jQuery(document).ready(function() {
+			function loadDataDSTRedeem(){
+				
+				var options = null;
+				options = {
+					chart: {
+						renderTo: 'merchandise',
+						type: 'column'
+					},
+					credits: {
+				        enabled: false
+				    },
+					title: {
+						text: ''
+					},
+					xAxis: {
+						categories: []
+					},
+					yAxis: {
+						title: {
+							text: ''
+						}
+					},
+					tooltip: {
+				         formatter: function() {
+				            return ''+
+				               '<b>'+this.series.name +'</b>: '+ this.y;
+				         }
+				    },
+					legend: {
+						enabled: true
+					},
+					series: []
+				};
+				
+				// Load the data from the XML file 
+				$.get('index.php?s=reporting&act=xmlmerchandise', function(xml) {
+					
+					// Split the lines
+					var $xml = $(xml);
+					
+					// push categories
+					$xml.find('categories item').each(function(i, category) {
+						options.xAxis.categories.push($(category).text());
+					});
+					
+					// push series
+					$xml.find('series').each(function(i, series) {
+						var seriesOptions = {
+							name: $(series).find('name').text(),
+							data: []
+						};
+						
+						// push data points
+						$(series).find('data point').each(function(i, point) {
+							seriesOptions.data.push(
+								parseInt($(point).text())
+							);
+						});
+						
+						// add it to the options
+						options.series.push(seriesOptions);
+					});
+					var chart = null;
+					chart = new Highcharts.Chart(options);
+				});
+			}
+			loadDataDSTRedeem();
+			
+			function loadDataGame(){
+				
+				var options = null;
+				options = {
+					chart: {
+						renderTo: 'games',
+						type: 'column'
+					},
+					credits: {
+				        enabled: false
+				    },
+					title: {
+						text: ''
+					},
+					tooltip: {
+				         formatter: function() {
+				            return ''+
+				               '<b>'+this.series.name +'</b>: '+ this.y;
+				         }
+				    },
+					xAxis: {
+						categories: []
+					},
+					yAxis: {
+						title: {
+							text: ''
+						}
+					},
+					legend: {
+						enabled: true
+					},
+					series: []
+				};
+				
+				// Load the data from the XML file 
+				$.get('index.php?s=reporting&act=xmldatagames', function(xml) {
+					
+					// Split the lines
+					var $xml = $(xml);
+					
+					// push categories
+					$xml.find('categories item').each(function(i, category) {
+						options.xAxis.categories.push($(category).text());
+					});
+					
+					// push series
+					$xml.find('series').each(function(i, series) {
+						var seriesOptions = {
+							name: $(series).find('name').text(),
+							data: []
+						};
+						
+						// push data points
+						$(series).find('data point').each(function(i, point) {
+							seriesOptions.data.push(
+								parseInt($(point).text())
+							);
+						});
+						
+						// add it to the options
+						options.series.push(seriesOptions);
+					});
+					var chart = null;
+					chart = new Highcharts.Chart(options);
+				});
+			}
+			loadDataGame();
+			
+});
+{/literal}
+</script>
+
+<div style="padding:10px 25px 10px 10px;clear:both;">
+	<div id="title-bar">
+		<h2>WEBSITE ACTIVITY</h2>
+		<hr>     
+	</div>
+	
+	<div>
+		<div style="float:left; width:300px;">
+			<h2><span class="dot-square"></span>MOST ACTIVE CONTENT</h2>
+			<div class="box">
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=website_mostactivecontent'" />
+				<div>
+					<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+						<tr>
+							<td><b>Page</b></td>
+							<td><b>Number of Hits</b></td>
+							<td><b>Percentage Ratio</b></td>
+						</tr>
+						{section name=i loop=$total_hit}
+						<tr>
+							<td>{$total_hit[i].pages_name|stripslashes}</td>
+							<td>{$total_hit[i].total|intval}</td>
+							<td>{$total_hit[i].percent}</td>
+						</tr>
+						{/section}
+					</table>
+				</div>
+			</div>
+			<!--
+			<div class="box">
+				<div class="box-title"><strong>Number of Hits</strong></div>
+				<div>for each content</div>
+				<div style="margin:16px 0 0;" class="box-value orange">{$total_hit|intval}</div>
+			</div>
+			<div class="box">
+				<div class="box-title"><strong>Percentage Ratio</strong></div>
+				<div>for each content</div>
+				<div style="margin:16px 0 0;" class="box-value darkblue">{$total_percent}</div>
+			</div>
+			-->
+			<br />
+			
+			<h2><span class="dot-square"></span>MERCHANDISE</h2>
+			
+			
+			
+			<div class="box3" style="width:280px">
+				<div class="chart-title"><strong>Total numbers of users redeemed for each prize</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=website_user_redeem'" />
+				<div id="merchandise"></div>
+			</div>
+		</div>
+		<div style="float:left; width:65%">
+			<h2><span class="dot-square"></span>ONLINE GAMES</h2>
+			<div class="box3">
+				<div class="chart-title"><strong>Numbers of each games being played by users</strong></div>
+				<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=website_online_games'" />
+				<div id="games"></div>
+			</div>
+			
+			<br />
+			
+			<div class="box">
+				<h2>Top Users</h2>
+				<div>
+					<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=website_top_user'" />
+					<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+						<tr>
+							<td><b>Name</b></td>
+							<td><b>Register ID</b></td>
+							<!--<td><b>Total</b></td>-->
+						</tr>
+						{section name=i loop=$topuser}
+						<tr>
+							<td>{$topuser[i].name|stripslashes}</td>
+							<td>{$topuser[i].register_id}</td>
+							<!--<td>{$topuser[i].total}</td>-->
+						</tr>
+						{/section}
+					</table>
+				</div>
+			</div>
+			<div class="box">
+				<h2>Top Scores</h2>
+				<div>
+					<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=website_top_score'" />
+					<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+						<tr>
+							<td><b>Name</b></td>
+							<td><b>Register ID</b></td>
+							<td><b>Rank</b></td>
+							<td><b>Score</b></td>
+						</tr>
+						{section name=i loop=$topgame}
+						<tr>
+							<td>{$topgame[i].name|stripslashes}</td>
+							<td>{$topgame[i].user_id}</td>
+							<td>{$topgame[i].rank}</td>
+							<td>{$topgame[i].score}</td>
+						</tr>
+						{/section}
+					</table>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+
+</div>

@@ -1,0 +1,120 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="gold2">NUMBER OF USER</h1>
+    </div><!-- end .head -->
+    <div class="col2b">
+        <div class="title">
+            <h2>Login</h2>
+            <div class="selectDates">
+				<form method="GET" action="" class="loginRangeDate">
+                <input type="text" class="from" name="from" value="{$from}" />
+                <label for="to">-</label>
+                <input type="text" class="to" name="to"  value="{$to}"/>
+				<input type="hidden" name="s" value="number-of-user" />
+				</form>
+            </div>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="loginChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col3a last" >
+        <div class="title">
+            <h2>Gender</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="chart_gender" style="height:250px;">
+            
+                <!--<img src="sample_chart/3.jpg" align="middle" style="height:248px" />-->
+            </div>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="whiteBox col3"  style="overflow:hidden">	
+    	<h3 class="titleChart">Registrant</h3>
+        <h1 class="f50 red">{$registrant_num}</h1>
+    	<div class="chart bt1" id="registrantChart" style="position: relative; left: -59px;">
+        	
+        </div>
+    </div><!-- end .whiteBox -->
+    <div class="whiteBox col3"  style="overflow:hidden">	
+    	<h3 class="titleChart">Existing Participant</h3>
+        <h1 class="f50 gold2">{$existing_num}</h1>
+    	<div class="chart bt1" id="existingParticipantChart" style="position: relative; left: -59px;">
+        	<img src="sample_chart/4.jpg" align="middle" />
+        </div>
+    </div><!-- end .whiteBox -->
+ 	<div class="whiteBox col3 last"  style="overflow:hidden">	
+    	<h3 class="titleChart">New Participant</h3>
+        <h1 class="f50 blue2">{$new_num}</h1>
+    	<div class="chart bt1" id="newParticipantChart" style="position: relative; left: -59px;">
+        	<img src="sample_chart/4.jpg" align="middle" />
+        </div>
+    </div><!-- end .whiteBox -->
+</div><!-- end #content -->
+
+<script type="text/javascript">
+var female = {$female};
+var male = {$male};
+var unknown = {$unknown};
+var login = {$login};
+var userAgeAll = {$userAgeAll};
+var userAgeExisting = {$userAgeExisting};
+var userAgePart = {$userAgePart};
+{literal}
+
+var DataLoginNum = new Array();
+var DataLoginDate = new Array();
+for(var dateLogin in login){
+	DataLoginNum.push(parseInt(login[dateLogin],10));
+	DataLoginDate.push(String(dateLogin));
+}
+
+
+var DatauserAgeAllNum = new Array();
+var ageArr = ['18-29','30-35','others'];
+for(var idxAgeAll in userAgeAll){
+	var arrDataAge = [String(ageArr[userAgeAll[idxAgeAll].age_category]) , parseInt(userAgeAll[idxAgeAll].login_num,10)];
+	DatauserAgeAllNum.push(arrDataAge);
+	
+}
+
+var DatauserAgeExistingNum = new Array();
+var ageArr = ['18-29','30-35','others'];
+for(var idxAgeExisting in userAgeExisting){
+	var arrDataAge = [String(ageArr[userAgeExisting[idxAgeExisting].age_category]) , parseInt(userAgeExisting[idxAgeExisting].login_num,10)];
+	DatauserAgeExistingNum.push(arrDataAge);
+	
+}
+var DatauserAgePartNum = new Array();
+var ageArr = ['18-29','30-35','others'];
+for(var idxuserAgePart in userAgePart){
+	var arrDataAge = [String(ageArr[userAgePart[idxuserAgePart].age_category]) , parseInt(userAgePart[idxuserAgePart].login_num,10)];
+	DatauserAgePartNum.push(arrDataAge);
+	
+}
+$(document).ready(function() {
+	
+	var categoriesGender = ['Male', 'Female'];
+	var dataGender = [ male, female];
+	var arrayDataTest = [['18-29',   45.0],  ['30-35',       26.8],  ['others',    8.5]];
+	
+	//gender chart
+	gethighChart('column','Gender','chart_gender', dataGender, categoriesGender);
+   	
+	//login chart
+	gethighChart('area','Login Chart','loginChart',DataLoginNum,DataLoginDate,3,true,250,450);
+	
+	//registrant	
+	gethighChart('pie','Registrant','registrantChart',DatauserAgeAllNum,'',1,false,330,330)
+	//existing
+	gethighChart('pie','Existing','existingParticipantChart',DatauserAgeExistingNum,'',1,false,330,330)
+	//participant
+	gethighChart('pie','Participant','newParticipantChart',DatauserAgePartNum,'',1,false,330,330)
+   
+
+    
+});
+		</script>
+        {/literal}

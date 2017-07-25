@@ -1,0 +1,33 @@
+
+<div id="badgeAuction">
+    <div id="content">
+    	<a class="post postBadgeAuctions" href="#postBadgeAuction"></a>
+    	<div class="post postBadgeAuctionChoose" id="postBadgeAuction" style="display:none;">
+        	<div class="badgeAuctionList">
+				{section name=i loop=$have max=7}
+                <div class="boxBadges">
+                    <div class="theBadges" style="text-align:center"><a href="index.php?page=badges&act=auction_bid&id={$have[i]->id}"><img src="img/auction/{$have[i]->img}" style="height:49px;width:53px" /></a></div>
+                </div>
+               {/section}
+            </div>
+            <div class="entry">
+            	<p>Expand your Connections with the latest gadget and other exclusive merchandise!  We'll have a new item everyday, so make sure you have  enough badges to be the top bidder!</p>
+            </div>
+            <div id="yesterdayWinner" class="smallBox">
+            	<div class="yesterdayWinner" >
+                    <h1>yesterday's  WINNER</h1>
+                    <div class="theBadges" style="text-align:center"><img src="img/auction/{$lastestWinner.auction->img}" style="height:49px;width:53px" /></div>
+                    <h2>WON</h2>
+                    <div class="boxTrader">
+                        <div class="thumbTrader">
+                            <a href="#popupProfile" class="popProfile"><img src="img/photo.jpg" /></a>
+                        </div><!-- end .thumbTrader -->
+                        <div class="boxName">
+                            <span class="nameTrader">{$lastestWinner.user->name}</span>
+                        </div><!-- end .boxName -->
+                    </div><!-- end .boxTrader -->
+                </div><!-- end .yesterdayWinner -->
+            </div><!-- end #yesterdayWinner -->
+ 		</div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->

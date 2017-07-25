@@ -1,0 +1,56 @@
+<html>
+	<head>MARLBORO CONNECTION</head>
+<body>
+	<div style="padding:10px;">
+<p><h2>Register</h2></p>
+<br />
+{if $msg}<p><div style="color:#cc0000;"><h3>{$msg}</h3></div></p>{/if}
+<form>
+<input type="hidden" name="type" value="0" />
+<input type="hidden" name="status" value="1" />
+<input type="hidden" name="act" value="add" />
+<input type="hidden" name="add" value="1" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	<!--
+	<tr>
+		<td>Username</td><td><input type="text" name="username" value="" /></td>
+	</tr>
+	-->
+	<tr>
+		<td>Email</td><td><input type="text" name="email" value="" /></td>
+	</tr>
+	<tr>
+		<td>Password</td><td><input type="text" name="password" value="" /></td>
+	</tr>
+	<tr>
+		<td>Name</td><td><input type="text" name="name" value="" /></td>
+	</tr>
+	<!--
+	<tr>
+		<td>Type</td>
+		<td>
+			<select name="type">
+				<option value="0">Entourage</option>
+				<option value="1">BA</option>
+				<option value="2">Management</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td>
+			<select name="status">
+				<option value="0">Block</option>
+				<option value="1">Approve</option>
+			</select>
+		</td>
+	</tr>
+	-->
+	<tr>
+		<td colspan="2"><input type="submit" value=" Register " /></td>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

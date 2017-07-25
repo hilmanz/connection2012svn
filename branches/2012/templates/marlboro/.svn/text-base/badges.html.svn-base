@@ -1,0 +1,7 @@
+<div id="badgesPage">
+    <div id="content">
+    	<div class="post postBadges">
+        	<a class="btnStartTrade" href="index.php?page=badges-trade">&nbsp;</a>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #badgesPage -->

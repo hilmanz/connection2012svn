@@ -1,0 +1,34 @@
+ <div id="footer">
+            <div id="site-info">
+                <span>Informasi dalam website ini di tujukan untuk perokok berusia 18 tahun atau lebih dan tinggal di wilayah Indonesia </span>
+            </div>
+            <div class="menu-footer">
+                <a href="/index.php">Halaman Utama</a>|
+                <a href="{$mopurl}Templates/Termsandconditions.aspx" target="_blank">Syarat dan Ketentuan</a>|
+                <a href="{$mopurl}Templates/RemoveMe.aspx" target="_blank">Hapus Saya</a>|
+                <a href="{$mopurl}Templates/FAQ.aspx" target="_blank">Daftar Pertanyaan</a>|
+                <a href="{$mopurl}Templates/Contactus.aspx" target="_blank">Kontak Kami</a>|
+                <a href="https://www.pmi.com/id/smokingandhealth" target="_blank">Perihal Merokok</a>
+            </div>
+            <div id="hw">
+            </div>
+        </div><!-- #footer --> 
+<script>
+{literal}
+	$(document).ready(function() {	
+	$.post('?page=myprofile&act=m001ax',function(data) {
+	if(data=='null') data = 0;
+	$('.count-message').html('['+data+']');
+ });
+var m001ax  =  setInterval(function(){ 
+	$.post('?page=myprofile&act=m001ax',function(data) {
+	if(data=='null' ) data = 0;	
+   $('.count-message').html('['+data+']');
+ });
+
+ }, 10000);
+	});
+{/literal}
+		{$MOP_EMBED}
+</script>
+<iframe src="refresh.php" style="height:0px;visibility: hidden;"></iframe>

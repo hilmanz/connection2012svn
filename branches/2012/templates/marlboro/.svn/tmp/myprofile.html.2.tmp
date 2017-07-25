@@ -1,0 +1,44 @@
+<div id="myprofile">
+    <div id="content">
+    	<div class="post postMyprofile">
+        	<div id="card">
+            	<div class="card">
+                	<div id="thumbPhoto">
+                    	<a href="#" class="tip_trigger"><img src="{if $avatar!='' }{$avatar}{else}img/photo.jpg{/if}" /><span class="tip"><span class="arrow"></span><p>YOU WIN 1 IPAD</p><img src="img/ipad.png" /></span></a>
+                    </div><!-- end #thumbPhoto -->
+                    <div id="dataProfile">
+                    	<p class="bold">Name</p>
+                    	<p class="username">{$name}</p>
+                    	<p class="bold">AGE</p>
+                    	<p class="age">{$age}</p>
+                    	<p class="bold">TOWN</p>
+                    	<p class="towns">{$kota}</p>
+                    	<p class="bold">connection date</p>
+                    	<p class="connectDate">{$date}</p>
+                    	<p class="bold">BADGE VALUE</p>
+                    	<p class="values">67389</p>
+                    </div><!-- end #dataProfile -->
+                    <div id="piala">
+                    	<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p>YOU WIN 1 IPAD</p><img src="img/ipad.jpg" /></span></a>
+                    	
+                    </div><!-- end #piala -->
+                </div><!-- end .card -->
+            </div><!-- end #card -->
+            <div id="actProfile">
+            	<a href="#popupPhoto" class="changePhoto">Change Photo</a>
+            	<a href="#" onClick="(alert('LINK TO MOP!'))" class="editProfile">Edit Profile</a>
+            	<a href="index.php?page=redeem" class="redeemBadge">Redeem Badge</a>
+            </div><!-- end #activity -->
+            <div id="badgeList">
+				{section name=i loop=$badge max=10}
+            	<div class="badgeBox">
+            		<a class="badgesIcon tip_trigger" href="#"><img src="img/badge/badge{$badge[i].badge_id}.png" /><span class="tip"><span class="arrow"></span>Like in the movies, sometimes these aren't so easy to find! Find one and you may unlock an experience you'll want to remember. In the auction, these special badges are worth 20 points.</span></a>
+            		<div class="badgesCount">{$badge[i].total}</div>
+                </div><!-- end .badgeBox -->
+            	{/section}
+            </div><!-- end #badgeList -->
+        </div><!-- end .post -->
+        <div class="pesawat"></div>
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_photo.html"}

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util
+END
+JSON.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/JSON.php
+END
+Headers.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/Headers.php
+END
+MessageHeader.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/MessageHeader.php
+END
+NetDebug.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/NetDebug.php
+END
+Authenticate.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/Authenticate.php
+END
+CompatPhp4.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/CompatPhp4.php
+END
+CompatPhp5.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/CompatPhp5.php
+END
+MessageBody.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/MessageBody.php
+END
+CharsetHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/CharsetHandler.php
+END
+MethodTable.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/MethodTable.php
+END
+functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/util/functions.php
+END

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-connect/!svn/ver/1250/branches/2012/templates/common/admin
+END
+dashboard_config.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/dashboard_config.html
+END
+user_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/user_edit.html
+END
+message.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/message.html
+END
+exportTo.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/exportTo.html
+END
+default.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/1186/branches/2012/templates/common/admin/default.html
+END
+user_manage.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/user_manage.html
+END
+dashboard.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/dashboard.html
+END
+user_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/user_new.html
+END
+admin.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/1250/branches/2012/templates/common/admin/admin.html
+END
+permission.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/permission.html
+END
+dialog.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/dialog.html
+END
+login.dummy.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/login.dummy.html
+END
+broadcast.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/broadcast.html
+END
+paging.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/paging.html
+END
+config.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/config.html
+END
+dashboard_panel.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/dashboard_panel.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/1094/branches/2012/templates/common/admin/login.html
+END
+admin.html.old.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/admin.html.old.html
+END
+edit_config.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/839/branches/2012/templates/common/admin/edit_config.html
+END

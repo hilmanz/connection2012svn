@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader
+END
+Excel2007.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/Excel2007.php
+END
+IReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/IReadFilter.php
+END
+CSV.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/CSV.php
+END
+IReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/IReader.php
+END
+Serialized.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/Serialized.php
+END
+OOCalc.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/OOCalc.php
+END
+SYLK.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/SYLK.php
+END
+Excel5.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/Excel5.php
+END
+DefaultReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/DefaultReadFilter.php
+END
+Excel2003XML.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Utility/PHPExcel/Reader/Excel2003XML.php
+END

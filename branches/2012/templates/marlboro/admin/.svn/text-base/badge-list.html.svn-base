@@ -1,0 +1,28 @@
+<div style="padding:10px;">
+<h2>Badge Management</h2>
+Choose a Type : <select name="typesBadge" id="typesBadge" onChange="location.href='index.php?s=badge&classOfBadge='+this.value" >
+	<option value="1" {if $classOfBadge==1}selected{/if}>A</option>
+	<option value="2" {if $classOfBadge==2}selected{/if}>B</option>
+	<option value="3" {if $classOfBadge==3}selected{/if}>C</option>
+</select>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Name</strong></td>
+	<td><strong>Prob Rate</strong></td>
+	<td><strong>Class</strong></td>
+  <td><strong>Series</strong></td>
+	<td  width="10%"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].name}</td>
+    <td>{$list[i].prob_rate}</td>
+    <td>{$list[i].tier}</td>
+    <td>{$list[i].series}</td>
+    <td><a href="?s=badge&act=edit&id={$list[i].id}&classOfBadge={$classOfBadge}" class="addSubPage">Edit</a><a onclick="return confirm('Are you sure want to delete this badge ?');" href="?s=badge&act=delete&id={$list[i].id}&classOfBadge={$classOfBadge}" class="deletePage">Delete</a></td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

@@ -1,0 +1,2023 @@
+/*
+Theme Name: Marlboro Lights Connections
+Initial-Author: Acit Jazz
+Editor: CendekiApp
+*/
+body{
+	margin:0;
+	padding:0;
+	/*font-family:Bebas Neue, Arial, Helvetica, sans-serif;*/
+	font-family:'BebasNeueRegular', Arial, sans-serif;
+	font-size:14px;
+	height:100%;
+}
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+/*
+.typeface-js{
+	font-family:Bebas Neue;
+}
+*/
+h1,h2,h3,h4{
+	font-weight:normal;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #C52D08;
+}
+a.read{
+	cursor:pointer;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img{
+	border:none;
+}
+a#logo{
+	display:block;
+	background:url(../images/logo.png) no-repeat;
+	width:327px; height:83px;
+	float:left;
+}
+.white{
+	color:#FFF;
+}
+.blue{
+	color:#1b7ddb;
+}
+.fullBg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+a.hide-button{
+	display:block;
+	position:absolute;
+	width:100px;
+	height:100px;
+	text-decoration:none;
+	margin:-400px 0 0 600px;
+}
+a.hide-button:hover{
+	text-decoration:none;
+}
+#maincontent {
+	position: absolute;
+	left: 0;
+	z-index:10;
+	width: 100%;
+	padding:0 0 120px 0;
+}
+#header{
+	height:83px;
+}
+#top-city{
+	background:url(../images/bg_top_city.png) no-repeat;
+	width:624px;
+	height:83px;
+	float:right;
+}
+#content {
+	overflow:hidden;
+	height:100%;
+}
+#hw{
+	background:url(../images/hw.png) center #000 no-repeat;
+	height:90px;
+}
+#footer{    
+	position: fixed;
+    bottom: 0; left: 0;
+    z-index: 9999; 
+    border-bottom: none;
+    width:100%;
+	height:135px;
+}
+.menu-footer{
+	text-align:center;
+	background:#8a8a8a;
+}
+.menu-footer a{
+	color: #FFFFFF;
+    display: inline-block;
+    line-height: 15px;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+/*.menu-footer a:hover{
+	background:#333;
+}*/
+#site-info{
+	/*background:url(../images/tr_grey.png) repeat;*/
+	background:#ccc;
+	text-align:center;
+	padding:5px 0 0 0;
+}
+/*------------- dropdown -------------*/
+#navigation{
+	clear:both;
+	background:url(../images/bg_nav.png) repeat-x;
+	height:30px;
+}
+#navigation ul{
+	margin:0 10px 0 0;
+	padding:0;
+	float:right;
+	list-style:none;
+}
+#navigation ul li{
+	float:left;
+	margin:0;
+	padding:0;
+	height:30px;
+}
+#navigation ul li a{
+	color:#fff;
+	text-decoration:none;
+	font-size:15px;
+	text-transform:uppercase;
+	height:20px;
+	display:block;
+	padding:8px 15px 0 15px ;
+}
+#navigation ul li a span{
+	cursor:pointer;
+}
+#navigation ul li a:hover{
+	background:#000;
+}
+ul.menu li{
+	position:relative;
+	float:right;
+}
+ul.menu ul{
+	position:absolute;
+	top:30px;
+	left:0;
+	display:none;
+	opacity:0;
+	list-style:none;
+	padding:0;
+}
+ul.menu ul li{
+	position:relative;
+	width:220px; margin:0;
+	padding:0 5px;
+} 
+#navigation ul.menu ul li a:hover{
+	background:#111;
+}
+ul.menu ul ul{
+	left:180px;top:0px;
+}
+#navigation ul.menu ul li a{
+	background:#000;
+}
+ul.menu .menulink{
+	padding-left:10px; 
+	padding-bottom:5px;
+	font-weight:bold;
+	margin:0px 20px 0px 10px;
+	width:100%
+}
+ul.menu .menulink:hover,ul.menu .menuhover{
+	background:#000;
+}
+/* ---------- content ---------------*/
+.page-welcome{
+	background:url(../images/bg_welcome.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    top:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+	z-index:-3;
+    height:100%;
+}
+#welcome{
+	background:url(../images/welcome.png) no-repeat;
+	width:576px;
+	height:600px;
+	position: absolute;
+	right:0;
+	margin:5px 0 0 -288px;
+	left:50%;
+}
+#welcome .content{
+	width:430px;
+	padding:65px 0 0 10px;
+	float:left;
+	line-height:22px;
+	font-size:22px;
+	text-align:center;
+}
+#welcome h1{
+	margin:0;
+	font-size:30px;
+}
+#welcome p{
+	margin:0;
+}
+#welcome .title{
+	font-size:36px;
+	color:#FFF;
+	display:block;
+	line-height:28px;
+	margin:10px 0 5px 0;
+}
+#welcome a{
+	color:#0173e7;
+	text-decoration:none;
+}
+#welcome .welcome-menu{
+	width:135px;
+	padding:55px 0 0 0;
+	float:left;
+}
+#welcome .welcome-menu a{
+	display:block;
+	text-decoration:none;
+	color:#fff;
+	font-size:16px;
+	height:18px;
+}
+#welcome .welcome-menu a span{
+	cursor:pointer;
+}
+#welcome img{
+	cursor:pointer;
+}
+/* ---------- content ---------------*/
+#profile{
+	width:750px;
+	height:650px;
+	position: absolute;
+	right:0;
+	margin:0 0 0 -280px;
+	left:50%;
+	text-align:left;
+}
+.profile-card{
+	background:url(../images/bg_profile.png) no-repeat;
+	width:547px; height:315px;
+	float:left;
+}
+#profile .photo{
+	width:120px;
+	height:170px;
+	overflow:hidden;
+	float:left;
+}
+#profile .profile-info{
+	width:150px;
+	padding:0 0 0 20px;
+	float:left;
+}
+#profile .profile-info h2{
+	margin:0;
+	font-size:16px;
+}
+#profile .profile-menu{
+	float:right;
+	width: 110px;
+	font-size:14px;
+	padding:150px 0 0 0;
+}
+#profile .profile-menu a{
+	display:block;
+}
+#profile .profile-entry{
+	padding:32px 30px 15px 35px;
+	font-size:12px;
+	line-height:18px;
+}
+#profile .entry-text{
+	clear:both;
+	padding:23px 0 0;
+	font-size:14px;
+	height:50px;
+	overflow:hidden;
+}
+.gift{
+	float:left;
+	width:200px;
+	height:100px;
+	margin:225px 0 0;
+}
+.gift a{
+	font-size:14px;
+	width:70px;
+	padding:35px 0 0 0;
+	display:block;
+	float:left;
+}
+.gift img{
+	float:left;
+}
+.badge-row{
+	clear:both;
+	/*overflow:hidden;*/
+	height:120px;
+}
+.badge-box{
+	width:60px;
+	float:left;
+	height:100px;
+}
+.badge-img{
+	margin:0 0 0 -4px;
+	position: relative;
+}
+
+.badge-count{
+	background:url(../images/bg_count.png) no-repeat;
+	width:24px; height:24px;
+	padding:15px 10px 10px 13px;
+	color:#000;
+	margin:0 auto;
+	text-align:center;
+	font-size:18px;
+}
+#profile .content{
+	padding:40px 0 0 0;
+	float:left;
+	line-height:22px;
+	font-size:22px;
+}
+#profile h1{
+	margin:0;
+	font-size:30px;
+	width:300px;
+}
+#profile p{
+	margin:0;
+}
+#profile .title{
+	font-size:36px;
+	color:#FFF;
+	display:block;
+	line-height:28px;
+	margin:10px 0 5px 0;
+}
+#profile a{
+	color:#0173e7;
+	text-decoration:none;
+}
+/* --------------- REEDEM  -------------------*/
+#reedem{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#reedem .content{
+	width:800px;
+	margin:0 0 0 -300px;
+	position:absolute;
+	left:50%;
+	height:500px;
+	background:url(../images/reedem-text.png) no-repeat;
+}
+.reedem-entry{
+	font-size:15px;
+	text-align:center;
+	padding:80px 0 0 307px;
+}
+.btn-reedem{
+	display:block;
+	float:left;
+	width:225px;
+	margin:0 15px 15px 0;
+	height:151px;
+}
+.reedem-entry h1{
+	color:#1492bb;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.reedem-entry p{
+	margin:0 0 20px 0;
+}
+.reedem-entry a{
+	color:#0173e7;
+}
+/* --------------- Pick Tshirt  -------------------*/
+#pick-tshirt{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#pick-tshirt .content{
+	width:712px;
+	margin:0 0 0 -240px;
+	position:absolute;
+	left:50%;
+	height:500px;
+	background:url(../images/content/bg_tshirt.png) no-repeat;
+}
+.tshirt-entry{
+	font-size:15px;
+	text-align:center;
+	padding:135px 0 0 30px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.tshirt-entry .row{
+	
+	text-align:left;
+	clear:both;
+	position: relative;
+}
+.tshirt-entry .row label{
+	padding:0  20px 0 0;
+	position:absolute;
+	top:30px;
+	left:10px;
+}
+.tshirt-entry .row select{
+	left: 90px;
+    position: absolute;
+    top: 30px;
+	}
+.tshirt-box{
+	width:200px;
+	height:220px;
+	margin:0 0 0 20px;
+	float:left;
+}
+.tshirt-type{
+	background:url(../images/bg_type_tshirt.png) no-repeat;
+	width:82px; height:19px;
+	padding:4px;
+	margin:160px 0 0 60px;
+	position:absolute;
+}
+/* --------------- REEDEM Form  -------------------*/
+#reedem-form{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#reedem-form .content{
+	width:700px;
+	margin:0 0 0 -300px;
+	position:absolute;
+	left:50%;
+	height:500px;
+}
+.reedem-form{
+	font-size:15px;
+	padding:45px 0 0 50px;
+}
+.reedem-form{
+	display:block;
+	float:left;
+	margin:0 15px 15px 0;
+}
+.reedem-form h1{
+	color:#005f4b;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.reedem-form p{
+	margin:0 0 20px 0;
+}
+.reedem-form a{
+	color:#0173e7;
+}
+.redeemform{
+	background:url(../images/reedem-form.png) no-repeat;
+	width:733px; height:346px;
+	margin:0 0 0 -40px;
+	padding:20px 0 0 0;
+}
+.redeemform .row{
+	clear:both;
+	padding:15px 0 0 40px;
+}
+.redeemform label{
+	display:block; width:100px;
+	float:left;
+	padding:6px  0 0 0;
+}
+.redeemform label.checkbox{
+	width:216px;
+	padding:3px 0 0 10px;
+}
+.redeemform input[type=checkbox]{
+	float:left;
+}
+.redeemform input[type=text]{
+	background:url(../images/redeem_input.png) no-repeat;
+	width:283px;
+	height:17px;
+	border:none;
+	padding:5px 10px;
+}
+.redeemform input[type=submit],#pick-tshirt .btn-reedem{
+	background:url(../images/btn_reedem.png) no-repeat;
+	width:157px;
+	height:34px;
+	border:none;
+	cursor:pointer;
+}
+#pick-tshirt .btn-reedem{
+	float:right;
+	margin:-6px 40px 0 0;
+	position: absolute;
+    right: 0;
+    top: 30px;
+}
+.reedem-confirm{
+	width:500px;
+	float:left;
+}
+.require-badges{
+	width:200px;
+	float:left;
+	padding:40px 0 0 0;
+}
+.require-badges .box{
+	width:100px;
+	height:70px;
+	float:left;
+	margin:0;
+}
+.require-badges .box a img{
+	float:left;
+}
+.checklist{
+	background:url(../images/checklist.png) no-repeat;
+	display:block;
+	width:22px; height:17px;
+	float:left;
+	margin:30px 0 0 0;
+}
+/* --------------- REEDEM SUKSES  -------------------*/
+#reedem-success{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#reedem-success .content{
+	width:700px;
+	margin:0 0 0 -300px;
+	position:absolute;
+	left:50%;
+	height:500px;
+}
+.reedem-success{
+	background:url(../images/reedem-sukses.png) no-repeat;
+	width:733px; height:346px;
+	font-size:15px;
+	padding:45px 0 0 50px;
+}
+.head-text{
+	padding:7px 0 0 320px;
+}
+.reedem-success{
+	display:block;
+	float:left;
+	margin:0 15px 15px 0;
+}
+.reedem-success h1{
+	color:#005f4b;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.reedem-success p{
+	margin:0 0 20px 0;
+}
+.reedem-success a{
+	color:#0173e7;
+}
+.reedem-success .redeemsuccess{
+	margin:0 0 0 -40px;
+	padding:40px 0 0 0;
+	overflow:hidden;
+	height:265px;
+}
+.reedem-success .require-badges{
+	width:200px;
+	float:left;
+	padding:40px 0 0 30px;
+}
+.reedem-prize{
+	width:200px;
+	float:left;
+	margin:0 0 0 175px;
+	padding:30px 0 0 0;
+}
+.reedem-success .require-badges .box{
+	width:100px;
+	height:70px;
+	float:left;
+	margin:0;
+}
+.foot-text{
+	clear:both;
+	margin:0 0 0 -30px;
+}
+.reedem-success .require-badges .box a img{
+	float:left;
+}
+/* --------------- MESSAGES  -------------------*/
+#messages{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#messages .content{
+	width:700px;
+	margin:0 0 0 -300px;
+	position:absolute;
+	left:50%;
+	height:500px;
+}
+.messages{
+	width:733px; height:346px;
+	font-size:15px;
+	padding:45px 0 0 50px;
+}
+.messages h1{
+	float:right;
+	color:#005f4b;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.messagebox{
+	clear:both;
+	padding:30px 0 0 0;
+}
+.messagebox .row{
+	background:url(../images/news_corner.png) right bottom no-repeat;
+	padding:0 14px 0 0;
+	margin:10px 0 0 0;
+}
+.messagebox .msg-detail{
+	padding: 10px;
+	width:700px;
+	background:#fff;
+	display: none;
+}
+.messagebox .row .entry{
+	background:#ffd529;
+	padding:5px;
+}
+.messagebox .row .entry p{
+	margin:0;
+}
+.messagebox .row .entry a{
+	float:right;
+	color:#666;
+	padding:0 0 0 15px;
+}
+.messages p{
+	margin:0 0 20px 0;
+}
+.messages a{
+	color:#0173e7;
+}
+/* --------------- NEWS -------------------*/
+.page-news{
+	background:url(../images/content/news-event.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    top:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+    height:100%;
+    z-index:-1;
+}
+#news{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#news .content{
+	width:400px;
+	margin:40px auto 0 auto;
+}
+.newsfeed{
+	font-size:15px;
+}
+.newsfeed p{
+	margin:0;
+	display:inline;
+}
+#news .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:420px;
+	top:20px;
+}
+#news .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:450px;
+	top:20px;
+}
+.newsfeed .time{
+	color:#0173e7;
+}
+.newsfeed .row{
+	background:url(../images/news_corner.png) right bottom no-repeat;
+	padding:0 14px 0 0;
+	margin:0 0 10px 0;
+}
+.newsfeed .row .entry{
+	background:#ffd529;
+	padding:5px;
+}
+.newsfeed a{
+	color:#0173e7;
+}
+/* --------------- Trade -------------------*/
+.page-trade{
+	background:url(../images/content/trade.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    top:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+    height:100%;
+    z-index:-1;
+}
+#trade{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#trade .content{
+	width:400px;
+	margin:40px auto 0 auto;
+	position: relative;
+}
+.trade-activity{
+	font-size:15px;
+}
+.trade-activity p{
+	margin:0;
+	display:inline;
+}
+.trade-activity .time{
+	color:#0173e7;
+}
+.trade-activity .row{
+	margin:0 0 7px 0;
+}
+.trade-activity .row .entry{
+	background:url(../images/bg_trade.png) repeat;
+	padding:5px;
+	overflow:hidden;
+}
+.trade-activity .row .entry2{
+	background:none;
+	padding:5px;
+	overflow:hidden;
+}
+.trade-activity .row .entry .activity, .trade-activity .row .entry2 .activity{
+	display:block;
+	width:300px;
+	float:left;
+	padding:0 0 0 15px;
+}
+.trade-activity a{
+	color:#0173e7;
+}
+
+#trade .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:420px;
+	top:20px;
+}
+#trade .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:450px;
+	top:20px;
+}
+span.icon_user{
+	background:url(../images/icon_user.png) no-repeat;
+	display:block;
+	width:28px; height:34px;
+	text-decoration:none;
+	float:left;
+}
+a.add{
+	background:url(../images/icon_plus.png) no-repeat;
+	display:block;
+	width:20px; height:20px;
+	text-decoration:none;
+	float:right;
+}
+a.user_name{
+}
+.trade-activity .odd{
+	background:none;
+}
+.trade-activity .odd .entry{
+	background:none;
+}
+/*#trade .light{
+	background:url(../images/light_trade.png) no-repeat;
+	width:481px;
+	height:180px;
+	position:absolute;
+	z-index:500;
+	top:270px;
+}*/
+/* ---------- input code ---------------*/
+#code{
+	background:url(../images/content/code.png) right no-repeat;
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#code .content{
+	width:435px;
+	line-height:22px;
+	font-size:22px;
+	margin:50px auto 0 auto;
+}
+#code h1{
+	margin:0;
+	font-size:30px;
+}
+#code p{
+	margin:0;
+}
+#code label{
+	font-size:14px;
+}
+#code .row{
+	margin:0 0 15px 0;
+	overflow:hidden;
+	padding:10px  0 0 0;
+}
+#code .code1{
+}
+#code .code2{
+	float:left;
+	margin:0 15px 0 0;
+}
+#code a{
+	color:#1492bb;
+}
+.input-code{
+	width:380px;
+}
+#code .code1 input[type=text]{
+	background:url(../images/chapcha1.png) no-repeat;
+	width:290px;
+	height:45px;
+	padding:5px 5px;
+	border:none;
+	font-size:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+#code .submit-code input[type=text]{
+	background:url(../images/bg_input_chapca.jpg) no-repeat;
+	width:103px;
+	height:23px;
+	padding:2px 5px;
+	border:none;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+}	
+input[type=submit].btn-submit, input[type=button].btn-submit{
+	background:url(../images/submit.png) no-repeat;
+	width:82px; height:27px;
+	cursor:pointer;
+	border:none;
+	margin:10px 0 0 0;
+}
+input[type=submit].btn-submit:hover{
+	background:url(../images/submit_hover.png) no-repeat;
+}
+#code .message-box{
+	background:url(../images/message-box.png) no-repeat;
+	z-index:999;
+	position:absolute;
+	width:576px; height:341px;
+	display:block;
+}
+.message-text{
+	width:400px;
+	float:left;
+}
+.message-entry{
+	border-right:dashed 1px #FFF;    
+	height: 264px;
+    overflow: hidden;
+}
+.message-menu{
+	float:left;
+	padding:0 0 0 10px;
+	width:100px;
+}
+#code .message-menu a,.message-menu a{
+	color:#fff;
+	text-decoration:none;
+	font-size:12px;
+}
+a.close-box{
+	background:url(../images/close.png) no-repeat;
+	position:absolute;
+	width:57px;
+	height:57px;
+	display:block;
+	text-decoration:none;
+	top:285px;
+}
+a.close-box:hover{
+	text-decoration:none;
+}
+/* --------------- TERMS  -------------------*/
+.page-terms{
+	background:url(../images/bg_welcome.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    top:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+    height:100%;
+    z-index:-1;
+
+}
+#term{
+	width:100%;
+	height:580px;
+	position:absolute;
+}
+#term .content{
+	width:550px;
+	margin:40px auto 0;
+}
+.term{
+	font-size:15px;
+	text-align:center;
+}
+.term ol li{
+	margin:0 0 12px 0;
+}
+.term h1{
+	color:#1492bb;
+	font-size:65px;
+	margin:0 0 0 -20px;
+}
+.term p{
+	margin:0 0 20px 0;
+}
+.term a{
+	color:#0173e7;
+}
+#term .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:525px;
+	bottom:70px;
+}
+#term .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:565px;
+	bottom:70px;
+}
+/*#term .light{
+	background:url(../images/light_term.png) no-repeat;
+	width:550px;
+	height:116px;
+	position:absolute;
+	z-index:500;
+	margin:275px 0 0 0;
+}*/
+#term .jcarousel-skin-tango .jcarousel-clip-vertical {
+	width:500px;
+    height: 280px;
+}
+
+
+#term .jcarousel-skin-tango .jcarousel-container-vertical {
+    height:300px;
+	padding:10px;
+	margin:-20px 0 0 0;
+}
+
+#term .jcarousel-skin-tango .jcarousel-item {
+    width: 500px;
+}
+
+/* --------------- ABout  -------------------*/
+.page-about{
+	background:url(../images/content/what-its-connection.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    bottom:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+    height:100%;
+    z-index: -1;
+
+}
+#about{
+	width:100%;
+	height:455px;
+}
+#about .content{
+	width:550px;
+	margin:40px auto 0 auto;
+	text-align:left;
+	position:relative;
+}
+#about .about{
+	font-size: 16px;
+    margin: 10px;
+    width: 410px;
+}
+.about p{
+	margin:0 0 20px 0;
+}
+.about a{
+	color:#0173e7;
+}
+#about .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:225px;
+}
+#about .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:265px;
+}
+
+#about .jcarousel-skin-tango .jcarousel-clip-vertical {
+	width:500px;
+    height: 120px;
+	font-size:16px;
+}
+#about  .jcarousel-skin-tango .jcarousel-container-vertical {
+	height:170px;
+}
+#about .jcarousel-skin-tango .jcarousel-item {
+    width: 500px;
+}
+/* --------------- Prize  -------------------*/
+#prize{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#prize .content{
+	width: 970px;
+	margin:0 auto;
+}
+.prize{
+	text-align:center;
+	margin:0 auto;
+}
+.prize p{
+	margin:0 0 20px 0;
+}
+.prize a{
+	color:#0173e7;
+}
+#prize .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:690px;
+	bottom:160px;
+}
+#prize .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:725px;
+	bottom:160px;
+}
+
+#prize .jcarousel-skin-tango .jcarousel-clip-vertical {
+	width:780px;
+    height: 465px;
+	font-size:12px;
+}
+#prize  .jcarousel-skin-tango .jcarousel-container-vertical {
+	height:500px;
+	padding:0;
+}
+#prize .jcarousel-skin-tango .jcarousel-item {
+    width: 780px;
+}
+/* --------------- How To Play  -------------------*/
+#howtoplay{
+	width:100%;
+	height:600px;
+	position:absolute;
+	/*background: url("../images/content/code.png") no-repeat scroll right center transparent;*/
+    
+}
+#howtoplay .content{
+	width:780px;
+	margin:0 auto;
+}
+.howtoplay{
+	text-align:center;
+	margin:0 0 0 100px;
+}
+.howtoplay p{
+	margin:0 0 20px 0;
+}
+.howtoplay a{
+	color:#0173e7;
+}
+#howtoplay .jcarousel-skin-tango .jcarousel-next-vertical{
+	left:690px;
+	bottom:255px;
+}
+#howtoplay .jcarousel-skin-tango .jcarousel-prev-vertical{
+	left:725px;
+	bottom:255px;
+}
+
+#howtoplay .jcarousel-skin-tango .jcarousel-clip-vertical {
+	width:780px;
+    height:600px;
+	font-size:12px;
+}
+#howtoplay  .jcarousel-skin-tango .jcarousel-container-vertical {
+	height:600px;
+	padding:0;
+}
+#howtoplay .jcarousel-skin-tango .jcarousel-item {
+    width: 780px;
+}
+/* ---------- sidebar ---------------*/
+#sidebar{
+	width:240px;
+	position:absolute;
+	top:125px;
+	left:0;
+	padding:20px 20px 0 0;
+	overflow:hidden;
+	z-index:500;
+}
+#sidebar a span{
+	cursor:pointer;
+}
+#sidebar a{
+	text-decoration:none;
+}
+#side-menu h2{
+	font-size:24px;
+	margin:0;
+	padding:0;
+	outline:none;
+}
+#side-menu h2 a{
+	color:#03C;
+	display:block;
+	padding:5px 0 7px 20px;
+	outline:none;
+	height:30px;
+	-moz-border-radius:0 15px 15px 0;
+	-webkit-border-radius:0 15px 15px 0;
+	border-radius:0 15px 15px 0;
+}
+.ui-accordion .ui-accordion-content-active,.ui-state-active a{
+	background:url(../images/side_menu_hover.png) repeat;
+	display:block;
+}
+.side-submenu{
+	padding:0 40px 0 20px;
+	-moz-border-radius:0 0 10px 0;
+	-webkit-border-radius:0 0 10px 0;
+	border-radius:0 0 10px 0;
+	text-align:right;
+}
+.side-submenu a{
+	color:#555;
+	display:block;
+	height:20px;
+	font-size:18px;
+	border-top:solid 1px #666;
+	padding:2px 0;
+}
+#side-menu h2.ui-state-active a.about,#side-menu h2.ui-state-active a.whats{
+	-moz-border-radius:0 10px 0 0;
+	-webkit-border-radius:0 10px 0 0;
+	border-radius:0 10px 0 0;
+}
+#side-menu h2 a.about span{
+	display:block;
+	background:url(../images/about.png) no-repeat;
+}
+#side-menu h2 a.whats span{
+	display:block;
+	background:url(../images/whats.png) no-repeat;
+}
+#side-menu h2 a.badge span{
+	display:block;
+	background:url(../images/badge_trade.png) no-repeat;
+}
+#side-menu h2 a.code span{
+	display:block;
+	background:url(../images/input_code.png) no-repeat;
+}
+#side-menu h2 a.game span{
+	display:block;
+	background:url(../images/games.png) no-repeat;
+}
+#side-menu h2 a.reedem span{
+	display:block;
+	background:url(../images/reedem-badge.png) no-repeat;
+}
+#side-menu a.active{
+	color:#000;
+}
+#side-menu h2 a:hover{
+	background:url(../images/side_menu_hover.png) repeat; 
+}
+.nav-about-active{
+	background:url(../images/bg_menu_about.png) no-repeat;
+	width:207px; height:136px;
+	margin:0 0 10px 0;
+}
+.nav-whats-active{
+	background:url(../images/bg_menu_whats.png) no-repeat;
+	width:207px; height:110px;
+	margin:0 0 10px 0;
+}
+.nav-code-active{
+	background:url(../images/bg_menu2.png) no-repeat;
+	width: 250px; height:43px;
+	margin:0 0 10px 0;
+}
+.nav-badge-active,.nav-game-active,.nav-reedem-active{
+	background:url(../images/bg_menu.png) no-repeat;
+	width:149px; height:43px;
+	margin:0 0 10px 0;
+}
+
+.preloader {
+	background:url(../images/89.gif) center center no-repeat #ffffff;
+}
+
+.backgroundPopup {
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:1;
+}
+#popup,.popupcontent {
+	background:url(../images/message-box.png) no-repeat;
+	color: #FFFFFF;
+    display: none;
+    height: 341px;
+    left: 0;
+    margin: 0 0 0 -55px;
+    position: absolute;
+    top: 0;
+    width: 576px;
+    z-index: 999;
+}
+.popup-close{
+	background:url(../images/close.png) no-repeat;
+	position:absolute;
+	width:57px;
+	height:57px;
+	display:block;
+	cursor:pointer;
+	right:-20px;
+	top:-10px;
+	text-decoration:none;
+}
+.popup-close:hover{
+	text-decoration:none;
+}
+.last-photo{
+	width:200px;
+	float:left;
+}
+.last-photo h1 {
+	clear:both;
+}
+#profile .last-photo .photo {
+	margin:0 0 20px 7px;
+}
+.entry-popup{
+	padding:42px 0 0 48px;
+}
+.scrollAction{
+	height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+.scroller{
+   position: absolute;
+   top:0px;
+   bottom:0px;
+   width: 400px;
+}
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}
+.red{
+	color:red;
+}
+.blue{
+	color:#0f79e1;
+}
+.green{
+	color:#3a6b34;
+}
+.grey{
+	color:#43433e;
+}
+
+.font20{
+	font-size: 16px;
+}
+.prize-1-position{
+	top:350px;
+	left:0px;
+}
+.prize-2-position{
+	top:170px;
+	left:0px;
+}
+.prize-3-position{
+	top:250px;
+	left:0px;
+}
+.prize-4-position{
+	left: 85px;
+    text-align: left;
+    top: 325px;
+}
+.prize-5-position{
+	left: 40px;
+    text-align: left;
+    top: 340px;
+    width: 600px;
+}
+.prize-6-position{
+	left: 95px;
+    text-align: left;
+    top: 25px;
+    width: 580px;
+}
+
+/*##############Badge-Trade###############*/
+#badge{
+	width:100%;
+	height:600px;
+	position:absolute;
+}
+#badge .content{
+	
+	margin: 50px 0 0 -150px;
+	position:absolute;
+	left:50%;
+	height:500px;
+	background:url(../images/content/badgetrade.png) no-repeat;
+}
+.badge-trade{
+	font-size:15px;
+	text-align:center;
+	position:relative;
+	width: 550px;
+}
+.btn-badgetrade{
+	background:url(../images/starttrade.png) no-repeat;
+	width:114px; height:24px;
+	cursor:pointer;
+	border:none;
+	position:absolute;
+	right: 35px;
+    top: 135px;
+}
+.badge-trade h1{
+	color:#1492bb;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.badge-trade p{
+	margin:0 0 20px 0;
+}
+.badge-tooltip{
+	background: url("../images/content/tooltip.png") no-repeat scroll 0 0 transparent;
+    display: none;
+    height: 130px;
+    padding: 10px;
+    position: absolute;
+    line-height: 16px;
+    top: -135px;
+    width: 154px;
+    left:-20px;
+}
+.hover-img{
+	cursor: pointer;
+}
+
+.badge-trade a{
+	color:#0173e7;
+}
+.requestBadge{
+	background: url("../images/content/badgebox.png") no-repeat scroll 0 0 transparent;
+    height: 414px;
+    left: -166px;
+    position: absolute;
+    top: -20px;
+    width: 780px;
+    display:none;
+}
+.BadgeUniversal{
+	background: url("../images/content/badgebox_universal.png") no-repeat scroll 0 0 transparent;
+    height: 414px;
+    width: 400px;
+	left:50%;
+	margin:0 0 0 -285px;
+	top:50%;
+    position: absolute;
+    display:none;
+}
+.messageUniversal{
+	background: url("../images/message-box.png") no-repeat scroll 0 0 transparent;
+    width: 576px;
+	left:50%;
+	margin:0 0 0 -285px;
+	top:50%;
+	color:#fff;
+}
+.BadgeUniversal .badge-box{
+	height:80px;
+}
+.BadgeUniversal .badgeKiri{
+	top:80px;
+}
+#content .BadgeUniversal .head{
+	width:260px;
+}
+#content .messageUniversal .head{
+	width:435px;
+}
+.messageUniversal .head h1{
+	font-size:30px;
+}
+.messageUniversal .head h3{
+	font-size:20px;
+}
+.BadgeUniversal .head h3{
+	font-size:18px;
+}
+.badge-universal-sukses img{
+	margin:130px 0 0 83px;
+}
+.contentBadge{
+	position:relative;
+}
+.BadgeUniversal .head{
+	position:absolute;
+}
+.requestBadge .head{
+	left: 86px;
+    position: absolute;
+    top: 25px;
+    width: 645px;
+}
+.requestBadge .head h3{
+	margin-bottom: 0px;
+}
+.requestBadge .head p{
+	margin: 0px;
+	border-bottom: 2px dashed #999999;
+	width:100%;
+}
+.badgeKiri{
+    height: 300px;
+    left: 85px;
+    position: absolute;
+    top: 85px;
+    width: 250px;
+}
+.badgeKiri p{
+	margin:0;
+	padding: 0 0 0 3px;
+}
+.badgeKiri .badge-cek{
+	text-align:center;
+	margin-top: -10px;
+}
+.badgeKiri .badge-img{
+	margin: -5px 0 0 -4px;
+}
+.badgeKiri input[type=checkbox]{
+	border: 0 none;
+    height: 20px;
+    width: 22px;
+}
+
+.badgeKanan{
+    height: 300px;
+    left: 485px;
+    position: absolute;
+    top: 85px;
+    width: 250px;
+}
+.badgeKanan p{
+	margin:0;
+	padding: 0 0 0 3px;
+}
+.badgeKanan .badge-cek{
+	text-align:center;
+	margin-top: -10px;
+}
+.badgeKanan .badge-img{
+	margin: -5px 0 0 -4px;
+}
+.badgeKanan input[type=checkbox]{
+	border: 0 none;
+    height: 20px;
+    width: 22px;
+}
+.controlTrade{
+	left: 350px;
+    position: absolute;
+    text-align: center;
+    top: 200px;
+    width: 115px;
+}
+.controlTrades{
+	clear:both;
+}
+.controlTrade input[type=button], .controlTrade input[type=submit]{
+	background: url(../images/content/btn-trade.png) no-repeat;
+	border: 0 none;
+	width:88px;
+	height: 29px;
+	cursor:pointer;
+	margin-top: 15px;
+}
+.controlTrades input[type=button].submituniversal, .controlTrades input[type=submit].submituniversal{
+	background: url(../images/content/btn-submit.png) no-repeat;
+	border: 0 none;
+	width:88px;
+	height: 29px;
+	cursor:pointer;
+	margin-top: 15px;
+}
+.badge-box-medium{
+	background: url("../images/content/badgebox-med.png") no-repeat scroll 0 0 transparent;
+    height: 332px;
+    left: -35px;
+    padding: 10px 40px;
+    position: absolute;
+    top: -20px;
+    width: 576px;
+	margin:-25px 0 0 0;
+    display:none;
+}
+.badge-box-small{
+	background: url("../images/content/badgebox-small.png") no-repeat scroll 0 0 transparent;
+    height: 145px;
+    margin: -25px 0 0;
+    padding: 15px 25px;
+    width: 255px;
+    display:none;
+}
+.badge-box-medium-video{
+	background: url("../images/content/badgebox-med-video.png") no-repeat scroll 0 0 transparent;
+    height: 332px;
+    left: -35px;
+    padding: 10px 40px;
+    position: absolute;
+    top: -20px;
+    width: 576px;
+    display:none;
+}
+.badge-box-medium .contentBadge{
+	position:relative;
+}
+.badge-box-medium a.popup-close{
+	right: 5px;
+    top: -55px;
+}
+#welcome .badge-box-medium a.popup-close{
+	margin:10px 0 0 0;
+}
+.badge-box-medium .controlTrade{
+	left: 195px;
+    top: 110px;
+}
+.badge-box-medium img.kanan{
+	position: absolute;
+	right: 20px;
+}
+.badge-box-medium img.kiri{
+	position: absolute;
+	left: -30px;
+}
+.badge-box-medium input[type=submit]{
+	background: url(../images/content/btn-finish.png) no-repeat;
+	border: 0 none;
+	width:92px;
+	height: 34px;
+	cursor:pointer;
+	margin-top: 15px;
+}
+input[type=submit].btn-setup {
+   background: url("../images/content/btn-setup.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 33px;
+    margin-left: -33px;
+    margin-top: 45px;
+    width: 182px;
+}
+#badgeSubmitted input[type=submit], #badgeSubmitted input[type=button]{
+	background: url(../images/content/btn-whotrade.png) no-repeat;
+	border: 0 none;
+    cursor: pointer;
+    height: 115px;
+    margin-top: 15px;
+    width: 405px;
+}
+#badgeSubmitted .controlTrade{
+	left: 50px;
+    top: 90px;
+}
+#badgeSubmitted h1{
+	margin-bottom:0;
+}
+#badgeSubmitted p{
+	margin:0;
+	padding:0;
+}
+.profileBadge {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid;
+    float: left;
+    left: 0px;
+    margin-right: 10px;
+    padding: 3px;
+    position: absolute;
+    top: -45px;
+}
+#news .profile-entry{
+	position:relative;
+}
+#news .photo{
+	left: 34px;
+    position: absolute;
+    top: 33px;
+}
+#news .profile-info{
+	left: 200px;
+    position: absolute;
+    top: 33px;
+}
+#news .entry-text{
+	font-size: 15px;
+    left: 27px;
+    position: absolute;
+    top: 247px;
+}
+#news .trader{
+	position: absolute;
+    right: -145px;
+    top: 100px;
+}
+#news .badge-row{
+	left: 70px;
+    position: absolute;
+    top: 300px;
+}
+#news .badge-box{
+	width:55px;
+}
+#news .badge-img{
+	margin: 0;
+}
+#news .badge-count{
+	margin: -18px 0 0 5px;
+}
+input[type=submit].offerTrade, input[type=button].offerTrade{
+	background: url(../images/content/btn-offertrade.png) no-repeat;
+	border: 0 none;
+	width:114px;
+	height: 36px;
+	cursor:pointer;
+	margin-top: 15px;
+	position: absolute;
+	right: -130px;
+    top: 180px;
+}
+#news h2{
+	margin:0;
+	padding:0;
+}
+/*##############Game###############*/
+#bgGame{
+    background: url(../images/trans.png) repeat scroll 0 0 transparent;
+    border: 1px solid #CECECE;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 600;
+}
+#game{
+	
+}
+#game .content{
+	height: 736px;
+    margin: 0 auto;
+    width: 960px;
+}
+.content .gamehome{
+    position: relative;
+    margin: 40px 0 0 125px;
+}
+.content .game-desc{
+    left: 0;
+    position: absolute;
+    top: -20px;
+    width: 400px;
+}
+.game-desc p{
+	font-size:16px;
+}
+.content img.map{
+	position: absolute;
+    top:175px;
+    left:0;
+}
+.content img.route{
+	left: 186px;
+    position: absolute;
+    top: 225px;
+}
+.content img.lock-newyork{
+	left: 202px;
+    position: absolute;
+    top: 305px;
+}
+.content img.lock-istanbul{
+	left: 550px;
+    position: absolute;
+    top: 332px;
+}
+.content .myRank{
+	background: url(../images/game/bg_my_rank.png) no-repeat;
+	color: #2E507D;
+    font-size: 50px;
+    height: 60px;
+    left: 0;
+    padding: 25px 6px 0;
+    position: absolute;
+    text-align: center;
+    top: 435px;
+    width: 103px;
+}
+.content .top100{
+	left: 0;
+    position: absolute;
+    top: 532px;
+}
+.content .popup-istanbul{
+	background: url(../images/game/popup-istanbul.png) no-repeat scroll 0 0 transparent;
+    height: 128px;
+    left: 550px;
+    padding: 30px 12px 12px 9px;
+    position: absolute;
+    top: 332px;
+    width: 180px;
+}
+.content .popup-newyork{
+	background: url(../images/game/popup-newyork.png) no-repeat scroll 0 0 transparent;
+    height: 128px;
+    left: 260px;
+    padding: 30px 12px 12px 9px;
+    position: absolute;
+    top: 300px;
+    width: 180px;
+}
+.content .popup-berlin{
+	background: url(../images/game/popup-berlin.png) no-repeat;
+	height: 161px;
+    left: 485px;
+    position: absolute;
+    top: 108px;
+    width: 372px;
+    padding: 12px;
+}
+.popup-berlin .thumb-b1{
+	background: url(../images/game/thumb-berlin1.jpg) no-repeat;
+	height: 114px;
+    padding: 0 12px 0 0;
+    position: relative;
+    width: 167px;
+    float: left;
+}
+.popup-istanbul .thumb-i{
+	background: url(../images/game/thumb-istanbul.jpg) no-repeat;
+	height: 114px;
+    padding: 0 12px 0 0;
+    position: relative;
+    width: 167px;
+    float: left;
+}
+.popup-berlin .thumb-b2{
+	background: url(../images/game/thumb-berlin2.jpg) no-repeat;
+	height: 114px;
+    position: relative;
+    width: 167px;
+    float: left;
+}
+.popup-newyork .thumb-n{
+	background: url(../images/game/thumb-newyork.jpg) no-repeat;
+	height: 114px;
+    padding: 0 12px 0 0;
+    position: relative;
+    width: 167px;
+    float: left;
+}
+.popup-berlin .hidden, .popup-newyork .hidden, .popup-istanbul .hidden{
+	background: url(../images/game/blank.png) no-repeat;
+}
+.content a.play{
+	background: url(../images/game/play.png) no-repeat;
+	height: 54px;
+    left: 57px;
+    position: absolute;
+    top: 30px;
+    width: 54px;
+}
+.content a.replay{
+	background: url(../images/game/replay.png) no-repeat;
+}
+.content a.lock{
+	background: url(../images/game/lock.png) no-repeat;
+}
+.game-trade{
+	font-size:15px;
+	text-align:center;
+	position:relative;
+	width: 550px;
+}
+.btn-gametrade{
+	background:url(../images/starttrade.png) no-repeat;
+	width:114px; height:24px;
+	cursor:pointer;
+	border:none;
+	position:absolute;
+	right: 35px;
+    top: 135px;
+}
+.game-trade h1{
+	color:#1492bb;
+	font-size:24px;
+	margin:0 0 0 -20px;
+}
+.game-trade p{
+	margin:0 0 20px 0;
+}
+.game-trade a{
+	color:#0173e7;
+}
+#berlin1, #berlinDj{
+	display:none;
+}
+
+/*###FONT###*/
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('font/BebasNeue-webfont.eot');
+    src: url('font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BebasNeue-webfont.woff') format('woff'),
+         url('font/BebasNeue-webfont.ttf') format('truetype'),
+         url('font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*CSS for scrollcApp*/
+#scrollcApp {
+	   position: relative;
+	   overflow: hidden;
+	   border: none;
+}
+.scrollcApp {
+	position: absolute;
+	top: 0px; 
+	left:0px;  
+}
+#up{
+	background: url("../images/content/prev-vertical.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+    z-index: 750;
+    border: 0;
+}
+#up:hover, #up:focus{
+	background-position: 0px -32px;
+}
+#up:active{
+	background-position: 0px -64px;
+}
+#down{
+	background: url("../images/content/next-vertical.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+    z-index: 750;
+    border: 0;
+}
+#down:hover, #down:focus{
+	background-position: 0px -32px;
+}
+#down:active{
+	background-position: 0px -64px;
+}
+
+/*TRADE*/
+#trade .profile-entry{
+	position:relative;
+}
+
+#trade .photo{
+	left: 34px;
+    position: absolute;
+    top: 33px;
+}
+#trade .profile-info{
+	left: 200px;
+    position: absolute;
+    top: 33px;
+}
+#trade .entry-text{
+	font-size: 15px;
+    left: 27px;
+    position: absolute;
+    top: 247px;
+}
+#trade h2{
+	margin:0;
+	padding:0;
+}
+
+.page-howtoplay{
+	background:url(../images/content/code.png) bottom right no-repeat;
+	display:block;
+    /*set the div in the top-left corner of the screen*/
+    position:fixed;
+    bottom:15px;
+    left:0;
+    /*set the width and height to 100% of the screen*/
+    width:100%;
+	overflow:auto;
+    height:100%;
+    z-index:-1;
+
+}
+.landings{
+	background:url(../img_close/text.png) no-repeat;
+	width:757px;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -400px;
+	height:470px;
+}
+.kertas{
+	background:url(../img_close/kertas.png) no-repeat;
+	width:622px; height:768px;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.kota{
+	background:url(../img_close/kota.png) no-repeat;
+	width:1000px;
+	position:absolute;
+	height:307px;
+	bottom:0;
+	margin:0 0 0 -500px;
+	left:50%;
+}

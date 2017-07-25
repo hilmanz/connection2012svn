@@ -1,0 +1,30 @@
+<div id="inputCodes">
+    <div id="content">
+    	<div class="post postInputCodes">
+        	<div class="contentInputCodes">
+            	<form id="inputCode" action="index.php?page=inputCode&act=submit" method="POST">
+                	<label>INPUT  YOUR  CONNECTION CODE HERETO UNLOCK A BADGE</label>
+                	<input type="text" class="thecode" name="code" maxlength="8" />
+                    <div id="chaptcha"><img src="captcha.php" /></div>
+                	<input type="text" class="chaptcha" name="captcha"  />
+                    <input type="submit" value="&nbsp;" class="btnsubmit" />
+                </form>
+            </div>
+            <div class="imgbadges"></div>
+            <div class="hw18plus"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+
+{include file="marlboro/popup_getBadge.html"}
+
+{literal}
+
+<script>
+
+	$("#popupGetBadge").fadeIn();
+	$("#bgPopup").fadeIn();
+	
+</script>
+
+{/literal}

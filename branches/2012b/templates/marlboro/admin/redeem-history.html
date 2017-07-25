@@ -1,0 +1,33 @@
+{literal}
+<script>
+function goExport(){
+	document.location.href = "index.php?s=code&act=getCSV&data=redeem-history";
+}
+</script>
+{/literal}
+<div style="padding:10px;">
+<h2>Badge Redeem History</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr>
+    <td colspan="4">
+		<input type="button" value="Export to Excel " onclick="javascript:goExport();" class="xlbutton" />
+	</td>
+  </tr>
+  <tr class="head">
+    <td><strong>Redeem Time</strong></td>
+	<td><strong>User ID</strong></td>
+	<td><strong>Kode</strong></td>
+	<td><strong>Badge ID</strong></td>
+  </tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].redeem_time}</td>
+    <td>{$list[i].user_id}</td>
+    <td>{$list[i].kode}</td>
+    <td>{$list[i].badge_id}</td>
+	</tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

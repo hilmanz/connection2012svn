@@ -1,0 +1,38 @@
+<div style="padding:10px;">
+<h2>Redeem Badge Request</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr>
+	<td colspan="7">
+		<input type="button" value="Export To Excel" onclick="javascript:document.location.href='index.php?s=code&act=getCSV&data=redeem_request'" />
+	</td>
+  </tr>
+  <tr class="head">
+    <td><strong>Nama User</strong></td>
+	<td><strong>Reg ID</strong></td>
+	<td><strong>Prize</strong></td>
+	<td><strong>Tanggal</strong></td>
+    <td><strong>Remarks</strong></td>
+	<td><strong>Status</strong></td>
+    <td><strong>Action</strong></td>
+  </tr>
+  {section name=i loop=$list}
+  <tr>
+    <td><a href="?s=code&act=redeemHistoryPerUser&id={$list[i].id}&regid={$list[i].regid}">{$list[i].Nama}</a></td>
+	<td>{$list[i].regid}</td>
+    <td>{$list[i].Prize}</td>
+    <td>{$list[i].Tanggal}</td>
+    <td>
+    {if $list[i].Prize=="berlin-prize-brief"}{$list[i].TypeTshirt},{$list[i].SizeTshirt}
+    {elseif $list[i].Prize=="new-york-prize-brief-1"}Samsung Galaxy SII smart phone
+    {elseif $list[i].Prize=="new-york-prize-brief-2"}Samsung Galaxy 10.1 tablet
+    {elseif $list[i].Prize=="instanbul-prize-brief"}VIP experience 
+    {/if}
+    </td>
+    <td>{if $list[i].Status==1}Approve{elseif $list[i].Status==2}Cancel{else} - {/if}</td>
+    <td>{if $list[i].Status==0}<a href="?s=code&act=edit-badgeRequest&id={$list[i].id}&regid={$list[i].regid}" class="addSubPage">Edit</a>{else}-{/if}</td>
+	</tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

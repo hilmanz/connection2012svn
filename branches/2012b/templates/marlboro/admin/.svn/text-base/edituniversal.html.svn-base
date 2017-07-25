@@ -1,0 +1,23 @@
+<div style="padding:10px 25px 10px 10px;clear:both;">
+	<div id="title-bar">
+		<h2>EDIT UNIVERSAL BADGE</h2>
+		<hr />     
+	</div>
+	<div>
+		<form METHOD="post" action="index.php?s=code&act=edituniversal&kode={$list.kode}">
+		<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+			<tr class="head">
+				<td>Kode</td>
+				<td>Cap</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>{$list.kode}</td>
+				<td><input type="text" value="{$list.cap}" name="cap" /></td>
+				<td><input type="submit" value="Edit" /></td>
+			</tr>
+		</table>
+		<input type="hidden" name="edit" value="1" />
+		</form>
+	</div>
+</div>

@@ -1,0 +1,304 @@
+
+/*
+   Author: cendekiApp
+   Template: Marlboro_Admin v1.0
+*/
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+body{
+	margin:0 auto;
+	padding:0;
+	font-family:'BebasNeueRegular', Arial, sans-serif;
+	font-size:12px;
+	text-align: left;
+	font-weight: lighter;
+	color: #333;
+}
+#body{
+	position:relative;
+}
+#body #content{
+	background: url(images/marlboro/bg_trans.png) repeat;
+	margin: 0 0 30px 0;
+	min-height:300px;
+	padding: 0 20px 20px;
+	font-family:'Arial', Verdana, sans-serif;
+	
+  -webkit-border-radius: 0 0 12px 12px; 
+     -moz-border-radius: 0 0 12px 12px; 
+          border-radius: 0 0 12px 12px; 
+          
+          
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+	
+}
+#logo{
+	position:relative;
+	margin:96px auto 30px;
+	width: 280px;
+}
+.wrap{
+	padding: 0 30px;
+}
+hr{
+	margin-bottom: 20px;
+}
+.xlbutton{
+	background:url(images/exportxl.png) no-repeat;
+	display:block;
+	border:none;
+	margin:0;
+	width:190px; height:30px;
+	text-indent:-2000px;
+	cursor:pointer;
+}
+.xlbutton:hover{
+	background:url(images/exportxl_hover.png) no-repeat;
+}
+/*###LOGIN###*/
+#login{
+	position:relative;
+	background: url(images/marlboro/bg-login.png);
+	width:231px;
+	height:216px;
+	margin:0 auto 200px;
+	padding: 5px 20px;
+}
+#login h1{
+	margin: 0 0 20px;
+	font-weight: lighter;
+}
+#login label{
+	font-size: 18px;
+	font-weight: lighter;
+	float:left;
+}
+#login input{
+	float:right;
+}
+#login .space{
+	display: block;
+    float: left;
+    padding: 10px;
+    width: 200px;
+}
+#login .space5{
+	display: block;
+    float: left;
+    padding: 5px;
+    width: 200px;
+}
+.messageLogin {
+	color:#CC0000;
+	margin:0;
+	float:left;
+}
+#login #button{
+	background: none #333;
+	border: medium none;
+    color: #CCCCCC;
+    float: none;
+    font-family: 'BebasNeueRegular',Arial,sans-serif;
+    font-size: 24px;
+    margin: 5px 0 0 75px;
+    padding: 5px 10px;
+}
+
+/*###FONT###*/
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('font/BebasNeue-webfont.eot');
+    src: url('font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BebasNeue-webfont.woff') format('woff'),
+         url('font/BebasNeue-webfont.ttf') format('truetype'),
+         url('font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*###GENERAL###*/
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {
+	border: solid 1px #e7cb7d;
+}
+img#marl-logo{
+	margin-top: -40px;
+}
+#topmenu{
+	background:none;
+	float: right;
+    height: 35px;
+    margin-top: 25px;
+    text-align: right;
+    width: 60%;
+}
+.red{
+	color:#ff3333;
+}
+.green{
+	color:#006633;
+}
+.orange{
+	color:#ff9933;
+}
+.darkblue{
+	color:#006699;
+}
+.purple{
+	color:#993399;
+}
+
+
+/*###NAVIGATION###*/
+.nav{
+    background: url("images/marlboro/bg_nav.png") repeat-x scroll 0 0 transparent;
+    clear: both;
+    height: 28px;
+}
+.nav ul li {
+    float: left;
+    margin: 4px 15px 0 0;
+}
+.nav ul li a {
+    color: #FFFFFF;
+    font-size: 15px;
+    height: 20px;
+    padding: 0 8px 5px 0;
+}
+#topmenu{
+	background:none;
+	float: right;
+    height: 35px;
+    margin-top: 25px;
+    text-align: right;
+    margin-right: 36px;
+    width: 50%;
+}
+#topmenu ul li {
+    float: right;
+    margin: 0 2px 0 0;
+}
+#topmenu ul li a {
+    background: none no-repeat scroll right center #a5a89f;
+    color: #fff;
+    display: block;
+    height: 20px;
+    padding: 4px 10px 0;
+	font-size: 14px;
+  -webkit-border-radius: 5px 5px 0 0; 
+     -moz-border-radius: 5px 5px 0 0; 
+          border-radius: 5px 5px 0 0; 
+          
+          
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+
+}
+#topmenu ul li a:hover {
+	color: #767676;
+}
+#topmenu ul li span, #topmenu ul li span.current:hover{
+	background: none;
+    display: block;
+    height: 24px;
+    padding-left: 8px;
+    text-align: center;
+    width: 100%;
+}
+#topmenu ul li span:hover{
+	background: none;
+}
+#topmenu ul li span.current a {
+    background: none no-repeat scroll right center #a5a89f;
+    color: #fff;
+    
+}
+#topmenu ul li span.current a:hover{
+	color: #767676;
+}
+#topmenu ul li span.current {
+    background: none;
+}
+#top {
+    float: left;
+    height: 60px;
+    margin-bottom: 1px;
+    padding: 70px 0 0 30px;
+    width: 100%;
+}
+
+/*########CONTENT##########*/
+.box{
+	background:#fff;
+	padding:10px;
+	margin:5px;
+	display:inline-block;
+	min-width: 165px;
+	
+}
+.box2{
+	background:#fff;
+	padding:10px;
+	margin:5px;
+	display:block;
+	min-width: 165px;
+}
+.box3{
+	background:#fff;
+	display:block;
+	margin:0 0 0 5px;
+}
+.box h2, .box2 h2, .box3 h2{
+	margin-top:0;
+}
+.box-title{
+	font-weight: bolder;
+	font-size: 16px;
+	
+}
+.box-value{
+	font-weight: bolder;
+	font-size: 50px;
+	margin: 30px 0 0;
+}
+.box-value2{
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 15px 0 0;
+}
+.chart-title{
+	background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 16px;
+    padding: 13px 13px 30px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.dot-square{
+	background: none repeat scroll 0 0 #000000;
+    display: inline-block;
+    height: 13px;
+    margin-right: 10px;
+    width: 13px;
+    margin-left: 5px;
+}
+.badge-count{
+	font-weight: bolder;
+	font-size: 25px;
+}
+.box ul li{
+	position:relative;
+}
+.box ul li b{
+	left: 80px;
+    position: absolute;
+    top: 25px;
+}
+.box2 ul li{
+	position:relative;
+}
+.box2 ul li b{
+	left: 80px;
+    position: absolute;
+    top: 25px;
+}
+

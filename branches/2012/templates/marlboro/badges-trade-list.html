@@ -1,0 +1,126 @@
+<link rel="stylesheet" type="text/css" href="css/skins/connection/skin3.css" />
+<div id="badgesPage">
+    <div id="content">
+    	<div class="post postBadgesList">
+        	{if $list}
+				{*}<h1 style="font-size:50px; left:160px;">YOUR TRADE REQUEST<br />MATCHes these people!</h1>
+				<h2 style="left:160px; top:200px;">click on a person to trade your badge!</h2>{/*}
+				<h1 style="font-size:50px; left:110px;">click on a person <br />to trade your badge!</h1>
+			{else} 
+				{*}<h1 style="font-size:50px; left:160px;">YOUR TRADE REQUEST<br />There's No MATCHes people!</h1>
+				<h2 style="left:160px; top:200px;">No connections found for your badge trade request.</h2>{/*}
+				<h1 style="font-size:50px; left:110px; top:120px;">No connections found <br />for your badge trade request.</h1>
+			{/if}
+            	<div id="listTrader">
+                    {if $list}
+                        <ul id="first-carousel" class="listTrader jcarousel-skin-tango">
+                                {section name=i loop=$list }
+                                <li>
+                                <div class="boxTrader">
+                                    <div class="thumbTrader">
+                                        <a href="#popupProfile" class="popProfile getUserProfile"  idUser="{$list[i].register_id}" ><img  class="popup_profile" src="avatar/thumb/medium_{$list[i].img}" /></a>
+                                    </div><!-- end .thumbTrader -->
+                                    <div class="boxName">
+                                        <span class="nameTrader">{$list[i].name}</span>
+                                        <a class="tradeMyBadge" href="#popupTradeMyBadge" onClick="sendTraderData({$list[i].auction_id},'{$list[i].register_id}',{$want},{$badge},'{$list[i].name}','{$list[i].img}')" ></a>
+                                    </div><!-- end .boxName -->
+                                </div><!-- end .boxTrader -->
+                                               
+                                </li>
+                                {/section}
+                        </ul>
+                    {else}
+                		  <div class="list messageClick" style="margin:50px 0 0 200px;">
+                        	  <a href="?page=badges&act=trade" style="text-decoration:none;"><span>Click Here to Try Again</span></a>
+                          </div>
+                    {/if}
+                </div><!-- end #listTrader -->
+            <div class="imgBadgesList"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #badgesPage -->
+{include file="marlboro/popup_tradeMyBadge.html"}
+{include file="marlboro/profile.html"}
+
+{literal}
+<script>
+var auctionid = '';
+var registerid ='';
+var iWantThisBadge ='';
+var thisMyBadge ='';
+var name ='';
+
+
+function sendTraderData(auction_id,register_id,iWantBadge,myBadge,name,img){
+auctionid = auction_id;
+registerid = register_id;
+iWantThisBadge = iWantBadge;
+thisMyBadge = myBadge;
+name = name;
+img=img;
+
+$("#imgAvatar").attr('src','avatar/thumb/medium_'+img);
+$("#chosenTrader").html(name);
+$("#confirmRequestBadge").show();
+}
+
+
+function submitTrade(){
+
+$.post("index.php?page=badges&act=confirmtraderequest", { mine:thisMyBadge , your:iWantThisBadge, sellerId:auctionid  },
+		function(data) {
+				if(data.status==1) {
+				$("#confirmRequestBadge").hide();
+				$("#gotThisBadge").show();
+			  	}else {				
+				$("#gotThisBadge").hide();
+				$("#confirmRequestBadge").show();
+				}				
+		});
+
+}
+
+
+$(".popup_profile").click(function(){
+getUserProfile($(this).parent(".getUserProfile").attr("idUser"));
+});
+
+
+function getUserProfile(id){
+
+$.post("index.php?page=myprofile&act=profilePopup", { register_id: id},
+			   function(data) {
+					var html='';
+					$("#usernameID").html(data.name); 
+					$("#ageID").html(data.age); 
+					$("#townsID").html(data.kota); 	
+					$("#connectDateID").html(data.date); 
+					$("#badgesValuesID").html(data.totalBadge); 
+					$("#imageAvatar").attr('src',data.avatar_sm);
+					$("#hasTradeCount").html("YOU HAVE TRADE "+data.totalTrade+" TIMES WITH "+data.name); 
+					$("#headerNameProfile").html(data.name+" PROFILE"); 
+
+					for (var i in data.badge){
+						html += "<div class='badgeBox'>";
+                        html += '<a class="badgesIcon tip_trigger" href="#"><img src="img/badge/'+data.badge[i].image+'" /><span class="tip"><span class="arrow"></span>Vulputate Ornare Dolor Risus</span></a>';
+                        html += '<div class="badgesCount">'+data.badge[i].total+'</div>';
+                        html += '</div>';
+					
+					}
+					var auctionReward ='';
+					for (var j in data.auctionwin){
+						auctionReward += '<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p> '+data.name+' WIN 1 IPAD</p><img src="img/auction/'+data.auctionwin[j].auction_detail.img+'" /></span></a>';
+                    }
+					$("#piala").html(auctionReward);
+					$("#badgeList").html(html);
+					$("#popupProfile").fadeIn();
+					$("#bgPopup").fadeIn();
+					
+		});
+
+
+}
+
+</script>
+
+{/literal}

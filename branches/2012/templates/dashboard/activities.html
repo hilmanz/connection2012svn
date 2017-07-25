@@ -1,0 +1,126 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue">Activities</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="title">
+             <h2>Top Visited Page</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="visitPageChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="title">
+             <h2>Activities History</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="ActivityHistoryChart">
+             
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+
+<script type="text/javascript">
+var mostVisitedPage = {$mostVisitedPage};
+var totalVisitAllPage={$totalVisitAllPage};
+var activityWeb={$activityWeb};
+var totalactivityWeb={$totalactivityWeb};
+{literal}
+
+var DatamostVisitedPage = new Array();
+var CategoriesmostVisitedPage = new Array();
+for(var datemostVisitedPage in mostVisitedPage){
+	DatamostVisitedPage.push(parseInt(mostVisitedPage[datemostVisitedPage],10));
+	CategoriesmostVisitedPage.push(String(datemostVisitedPage));
+}
+
+
+var DataactivityWeb = new Array();
+var CategoriesactivityWeb = new Array();
+for(var dateactivityWeb in activityWeb){
+	if(dateactivityWeb!='minigame4'){
+		DataactivityWeb.push(parseInt(activityWeb[dateactivityWeb],10));
+		CategoriesactivityWeb.push(String(dateactivityWeb));
+	}
+}
+
+
+var colors= ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'];
+var dataActivityGroup = new Object();
+var cateActivityGroup = new Array();
+var minigame = ['minigame1','minigame2','minigame3','minigame4'];
+dataActivityGroup['minigame'] = new Object();
+dataActivityGroup['minigame']['y']= new Object();
+dataActivityGroup['minigame']['color']= new Object();
+dataActivityGroup['minigame']['drilldown']= new Object();
+dataActivityGroup['minigame']['drilldown']['name']= new Object();
+dataActivityGroup['minigame']['drilldown']['color']= new Object();
+dataActivityGroup['minigame']['drilldown']['data']= new Array();
+dataActivityGroup['minigame']['drilldown']['categories']= new Array();
+cateActivityGroup.push('minigames');
+
+var auction = ['auction'];
+var totalMinigames = 0;
+var nIdxColors = colors.length;
+var nColor = 0;
+for(var dateactivityWeb in activityWeb){
+   
+    if($.inArray(dateactivityWeb,minigame)>-1) {
+        totalMinigames+=parseInt(activityWeb[dateactivityWeb],10);
+        dataActivityGroup['minigame']['y']=totalMinigames;
+        dataActivityGroup['minigame']['color']=colors[nColor];
+        dataActivityGroup['minigame']['drilldown']['name'] = 'minigame';
+        dataActivityGroup['minigame']['drilldown']['color']=colors[nColor];
+        dataActivityGroup['minigame']['drilldown']['data'].push(parseInt(activityWeb[dateactivityWeb],10));
+        dataActivityGroup['minigame']['drilldown']['categories'].push(String(dateactivityWeb));
+        
+    }else{ 
+        dataActivityGroup[String(dateactivityWeb)] = new Object();
+        dataActivityGroup[String(dateactivityWeb)]['y']= new Object();
+        dataActivityGroup[String(dateactivityWeb)]['color']= new Object();
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']= new Object();
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['name']= new Object();
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['color']= new Object();
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['data']= new Array();
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['categories']= new Array();
+        
+     
+        dataActivityGroup[String(dateactivityWeb)]['y']=+(parseInt(activityWeb[dateactivityWeb],10));
+        dataActivityGroup[String(dateactivityWeb)]['color']=colors[nColor];
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['name']= String(dateactivityWeb);
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['color']=colors[nColor];
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['data'].push(parseInt(activityWeb[dateactivityWeb],10));
+        dataActivityGroup[String(dateactivityWeb)]['drilldown']['categories'].push(String(dateactivityWeb));
+        cateActivityGroup.push(String(dateactivityWeb));
+    }
+    
+    if(nIdxColors > nColor) nColor++;
+    else nColor=0;    
+    
+  
+}
+var arrDataAct = new Array();
+for(var idxDataAct in dataActivityGroup){
+    arrDataAct.push(dataActivityGroup[idxDataAct]);
+}
+
+
+$(document).ready(function() {
+		
+	var arrayDataTest = [  45.0,  26.8, 8.5];
+	
+	//login chart
+	gethighChart('column','Visit  Chart','visitPageChart',DatamostVisitedPage,CategoriesmostVisitedPage,1,true);
+	
+	drillDownChart('column','Activity Chart','ActivityHistoryChart',arrDataAct,cateActivityGroup);
+   
+
+    
+});
+		</script>
+        {/literal}

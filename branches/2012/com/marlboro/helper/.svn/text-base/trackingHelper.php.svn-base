@@ -1,0 +1,1 @@
+<?phpclass trackingHelper extends Application{	function __construct(){		//script here	}	function save($user_id,$page){		$qry = "INSERT INTO social_tracking (user_id,page,time) VALUES ('$user_id','$page',NOW());";		$this->open(0);		if($this->query($qry)){			$res = true;		}else{			$res = false;		}		return $res;		$this->close();	}}

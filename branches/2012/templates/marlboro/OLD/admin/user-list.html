@@ -1,0 +1,24 @@
+<div style="padding:10px;">
+<h2>User Management</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Name</strong></td>
+	<td><strong>Email</strong></td>
+	<td><strong>Register Date</strong></td>
+	<td><strong>Avatar</strong></td>
+  </tr>
+  {section name=i loop=$list}
+  <tr>
+    <td><a href="index.php?s=user&act=listTracking&id={$list[i].id}&nm={$list[i].name}">{$list[i].name}</a></td>
+    <td>{$list[i].email}</td>
+    <td>{$list[i].register_date|date_format}</td>
+	<td>
+		<img src="../{$list[i].img}" width="30%" height="30%" />
+		<p><a class="deletePage" href="?s=user&amp;act=deleteAvatar&amp;id={$list[i].id}" onclick="return confirm('Are you sure want to remove this avatar?');">Remove</a></p>
+	</td>
+	</tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

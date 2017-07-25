@@ -1,0 +1,125 @@
+/*
+Theme Name: MARLBORO CONNECTIONS
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@font-face {
+	font-family: 'BebasNeueRegular';
+	src: url('../font/bebasneue-webfont.eot');
+	src: url('../font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../font/bebasneue-webfont.woff') format('woff'),  
+	     url('../font/bebasneue-webfont.ttf') format('truetype'),  
+	     url('../font/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'DINMediumRegular';
+    src: url('../font/din-webfont.eot');
+    src: url('../font/din-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/din-webfont.woff') format('woff'),
+         url('../font/din-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BlackoutMidnight';
+    src: url('../font/Blackout-Midnight-webfont.eot');
+    src: url('../font/Blackout-Midnight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Blackout-Midnight-webfont.woff') format('woff'),
+         url('../font/Blackout-Midnight-webfont.ttf') format('truetype'),
+         url('../font/Blackout-Midnight-webfont.svg#BlackoutMidnight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Blackout2AM';
+    src: url('../font/Blackout-2am-webfont.eot');
+    src: url('../font/Blackout-2am-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Blackout-2am-webfont.woff') format('woff'),
+         url('../font/Blackout-2am-webfont.ttf') format('truetype'),
+         url('../font/Blackout-2am-webfont.svg#Blackout2AM') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	background:url(../img/wall_texture.jpg) repeat #eaeaea;
+	font-family: 'BebasNeueRegular';
+	font-size:28px;
+	color:#333;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	outline:none;
+}
+#landing{
+	width:960px;
+	height:400px;
+	position:relative;
+	margin:0 auto;
+}
+#textLanding{
+	background:url(../img/txt_landing.png) no-repeat;
+	width:853px; height:408px;
+	position:absolute;
+	display:block;
+	top:20px;
+}
+a#btnLanding{
+	background:url(../img/btn_landing.png) no-repeat;
+	width:368px; height:42px;
+	display:block;
+	bottom:-90px;
+	position:absolute;
+	right:50px;
+}
+a#btnLanding:hover{
+	background:url(../img/btn_landing.png) no-repeat 0 -42px;
+}
+#rainbow{
+	background:url(../img/wall_rainbow.jpg) center top no-repeat;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+/* ============ FOOTER =================*/
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	border-bottom: none;
+	width:100%;
+	height:135px;
+	text-transform:uppercase;
+    font-family: 'DINMediumRegular';
+}
+#hw {
+	background:url(../img/hw.png) center #000 no-repeat;
+	height:90px;
+}
+.menu-footer {
+	background:url(../img/transparent-white.png) repeat;
+	text-align:center;
+	border:solid 1px #ccc;
+	line-height: 15px;
+	font-size:8pt;
+}
+.menu-footer a {
+	color:#333;
+	display: inline-block;
+	padding: 5px 20px;
+	text-decoration: none;
+}
+.menu-footer a:hover{
+	color:#666;
+}
+#site-info {
+	background:url(../img/transparent-white2.png) repeat;
+	text-align:center;
+	line-height: 24px;
+	font-size:8pt;
+}

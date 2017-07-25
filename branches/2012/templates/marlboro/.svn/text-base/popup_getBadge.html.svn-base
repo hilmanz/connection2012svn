@@ -1,0 +1,26 @@
+<div id="popupGetBadge" class="popupContainer popupYellowCab">
+	<div id="popupHead">
+    	<div id="popupBottom">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#">&nbsp;</a>
+                <div class="poupContent">
+					{if $badge}
+                	<h1>you have obtained {$badgeName} badge!</h1>
+                    <h3>this badge has been added to your collection</h3>
+                    <div class="entryDesc">
+                   	 <img src="img/badge/big/{$badgeUrl}" />
+                   		<h2>{$badgeName}</h2>
+                  	    <p>{$badgeDescription} </p>
+					</div>
+					{else}
+						<h1>{$dontgetbadgeTitle}</h1>
+						<h3>{$dontgetbadgeDesc}</h3>
+					{/if}
+                	{*}<h1><a class="" href="index.php?page=yellowCabHunt">NEXT</a></h1>{/*}
+                </div><!-- end .poupContent -->
+            </div><!-- end #poupContent -->
+        </div><!-- end #popupBottom -->
+    </div><!-- end #popupHead -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>

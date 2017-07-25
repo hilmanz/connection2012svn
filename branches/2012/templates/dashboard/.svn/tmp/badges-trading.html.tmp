@@ -1,0 +1,210 @@
+<<<<<<< .mine
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue2">Badges & trading</h1>
+    </div><!-- end .head -->
+    <div class="col3a">
+        <div class="title">
+            <h2>Badges List</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="badges_list" style="width:200px;">
+        	<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=x loop=$badgeList}
+              <tr>
+                <td><a class="theTolltip" href="#" title="Yellow Cab - Egestas Cras Risus Mollis Fringilla"><img src="img/badge/{$badgeList[x].image}" /></a></td>
+                <td width="60%"><div class="bar b{$badgeList[x].badgeid}" style="width:{$badgeList[x].percent}%"></div><span>{$badgeList[x].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col3a">
+        <div class="title">
+            <h2>Badges being trade</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="badgebeingtrade" style="width:250;">
+			<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=t loop=$badgetrading}
+              <tr>
+                <td><a class="theTolltip" href="#" title="Yellow Cab - Egestas Cras Risus Mollis Fringilla"><img src="img/badge/{$badgetrading[t].image}" /></a></td>
+                <td width="60%"><div class="bar b{$badgetrading[t].badgeid}" style="width:{$badgetrading[t].percent}%"></div><span>{$badgetrading[t].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col3a last">
+        <div class="title">
+            <h2>Trading</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="box bb1">	
+                <h3 class="titleChart">Total Trading</h3>
+                <h1 class="f50 blue2">{$totalTrading.total_trade}</h1>
+            </div><!-- end .box -->
+            <div class="title">
+                <h4>Most Trade Badges</h4>
+            </div><!-- end .title -->
+        	<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=i loop=$mostTradedBadge}
+              <tr>
+                <td><a class="theTolltip" href="#" title="Yellow Cab - Egestas Cras Risus Mollis Fringilla"><img src="img/badge/{$mostTradedBadge[i].image}" /></a></td>
+                <td width="60%"><div class="bar b{$mostTradedBadge[i].badgeid}" style="width:{$mostTradedBadge[i].percent}%"></div><span>{$mostTradedBadge[i].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+            <div class="box bt1">	
+                <h3 class="titleChart">Succesful Trade</h3>
+                <h1 class="f50 gold2">{$totalTrading.successful_trade}</h1>
+            </div><!-- end .box -->
+        </div><!-- end .whiteBox -->
+    </div>
+</div><!-- end #content -->
+
+<script type="text/javascript">
+		
+var badgeList={$badgeList};
+var badgetrading={$badgetrading};
+var mostTradedBadge={$mostTradedBadge};
+
+
+{literal}
+
+
+//console.log(badges_percentage);
+$(document).ready(function() {
+//redeem badges
+var categoriebadgeList = [];
+var databadgeList  = [];
+for(var idxbadgeList in badgeList ){
+	categoriebadgeList.push(String(badgeList[idxbadgeList].badge_name));
+	databadgeList.push(parseInt(badgeList[idxbadgeList].trading_num,10));
+}
+
+// badgetrading 
+var databadgetrading = [];
+var categoriesbadgetrading= [];
+for(var idxbadgetrading in badgetrading ){
+	categoriesbadgetrading.push(badgetrading[idxbadgetrading].badge_name);
+	databadgetrading.push(parseInt(badgetrading[idxbadgetrading].trading_num,10));
+}
+
+	
+	//badgeList chart
+	//gethighChart('bar','Badge List','badges_list', databadgeList, categoriebadgeList);
+
+	//badgetrading chart
+	//gethighChart('bar','Badge Being trade','badgebeingtrade',databadgetrading,categoriesbadgetrading);
+
+
+	
+
+    
+});
+</script>
+=======
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue2">Badges & trading</h1>
+    </div><!-- end .head -->
+    <div class="col3a">
+        <div class="title">
+            <h2>Badges List</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="badges_list" style="width:200px;">
+        	<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=x loop=$badgeList}
+              <tr>
+                <td><img src="img/badge/{$badgeList[x].image}" /></td>
+                <td width="60%"><div class="bar b{$badgeList[x].badgeid}" style="width:{$badgeList[x].percent}%"></div><span>{$badgeList[x].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col3a">
+        <div class="title">
+            <h2>Badges Being Trade</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox" id="badgebeingtrade" style="width:250;">
+			<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=t loop=$badgetrading}
+              <tr>
+                <td><img src="img/badge/{$badgetrading[t].image}" /></td>
+                <td width="60%"><div class="bar b{$badgetrading[t].badgeid}" style="width:{$badgetrading[t].percent}%"></div><span>{$badgetrading[t].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+        </div><!-- end .whiteBox -->
+    </div>
+    <div class="col3a last">
+        <div class="title">
+            <h2>Trading</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="box bb1">	
+                <h3 class="titleChart">Total Trading</h3>
+                <h1 class="f50 blue2">{$totalTrading.total_trade}</h1>
+            </div><!-- end .box -->
+            <div class="title">
+                <h4>Most Trade Badges</h4>
+            </div><!-- end .title -->
+        	<table id="" width="100%" border="0" cellspacing="0" cellpadding="0" class="table graphBadges">
+			{section name=i loop=$mostTradedBadge}
+              <tr>
+                <td><img src="img/badge/{$mostTradedBadge[i].image}" /></td>
+                <td width="60%"><div class="bar b{$mostTradedBadge[i].badgeid}" style="width:{$mostTradedBadge[i].percent}%"></div><span>{$mostTradedBadge[i].num}</span></td>
+              </tr>
+             {/section}
+            </table>
+            <div class="box bt1">	
+                <h3 class="titleChart">Succesful Trade</h3>
+                <h1 class="f50 gold2">{$totalTrading.successful_trade}</h1>
+            </div><!-- end .box -->
+        </div><!-- end .whiteBox -->
+    </div>
+</div><!-- end #content -->
+
+<script type="text/javascript">
+		
+var badgeList={$badgeList};
+var badgetrading={$badgetrading};
+var mostTradedBadge={$mostTradedBadge};
+
+
+{literal}
+
+
+//console.log(badges_percentage);
+$(document).ready(function() {
+//redeem badges
+var categoriebadgeList = [];
+var databadgeList  = [];
+for(var idxbadgeList in badgeList ){
+	categoriebadgeList.push(String(badgeList[idxbadgeList].badge_name));
+	databadgeList.push(parseInt(badgeList[idxbadgeList].trading_num,10));
+}
+
+// badgetrading 
+var databadgetrading = [];
+var categoriesbadgetrading= [];
+for(var idxbadgetrading in badgetrading ){
+	categoriesbadgetrading.push(badgetrading[idxbadgetrading].badge_name);
+	databadgetrading.push(parseInt(badgetrading[idxbadgetrading].trading_num,10));
+}
+
+	
+	//badgeList chart
+	//gethighChart('bar','Badge List','badges_list', databadgeList, categoriebadgeList);
+
+	//badgetrading chart
+	//gethighChart('bar','Badge Being trade','badgebeingtrade',databadgetrading,categoriesbadgetrading);
+
+
+	
+
+    
+});
+</script>
+>>>>>>> .r1206
+        {/literal}

@@ -1,0 +1,31 @@
+<form method="post" enctype="multipart/form-data">
+	<h2>BA ENTOURAGE</h2><hr>
+	<table width="100%" border="0" cellspacing="3" cellpadding="4" class="list2">
+		<tr>
+			<td colspan="3"><h3>Form Upload XLS</h3></td>
+		</tr>  
+		<tr>
+			<td width="10%" class="head2"><strong>TYPE A - 9 BADGES</strong></td>
+			<td width="1">:</td>
+			<td><input type="file" name="xls_a" id="xls_a" size="40"/></td>
+		</tr>
+		<tr>
+			<td width="10%" class="head2"><strong>TYPE A - 18 BADGES</strong></td>
+			<td width="1">:</td>
+			<td><input type="file" name="xls_b" id="xls_b" size="40"/></td>
+		</tr>
+		<tr>
+			<td width="10%" class="head2"><strong>TYPE A - 36 BADGES</strong></td>
+			<td width="1">:</td>
+			<td><input type="file" name="xls_c" id="xls_c" size="40"/></td>
+		</tr>
+	 <tr>
+		<td colspan="3">
+		<input type="submit" name="submit" value="Upload" />
+		<input type="hidden" name="save" value="1"/>
+		<br><br>
+		<span>{$err}</span>
+		</td>
+	 </tr>
+	</table>
+</form>

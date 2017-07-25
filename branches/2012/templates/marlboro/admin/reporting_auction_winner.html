@@ -1,0 +1,40 @@
+<div style="padding:10px;">
+<h2>AUCTION WINNER</h2>
+<hr>
+ 	   	
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>No</strong></td>
+	<td><strong>Name</strong></td>
+	<td><strong>Email</strong></td>
+	<td><strong>Street</strong></td>
+	<td><strong>City</strong></td>
+	<td><strong>Province</strong></td>
+	<td><strong>Postal Code</strong></td>
+	<td><strong>Phone</strong></td>
+	<td><strong>Mobile</strong></td>
+	<td><strong>Auction Item</strong></td>
+	<td><strong>Periode</strong></td>
+
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].no}</td>
+    <td>{$list[i].name} {$list[i].last_name}</td>
+    <td>{$list[i].email}</td>
+    <td>{if $list[i].rpStreet} {$list[i].rpStreet} {else} {$list[i].StreetName} {/if}</td>
+    <td>{if $list[i].rpCity} {$list[i].rpCity}{else}{$list[i].mCity}{/if}</td>
+	<td>{$list[i].rpProvince}</td>
+	<td>{$list[i].rpPostCode}</td>
+	<td>{$list[i].rpPhone}</td>
+    <td>{$list[i].MobilePhone} / {$list[i].rpMobile}</td>
+    <td>{$list[i].item_name}</td>
+    <td>{$list[i].start_date|date_format} - {$list[i].end_date|date_format}</td>
+
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+
+
+</div>

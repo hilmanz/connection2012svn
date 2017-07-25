@@ -1,0 +1,121 @@
+/* CSS 
+	Author: cendekiApp
+	E-mail: cendekiApp@cendekiApp.com
+	Marlboro Connection MOP ver1.0
+*/
+
+body{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background:url(../../images/landing/bg_new.png) center top no-repeat #71cbfc;
+	}
+	
+/*	
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+*/
+#wrapper{
+	margin:0 auto;
+	padding:0;
+	width: 1000px;
+	position:relative;
+	min-height: 700px;
+	}
+div.menuKota{
+	position:fixed;
+	bottom:-5px;
+	width:1000px;
+	}
+.town{
+	background: url(../../images/landing/town.png) no-repeat;
+	width:936px;
+	min-height:233px;
+	margin:0 auto;
+	position:relative;
+	
+	}
+.landing{
+	background:url(../../images/landing/landing_text.png) no-repeat;
+	width:725px;
+	height:438px;
+	margin: 0 auto;
+	position:relative;
+	}
+.landing_link{
+	 bottom: 0;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    width: 345px;
+	z-index:1;
+	}
+.addMargin{
+	margin-top: 50px;
+	}
+.caps{
+	text-transform: uppercase;
+	text-align:center;
+	margin-left: 10px;
+	font-weight:bold;
+	}
+.disclaimer{
+	font-size: 11px;
+    margin: 0 auto;
+    padding-top: 125px;
+    text-align: center;
+    width: 700px;
+	}
+.disclaimer a{
+	color: #000000;
+    font-weight: bold;
+    margin-right: 15px;
+    text-decoration: none;
+	}
+.disclaimer a:hover{
+	color:#C93;
+	}
+hr {
+	background-color: #333333;
+    border: medium none;
+    height: 3px;
+    margin: 0;
+    padding: 0;
+	}
+.greeting{
+	background:url(../../images/landing/greeting_text.png) no-repeat;
+	width: 900px;
+	height:556px;
+	position:relative;
+	margin:0 auto;
+	}
+.login{
+	bottom: 0;
+    position: absolute;
+    right: 25px;
+	z-index:1;
+	}
+.login p, .login a, .login button{
+	text-transform: uppercase;
+	color:#FFF;
+	font-size:12px;
+	text-decoration:none;
+	margin:2px;
+	padding:0;
+	}
+.login button{
+	background:none transparent;
+	border:none;
+	font-size:11px;
+	cursor:pointer;
+	}
+.login input{
+	background:#FFF;
+	border: 1px #666;
+	color:#666;
+	}
+a.marginFix{
+	margin:0;
+	}

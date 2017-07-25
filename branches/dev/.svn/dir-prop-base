@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 38
+*.settings
+.buildpath
+.project
+config
+
+END

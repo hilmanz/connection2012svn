@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/amf/io
+END
+AMFSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/amf/io/AMFSerializer.php
+END
+AMFBaseDeserializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/amf/io/AMFBaseDeserializer.php
+END
+AMFDeserializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/amf/io/AMFDeserializer.php
+END
+AMFBaseSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/amf/io/AMFBaseSerializer.php
+END

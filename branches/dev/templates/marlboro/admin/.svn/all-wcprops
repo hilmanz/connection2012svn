@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-connect/!svn/ver/821/branches/dev/templates/marlboro/admin
+END
+message-search-email.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/message-search-email.html
+END
+edituniversal.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/756/branches/dev/templates/marlboro/admin/edituniversal.html
+END
+user-detail.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/user-detail.html
+END
+reporting-badges-trading.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-connect/!svn/ver/724/branches/dev/templates/marlboro/admin/reporting-badges-trading.html
+END
+news-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/news-list.html
+END
+edit-badge.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/edit-badge.html
+END
+code_info.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/821/branches/dev/templates/marlboro/admin/code_info.html
+END
+allocation.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/687/branches/dev/templates/marlboro/admin/allocation.html
+END
+reporting-user.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/771/branches/dev/templates/marlboro/admin/reporting-user.html
+END
+edit-badge-form.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/175/branches/dev/templates/marlboro/admin/edit-badge-form.html
+END
+dashboard.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/769/branches/dev/templates/marlboro/admin/dashboard.html
+END
+redeem-request.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/752/branches/dev/templates/marlboro/admin/redeem-request.html
+END
+user-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/user-list.html
+END
+badges-redemption.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/583/branches/dev/templates/marlboro/admin/badges-redemption.html
+END
+redeemHistoryPerUser.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/716/branches/dev/templates/marlboro/admin/redeemHistoryPerUser.html
+END
+user_trace.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/719/branches/dev/templates/marlboro/admin/user_trace.html
+END
+news-edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/news-edit.html
+END
+edit-badgeRequest-form.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-connect/!svn/ver/346/branches/dev/templates/marlboro/admin/edit-badgeRequest-form.html
+END
+redeem-history.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/707/branches/dev/templates/marlboro/admin/redeem-history.html
+END
+mobile-registrations.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/mobile-registrations.html
+END
+news-new.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/news-new.html
+END
+reporting-website-activity.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/724/branches/dev/templates/marlboro/admin/reporting-website-activity.html
+END
+universal.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/767/branches/dev/templates/marlboro/admin/universal.html
+END
+redeem-code.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/redeem-code.html
+END
+content.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/583/branches/dev/templates/marlboro/admin/content.html
+END
+code.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/6/branches/dev/templates/marlboro/admin/code.html
+END
+reporting-code-redeemtion.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-connect/!svn/ver/724/branches/dev/templates/marlboro/admin/reporting-code-redeemtion.html
+END
+user-listtracking.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/580/branches/dev/templates/marlboro/admin/user-listtracking.html
+END
+message-send.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-connect/!svn/ver/811/branches/dev/templates/marlboro/admin/message-send.html
+END

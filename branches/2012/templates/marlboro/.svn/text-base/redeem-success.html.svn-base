@@ -1,0 +1,19 @@
+<div id="badgesRedeem">
+    <div id="content">
+        	{if $status == 1 }
+                <div class="post postRedeemSuccess">
+                    <h1>Redeem Success!<br />
+                    Your prize has been queued for shipping!<br />
+                    If you have any questions, please contact<br />
+                    <a href="mailto:info@marlboro.co.id">INFO@MARLBORO.CO.ID</a> </h1>
+                </div><!-- end .post -->
+			{else}
+                <div class="post postRedeemFailed">
+                	<h1>
+                      {$message} 
+					</h1>
+                </div><!-- end .post -->
+			{/if}
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_ConfirmRedeem.html"}

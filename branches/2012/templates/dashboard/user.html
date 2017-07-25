@@ -1,0 +1,125 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue2">DEMOGRAPHIC DATA</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="whiteBox col3"  style="overflow:hidden">	
+			<h3 class="titleChart">AGE</h3>
+			<div class="chart bt1" id="ageChart" style="position: relative; left: -59px;">
+       
+               
+            </div>
+        </div><!-- end .whiteBox -->
+		
+		 <div class="whiteBox col3"  style="overflow:hidden">
+			<h3 class="titleChart">Gender</h3>
+			<div class="chart " id="genderChart" style="height:355px;">
+                   
+            </div>
+        </div><!-- end .whiteBox -->
+		<div class="whiteBox col3 last"  style="overflow:hidden">	
+			<h3 class="titleChart">Brand Preference</h3>
+			<div class="chart bt1" id="brandChart" style="position: relative; left: -59px;">
+      
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="title">
+             <h2>Location</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart"  id="locationChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+      <div class="clear">
+        <div class="title">
+             <h2>Channel</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart"  id="channelChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+
+
+<script type="text/javascript">
+//test
+var brand = {$brand};
+
+//age
+var userAgeAll={$age};
+//gender
+var female = {$female};
+var male = {$male};
+
+//brand pref
+//var brand={$brand};
+
+//location
+var locationUser={$location};
+//channel
+var channel={$channel};
+
+{literal}
+
+//brand
+var DataDeviceUsedNum = new Array();
+for(var idxdeviceUsed in brand){
+	var arrCategoryDevice = [String(brand[idxdeviceUsed].brand_name) , parseInt(brand[idxdeviceUsed].num,10)];
+	DataDeviceUsedNum.push(arrCategoryDevice);
+	
+}
+
+//age
+var DatauserAgeAllNum = new Array();
+var ageArr = ['18-29','30-35','others'];
+for(var idxAgeAll in userAgeAll){
+	var arrDataAge = [String(ageArr[userAgeAll[idxAgeAll].age_category]) , parseInt(userAgeAll[idxAgeAll].login_num,10)];
+	DatauserAgeAllNum.push(arrDataAge);
+	
+}
+
+//locationUser
+var Dataregistrant = new Array();
+var Categoriesregistrant = new Array();
+for(var dateregistrant in locationUser){
+	Dataregistrant.push(parseInt(locationUser[dateregistrant].registrant_num,10));
+	Categoriesregistrant.push(locationUser[dateregistrant].city);
+}
+
+
+//channel
+var categorieRedeemBadges = [];
+var dataRedeemBadges  = [];
+for(var idxRedeem in channel ){
+	categorieRedeemBadges.push(String(channel[idxRedeem].channel_name));
+	dataRedeemBadges.push(parseInt(channel[idxRedeem].redeem_num,10));
+}
+
+$(document).ready(function() {
+		
+	var categoriesGender = ['Male', 'Female'];
+	var dataGender = [ male, female];
+	
+	
+	gethighChart('column','Gender','genderChart', dataGender, categoriesGender);
+	
+	gethighChart('pie','Age','ageChart',DatauserAgeAllNum,'',1,false,330,330)
+
+	gethighChart('pie','channel  Chart','brandChart',DataDeviceUsedNum,'',1,false,330,330);
+	
+	
+	gethighChart('column','browser Chart','locationChart',Dataregistrant,Categoriesregistrant);
+	gethighChart('column','browser Chart','channelChart',dataRedeemBadges,categorieRedeemBadges);
+
+    
+});
+		</script>
+        {/literal}

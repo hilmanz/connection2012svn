@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="css/sba_login.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Kontak Kami</title>
+</head>
+<body id="landing">
+<div id="wrapper-login">
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<h2 align="center"><strong>KONTAK KAMI</strong></h2>
+<p align="center">Silahkan mengirimkan email ke <a href="mailto:info@ba-space.com">info@ba-space.com</a><br>
+  Kami akan segera merespon email yang masuk. <br>
+  Terima kasih.</p></div>
+</body>
+</html>

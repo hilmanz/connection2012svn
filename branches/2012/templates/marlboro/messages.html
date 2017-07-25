@@ -1,0 +1,62 @@
+<div id="activity">
+    <div id="content">
+    	<div class="post postMessages">
+        	<div id="listActivity">
+				{if $message}
+                  <ul id="first-carousel" class="listactivity jcarousel-skin-tango">
+				   {section name=i loop=$message}
+					<li>
+                        <div class="list">
+						
+                            <p>{if $message[i]->message_status=='0'}<span style="color:red" id="new_{$message[i]->message_id}" >[ NEW ]</span>{/if} {$message[i]->message_teaser}&nbsp;<a class="seeDetail" href="#popupMessages"  onCLick="getDetail({$message[i]->message_id})"  style="font-size:11px;">more</a></p>
+                            <a href="javascript:void(0)" class="trash" onCLick="deleteMessage({$message[i]->message_id})">&nbsp;</a>
+                        </div>
+                    </li>
+                   {/section}
+                  </ul>
+               {else}
+                  <div class="blank" style="margin:0 0 0 200px;"><span>You don't have<br />a message</span></div>
+               {/if}
+          	</div><!-- end #listActivity -->
+            <div class="peopleMessages"></div>
+            <div class="messagesIcon"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_messages.html"}
+
+
+{literal}
+<script>
+	function getDetail(id){
+		$.post("index.php?page=myprofile&act=messageDetail", { id: id },
+			   function(data) {
+		//	alert(data.data.news_last_update);
+					if(data.status>0) { 
+					$('#titleUpdateClue').html(data.data.message_subject);
+					$('#contentUpdateClue').html(data.data.message_text);
+					$('#dateUpdateClue').html(data.data.message_date);
+					$('#new_'+id).html('');
+					$("#popupActivity").show(); 				
+					}else return false;
+					
+				 
+		});
+		
+	
+	}
+	
+	function deleteMessage(id){
+		$.post("index.php?page=myprofile&act=deleteMessage", { id: id },
+			   function(data) {
+				if(data.status>0) location.href = "index.php?page=myprofile&act=messages";
+					
+					
+				 
+		});
+		
+	
+	}
+
+</script>
+{/literal}

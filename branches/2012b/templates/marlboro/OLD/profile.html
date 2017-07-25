@@ -1,0 +1,254 @@
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            {*}
+            <div class="nav-reedem">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            {/*}
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+<div id="content">
+    	<div id="profile">
+        	<div class="content">
+            	<div class="profile">  
+               		<div class="profile-card" style="position:relative;">
+                    	<div class="profile-entry" style="position:absolute; left: 0; top:0;">
+                            <div class="photo">
+                                <img src="{$avatar}" />
+                                {*}
+                                <!-- untuk laki2 -->
+                                <img src="images/avatar-man.jpg" />
+                                <!-- untuk wanita -->
+                                <img src="images/avatar-woman.jpg" />
+                                {/*}
+                            </div>
+                            <div class="profile-info">
+                                <span>Name</span>
+                                <h2>{$name}</h2>
+                                <span>Age</span>
+                                <h2>{$age}</h2>
+                                <span>Town</span>
+                                <h2>{$kota}</h2>
+                                {*}
+                                <span>Sex</span>
+                                <h2>{$sex}</h2>
+                                {/*}
+                                <span>Connections Date</span>
+                                <h2>{$date|date_format}</h2>
+                            </div>
+                            <div class="profile-menu">
+                                <a id="btn-popup" href="#">Change Profile Picture</a>
+                                {if $param eq ''}
+									<!--<a href="index.php?page=profile&act=edit{$param}">Edit Profile</a>-->
+									<a href="index.php?page=editprofil">Edit Profile</a>
+									<!--<a href="index.php?page=profile&act=editdescription">Edit Description</a>-->
+								{/if}
+                            </div>
+                            <div class="entry-text">
+                                <h2>{$description}</h2>
+                            </div>
+                            <div id="popup" style="left: 35px;top: -10px;">
+                                <a class="popup-close">&nbsp;</a>
+                                <div class="entry-popup">
+                                    <div class="last-photo">
+                                        <div class="photo">
+                                            <img src="{$avatar}" />
+                                            {*}
+			                                <!-- untuk laki2 -->
+			                                <img src="images/avatar-man.jpg" />
+			                                <!-- untuk wanita -->
+			                                <img src="images/avatar-woman.jpg" />
+			                                {/*}
+                                        </div>
+                                        <h1>Change Profile Picture</h1>
+                                	</div>
+                                    <form class="upload-photo" enctype="multipart/form-data" method="POST" action="index.php?page=profile&act=updatepicture">
+										<input type="hidden" name="page" value="profile" />
+										<input type="hidden" name="act" value="updatepicture" />
+                                    	<input type="file" name="avatar" />
+                                    	<input type="submit" value="Upload" />
+                                    </form>
+                                </div>
+                            </div>
+                            
+                       </div>
+                   
+                    </div><!-- .profile-card -->
+                    <div class="gift">
+                    	<img src="images/badge/kado.png" />
+                    	{*}
+                        <a href="index.php?page=redeem-badge">Redeem Badge</a>
+                    	{/*}
+                    </div>
+                    <div class="badge-row">
+                    	{assign var=num value=0}
+						{section name=i loop=$badge}
+						<div class="badge-box">
+                        	<div class="badge-img">
+
+								{if $num eq 6}
+									{if $badge[8].total eq 0}
+									
+										<img src="images/badge/badge{$badge[8].badge_id}_grey.png" />
+									
+									{else}
+									
+                            			<img class="hover-img" src="images/badge/badge{$badge[8].badge_id}.png" no="8"/>
+                            			<img class="hover-img absolute bhover8" src="images/badge/badge{$badge[8].badge_id}-med.png" no="8" style="left: -10px;top: -5px;width: 90px;z-index: 10;display:none;"/>
+									
+									{/if}
+								{elseif $num eq 8}
+									{if $badge[6].total eq 0}
+									
+										<img src="images/badge/badge{$badge[6].badge_id}_grey.png" />
+									
+									{else}
+									
+                            			<img class="hover-img" src="images/badge/badge{$badge[6].badge_id}.png" no="6"/>
+                            			<img class="hover-img absolute bhover6" src="images/badge/badge{$badge[6].badge_id}-med.png" no="6" style="left: -10px;top: -5px;width: 90px;z-index: 10;display:none;"/>
+									
+									{/if}
+								{else}
+									{if $badge[i].total eq 0}
+									
+										<img src="images/badge/badge{$badge[i].badge_id}_grey.png" />
+									
+									{else}
+									
+                            			<img class="hover-img" src="images/badge/badge{$badge[i].badge_id}.png" no="{$num}"/>
+                            			<img class="hover-img absolute bhover{$num}" src="images/badge/badge{$badge[i].badge_id}-med.png" no="{$num}" style="left: -10px;top: -5px;width: 90px;z-index: 10;display:none;"/>
+									
+									{/if}
+								{/if}	
+								
+								{if $num eq 0}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">Guten Tag</span><br>
+								<span style="font-size:12px;">The opening pages in any good phrasebook will show you how to greet and make new friends. Remember this one!</span>
+                         		</div>
+                         		{elseif $num eq 1}
+                         		<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">Graffiti</span><br>
+								<span style="font-size:12px;">Berlin's original style of graffiti can be seen around town and in cool galleries.</span>
+								</div>
+								{elseif $num eq 2}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">Techno</span><br>
+								<span style="font-size:12px;">Discover some of the largest electronic music stages in the world and the trendiest nightclubs in Europe.</span>
+                         		</div>
+                         		{elseif $num eq 3}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Yellow U-Bahn</span><br>
+								<span style="font-size:12px;">How millions of Berliners get around with great views of the busy city life all around.</span>
+                         		</div>
+                         		{elseif $num eq 4}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Carpet</span><br>
+								<span style="font-size:12px;">The finest materials and elaborate designs handed down through generations.</span>
+                         		</div>
+                         		{elseif $num eq 5}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Lantern</span><br>
+								<span style="font-size:12px;">In Istanbul, these works of art, light up bazaars and trendy homes.</span>
+                         		</div>
+                         		{elseif $num eq 8}
+								<div class="badge-tooltip hover-6">
+								<span style="font-size:16px;">Pop Art</span><br>
+								<span style="font-size:12px;">Travel the world over, but New York is still home to this contemporary style of art.</span>								
+                         		</div>
+                         		{elseif $num eq 7}
+                         		<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Fez</span><br>
+								<span style="font-size:12px;">Found in many countries but remains essentially a Turkish icon.</span>
+                         		</div>
+                         		{elseif $num eq 6}
+								<div class="badge-tooltip hover-8">
+								<span style="font-size:16px;">Club Scene</span><br>
+								<span style="font-size:12px;">Did you know that Istanbul is on the map for people looking for the best in nightlife and clubs?</span>
+                         		</div>
+                         		{elseif $num eq 9}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Boom Box</span><br>
+								<span style="font-size:12px;">Made popular during New York's rise as a music powerhouse. Today, New York continues to define music trends and attracts music lovers.</span>
+                         		</div>
+                         		{elseif $num eq 10}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">A City Block</span><br>
+								<span style="font-size:12px;">Towering high, New York stands tall to welcome all visitors to this great modern city.</span>
+                         		</div>
+                         		{elseif $num eq 11}
+								<div class="badge-tooltip hover-{$num}">
+								<span style="font-size:16px;">The Yellow Cab</span><br>
+								<span style="font-size:12px;">You haven't experienced New York until you ride one.</span>
+                         		</div>
+                         		{/if}
+                         		
+							</div>
+                          
+                            <div class="badge-count">
+                            	{if $num eq 6}
+										<span>{$badge[8].total}</span>
+								{elseif $num eq 8}
+										<span>{$badge[6].total}</span>
+								{else}
+                            	<span>{$badge[i].total}</span>
+                            	{/if}
+                            </div>
+                        </div>
+                        {assign var=num value=$num+1}
+						{/section}
+						
+                    	 
+                         
+						
+						<script>
+						{literal}
+							$(".hover-img").hover(
+									
+								function(){
+									var no = $(this).attr('no');
+									$(".bhover"+no).stop(true,true).fadeIn("fast");
+									$(".hover-"+no).stop(true,true).delay("fast").fadeIn("fast");
+									
+								},
+								function(){
+									var no = $(this).attr('no');
+									$(".bhover"+no).stop(true,true).delay("fast").fadeOut("fast");
+									$(".hover-"+no).stop(true,true).fadeOut("fast");
+									}
+								);
+							$("#btn-popup").click(function(){
+									$("#popup").fadeIn("slow");
+
+								});
+							$(".popup-close").click(function(){
+								$("#popup").fadeOut("slow");
+								}
+									);
+						{/literal}
+						</script>
+                    </div><!-- .badge-row -->
+                </div><!-- .profile -->
+            </div><!-- .content -->
+        </div><!-- #profile -->
+    </div><!-- #content -->
+<!--
+<p><a href="index.php?page=profile&act=tradesummary{$param}">Trade Summary</a></p>
+{if $param eq ''}<p><a href="index.php?page=profile&act=edit{$param}">Edit Profile</a></p>{/if}
+<p><a href="index.php?page=profile&act=badges{$param}">{if $param eq ''}My {/if}Badges</a></p>
+-->

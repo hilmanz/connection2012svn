@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters
+END
+sqliteobjectAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/sqliteobjectAdapter.php
+END
+zendrowAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/zendrowAdapter.php
+END
+RecordSetAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/RecordSetAdapter.php
+END
+informixAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/informixAdapter.php
+END
+peardbAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/peardbAdapter.php
+END
+mssqlAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/mssqlAdapter.php
+END
+sqliteAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/sqliteAdapter.php
+END
+oci8Adapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/oci8Adapter.php
+END
+zendrowsetAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/zendrowsetAdapter.php
+END
+mysqliobjectAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/mysqliobjectAdapter.php
+END
+mysqlAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/mysqlAdapter.php
+END
+odbcAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/odbcAdapter.php
+END
+fbsqlAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/fbsqlAdapter.php
+END
+doctrineAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/doctrineAdapter.php
+END
+adodbAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/adodbAdapter.php
+END
+plainrecordsetAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/plainrecordsetAdapter.php
+END
+mysqliAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/mysqliAdapter.php
+END
+pdoAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/pdoAdapter.php
+END
+pgsqlAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/260/branches/dev/public_html/remote/core/shared/adapters/pgsqlAdapter.php
+END

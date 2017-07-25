@@ -1,0 +1,22 @@
+<div style="padding:10px 25px 10px 10px;clear:both;">
+	<div id="title-bar">
+		<h2>UNIVERSAL BADGE</h2>
+		<hr />     
+	</div>
+	<div>
+		<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+			<tr class="head">
+				<td>Kode</td>
+				<td>Cap</td>
+				<td></td>
+			</tr>
+			{section name=i loop=$list}
+			<tr>
+				<td>{$list[i].kode}</td>
+				<td>{$list[i].total|intval} / {$list[i].cap|intval}</td>
+				<td><a href="index.php?s=code&act=edituniversal&kode={$list[i].kode}">Edit</a></td>
+			</tr>
+			{/section}
+		</table>
+	</div>
+</div>

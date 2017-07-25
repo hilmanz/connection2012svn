@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MARLBORO CONNECTION</title>
+</head>
+
+<body bgcolor="#555555">
+<table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td style="background:url(bg.jpg) no-repeat; height:420px;" headers="420" valign="top">
+    	<div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; color:#666; padding:0 40px; width:300px; height:350px; position:relative;">
+        	<h1 style="font-family:'Arial Black', Gadget, sans-serif; font-size:44px; color:#ed1106; margin:50px 0 30px 0;">HI, {name}</h1>
+            <p>Selamat! Kamu telah berhasil di verifikasi di Marlboro Lights Connections.</p><p> Masuk ke <a href="http://www.marlboro.co.id" target="_blank" style="color:#ed1106; text-decoration:none;">www.marlboro.co.id</a>
+           ikuti program menarik dari Marlboro Lights Connections dan dapatkan kesempatan jalan-jalan ke Berlin, Istanbul, dan New York selama 10 hari.</p><p> Caranya mudah! Temukan dan lengkapi seluruh badges di Marlboro Lights Connections.<br />
+ Semoga berhasil.</p>
+<p><strong>Username: {login}</strong><br />
+<strong>Password : {password}</strong></p>
+<a href="http://www.marlboro.co.id" target="_blank" style="color:#ed1106; text-decoration:none; position:absolute; display:block; width:200px; height:50px; right:-322px; bottom:0;">&nbsp;</a>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="background:url(hw.jpg) no-repeat; height:75px" headers="75">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

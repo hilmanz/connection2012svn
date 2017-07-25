@@ -1,0 +1,286 @@
+<script src="../js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="js/charts/highcharts.js" type="text/javascript"></script>
+<script type="text/javascript">
+var totalPerPage = {$totalPerPage|intval};
+var numPage = {$numPage|intval} - 1;
+var page = 0;
+var curPage = 0;
+
+var totalPerPageGame = {$totalPerPageGame|intval};
+var numPageGame = {$numPageGame|intval} - 1;
+var pageGame = 0;
+var curPageGame = 0;
+{literal}
+jQuery(document).ready(function() {
+
+$('#prev').hide();
+
+if(numPage <= 0){
+	$('#next').hide();
+}
+
+$('#next').click(function(){
+	//alert('page: '+curPage+' < numpage: '+numPage);
+	if( curPage < numPage){
+		for(var i=page;i<(page + totalPerPage);i++){
+			$('#tr-'+i).hide();
+		}
+		nextPage = page + totalPerPage; 
+		for(var i=nextPage;i<(nextPage + totalPerPage);i++){
+			$('#tr-'+i).fadeIn('slow');
+		}
+		page = nextPage;
+		if(page == (totalPerPage * numPage)){
+			$('#next').hide();
+		}
+		$('#prev').show();
+		curPage++;
+	}
+});
+$('#prev').click(function(){
+	if( curPage > 0){
+		for(var i=page;i<(page + totalPerPage);i++){
+			$('#tr-'+i).hide();
+		}
+		nextPage = page - totalPerPage; 
+		for(var i=nextPage;i<(nextPage + totalPerPage);i++){
+			$('#tr-'+i).fadeIn('slow');
+		}
+		page = nextPage;
+		if(page <= 0){
+			$('#prev').hide();
+		}
+		$('#next').show();
+		curPage--;
+	}
+});
+
+//GAME
+$('#prevGame').hide();
+
+if(numPageGame <= 0){
+	$('#nextGame').hide();
+}
+
+$('#nextGame').click(function(){
+	if( curPageGame < numPageGame){
+		for(var i=pageGame;i<(pageGame + totalPerPageGame);i++){
+			$('#t-'+i).fadeOut('slow');
+		}
+		nextPage = pageGame + totalPerPageGame; 
+		for(var i=nextPage;i<(nextPage + totalPerPageGame);i++){
+			$('#t-'+i).fadeIn('slow');
+		}
+		pageGame = nextPage;
+		if(pageGame == (totalPerPageGame * numPageGame)){
+			$('#nextGame').hide();
+		}
+		$('#prevGame').show();
+		curPageGame++;
+	}
+});
+$('#prevGame').click(function(){
+	if( curPageGame > 0){
+		for(var i=pageGame;i<(pageGame + totalPerPageGame);i++){
+			$('#t-'+i).fadeOut('slow');
+		}
+		nextPage = pageGame - totalPerPageGame; 
+		for(var i=nextPage;i<(nextPageGame + totalPerPageGame);i++){
+			$('#t-'+i).fadeIn('slow');
+		}
+		pageGame = nextPage;
+		if(pageGame <= 0){
+			$('#prevGame').hide();
+		}
+		$('#nextGame').show();
+		curPageGame--;
+	}
+});
+
+			function loadDataXML(param){
+				
+				var options = null;
+				options = {
+					chart: {
+						renderTo: 'chart-container-1',
+						type: 'line'
+					},
+					credits: {
+				        enabled: false
+				    },
+					title: {
+						text: ''
+					},
+					xAxis: {
+						categories: []
+					},
+					yAxis: {
+						title: {
+							text: ''
+						}
+					},
+					legend: {
+						enabled: false
+					},
+					series: []
+				};
+				
+				// Load the data from the XML file 
+				$.get('index.php?s=reporting&xml=1'+param, function(xml) {
+					
+					// Split the lines
+					var $xml = $(xml);
+					
+					// push categories
+					$xml.find('categories item').each(function(i, category) {
+						options.xAxis.categories.push($(category).text());
+					});
+					
+					// push series
+					$xml.find('series').each(function(i, series) {
+						var seriesOptions = {
+							name: $(series).find('name').text(),
+							data: []
+						};
+						
+						// push data points
+						$(series).find('data point').each(function(i, point) {
+							seriesOptions.data.push(
+								parseInt($(point).text())
+							);
+						});
+						
+						// add it to the options
+						options.series.push(seriesOptions);
+					});
+					var chart = null;
+					chart = new Highcharts.Chart(options);
+				});
+			}
+			
+			loadDataXML('&sort[]=1');
+});
+{/literal}
+</script>
+
+<div style="padding:10px 25px 10px 10px;clear:both;">
+	<div id="title-bar">
+		<h2>USERS REPORT</h2>     
+	</div>
+	
+	<div style="display:inline-block;">
+		<div class="box">
+			<div class="box-title"><strong>Total Users</strong></div>
+			<div class="box-value red">{$total_user|number_format}</div>
+			<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=total_user'" />
+		</div>
+		<div class="box">
+			<div class="box-title"><strong>Total Participant</strong></div>
+			<div class="box-value green">{$total_participant|number_format}</div>
+		</div>
+		<!--
+		<div class="box">
+			<div class="box-title"><strong>Total Active Users</strong></div>
+			<div class="box-value orange">{$total_active_user|intval}</div>
+		</div>
+		-->
+		<div class="box">
+			<div class="box-title"><strong>Number of Users</strong></div>
+			<div>unlocking badge through games</div>
+			<div style="margin:16px 0 0;" class="box-value darkblue">{$number_of_user|intval}</div>
+		</div>
+		<div class="box">
+			<div class="box-title"><strong>Conversion Rates</strong></div>
+			<div>{$total_user|number_format} of {$gaResult.unique_visitors|number_format}</div>
+			<div style="margin:16px 0 0;" class="box-value darkblue">{$gaResult.conversion_rate} %</div>
+		</div>
+		<div class="box">
+			<div class="box-title"><strong>Loyalty</strong></div>
+			<div>Returning Visitors</div>
+			<div style="margin:16px 0 0;" class="box-value darkblue">{$gaResult.loyalty} %</div>
+		</div>
+	</div>
+	
+	<div style="clear:both;"></div>
+	<div class="chart-title">
+	<strong>Number of Logins per Day</strong>
+	<input type="button" value=" Export To Excel" style="clear:both;display:block;" onclick="javascript:document.location.href='index.php?s=reporting&act=getCSV&data=user_login_per_day'" />
+	</div>
+	<div id="chart-container-1"></div>
+	
+		<div class="box">
+			<div class="box-title"><strong>Number of Badge Per User</strong>&nbsp;(<a href="index.php?s=reporting&act=getCSV&data=user-badges">Export To Excel</a>)</div>
+			<div>
+				<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+					<tr>
+						<td><strong>Name</strong></td>
+						{section name=i loop=$badge_name}
+						<td><strong>{$badge_name[i].name|stripslashes}</strong></td>
+						{/section}
+					</tr>
+						{section name=i loop=$badge_user}
+							{if $smarty.section.i.index < $totalPerPage}
+								{assign var=display value=''}
+							{else}
+								{assign var=display value='display:none;'}
+							{/if}
+							<tr style="{$display}" id="tr-{$smarty.section.i.index}">
+								<td>{$badge_user[i].name|stripslashes}</td>
+								<td>{$badge_user[i].badge_1|intval}</td>
+								<td>{$badge_user[i].badge_2|intval}</td>
+								<td>{$badge_user[i].badge_3|intval}</td>
+								<td>{$badge_user[i].badge_4|intval}</td>
+								<td>{$badge_user[i].badge_5|intval}</td>
+								<td>{$badge_user[i].badge_6|intval}</td>
+								<td>{$badge_user[i].badge_7|intval}</td>
+								<td>{$badge_user[i].badge_8|intval}</td>
+								<td>{$badge_user[i].badge_9|intval}</td>
+								<td>{$badge_user[i].badge_10|intval}</td>
+								<td>{$badge_user[i].badge_11|intval}</td>
+								<td>{$badge_user[i].badge_12|intval}</td>
+							</tr>
+						
+						{/section}
+				</table>
+				<div>
+					<span style="cursor:pointer;" id="prev">Prev</span>&nbsp;&nbsp;
+					<span style="cursor:pointer;" id="next">Next</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="box">
+			<div class="box-title"><strong>Number User Played Games</strong>&nbsp;(<a href="index.php?s=reporting&act=getCSV&data=user-games">Export To Excel</a>)</div>
+			<div>
+				<table cellspacing="0" cellpadding="0" border="0" class="addlist zebra">
+					<tr>
+						<td><strong>Name</strong></td>
+						<td><strong>Berlin Wall</strong></td>
+						<td><strong>DJ</strong></td>
+						<td><strong>Yacth</strong></td>
+						<td><strong>Museum</strong></td>
+					</tr>
+						{section name=i loop=$game}
+							{if $smarty.section.i.index < $totalPerPageGame}
+								{assign var=display value=''}
+							{else}
+								{assign var=display value='display:none;'}
+							{/if}
+							<tr style="{$display}" id="t-{$smarty.section.i.index}">
+								<td>{$game[i].name|stripslashes}</td>
+								<td>{$game[i].game_1|intval}</td>
+								<td>{$game[i].game_2|intval}</td>
+								<td>{$game[i].game_3|intval}</td>
+								<td>{$game[i].game_4|intval}</td>
+							</tr>
+						
+						{/section}
+				</table>
+				<div>
+					<span style="cursor:pointer;" id="prevGame">Prev</span>&nbsp;&nbsp;
+					<span style="cursor:pointer;" id="nextGame">Next</span>
+				</div>
+			</div>
+		</div>
+
+</div>

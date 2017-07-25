@@ -1,0 +1,43 @@
+<div style="padding:10px;">
+<h2>Mobile Registrations</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	<tr>
+		<td colspan="4">
+			<form>
+				<select name="act">
+					<option value="">Code Registration</option>
+					<option value="quiz" {if $filter eq 'quiz'}selected="selected"{/if}>Code Quiz</option>
+				</select>
+				<input type="submit" value=" Go " />
+				<input type="hidden" name="s" value="mobile" />
+			</form>
+		</td>
+	</tr>
+	<tr class="head">
+		<td><strong>Date</strong></td>
+		<td><strong>Code</strong></td>
+		<td><strong>SPG/SBA</strong></td>
+		<td><strong>Type</strong></td>
+	</tr>
+	{section name=i loop=$list}
+	<tr>
+		<td>{$list[i].survey_date|date_format}</td>
+		<td>{$list[i].codeid}</td>
+		<td>{$list[i].surveyor}</td>
+		<td>
+			{if $list[i].codetype eq 1}
+				Registration Code
+			{elseif $list[i].codetype eq 2}
+				Quiz Code
+			{elseif $list[i].codetype eq 3}
+				Code Generator
+			{else}
+				Quiz Code SBA
+			{/if}
+		</td>
+    </tr>
+	{/section}
+</table>
+<p>{$paging}</p>
+</div>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{$meta}
+</head>
+
+<body>
+<img src="images/bg.png" id="bg" />
+
+<div id="maincontent"  class="typeface-js">
+	{$header}
+    <div id="content">
+    {$mainContent}
+    </div><!-- #content -->
+ 
+	{*}{include file='marlboro/popup-message-universal.html'}{/*}
+	
+    {include file='marlboro/popup-game.html'}
+	
+	{*}{include file='marlboro/popup-unlock-universal2.html'}{/*}
+	
+	{*}{include file='marlboro/popup-badge-universal-list2.html'}{/*}
+	<div style="position: relative; margin: 0pt auto; width: 800px; z-index: 700;">
+		<div id="closeEvent" class="popupcontent" style="z-index:760; padding: 33px 45px;top: 50px; height:270px;width: 505px;left:250px;font-size: 22px; text-align:center; display:none;">
+		    			<a class="popup-close closeEvent" style="right: -9px;top: -25px;">&nbsp;</a>
+		    			<p>Marlboro Light Connections has officially drawn to a close.</p>
+		    			<p>Thank you so much for participating in this challenge. This competition has now closed and the winning will be announced in due course.</p>
+						<p>Check out the complete winner list exclusively at marlboro.co.id</p>
+						<p>For info please send your email to <a href="mailto:info@marlboro.co.id">info@marlboro.co.id</a></p>
+		</div>
+    </div>
+    <script>
+    {literal}
+	    $(".closeEvent").click(function(){
+			//$("#bgGame").fadeOut("slow");
+			$("#closeEvent").fadeOut("slow");
+		});
+    	$("img#closeWall").click(function(){
+			$("#bgGame").fadeOut("slow");
+			$("#berlin1").fadeOut("slow");
+		});
+    	$("img#closeDJ").click(function(){
+			$("#bgGame").fadeOut("slow");
+			$("#berlinDJ").fadeOut("slow");
+			$("#berlinWall").fadeOut("slow");
+			//$("#linkGameDJ").attr("value","");
+			//$("#linkGameDJ2").attr("data","");
+			$("#gameframe").attr("src","");
+			$("#gameframeWall").attr("src","");
+			});
+    	$("img#closeWall").click(function(){
+    		$("#bgGame").fadeOut("slow");
+			$("#berlinWall").fadeOut("slow");
+			$("#gameframeWall").attr("src","");
+			});
+		
+    	
+    {/literal}
+    </script>
+    {*}
+    <script>
+	{literal}
+    	$(".nav-badge").click(function(){
+        	$(".nav-badge a").removeAttr("href");
+			$(".nav-badge-lock").fadeIn("slow");
+			$("#bgGame").fadeIn("slow");
+        	});
+    	$(".badge-lock-close").click(function(){
+			$(".nav-badge-lock").fadeOut("slow");
+			$("#bgGame").fadeOut("slow");
+        	});
+   	{/literal}
+	</script>
+    {/*}
+    <script>
+	{literal}
+    	$(".noprice").click(function(){
+    		var no = $(this).attr('no');
+			$(".no-price").fadeIn("slow");
+			$("#bgGame").fadeIn("slow");
+			$(".no-price"+no).fadeIn("slow");
+        	});
+    	$(".badge-lock-close").click(function(){
+			$(".no-price").fadeOut("slow");
+			$("#bgGame").fadeOut("slow");
+			for(i=1;i<5;i++){
+				$(".no-price"+i).fadeOut("slow");
+				}
+        	});
+   	{/literal}
+	</script>
+	<script>
+	{literal}
+    	$(".universalClose").click(function(){
+			$("#popupUniversalMSG").fadeOut("slow");
+			$("#unluckyBadgeUniversal").fadeOut("slow");
+			$("#listBadgeRequest").fadeOut("slow");
+        	});
+			
+		$('.unluckyClose').click(function(){
+			$("#unluckyBadgeUniversal").fadeOut("slow");
+		});
+   	{/literal}
+	</script>
+	{$footer}
+</div><!-- #main-content -->
+{literal}
+<iframe src="refresh.php" style="height:1px;"></iframe>
+<script type="text/javascript">
+
+	{/literal}
+	{$MOP_EMBED}
+	
+	var berlin_wall_track = '{$berlin_wall_track}';
+	var dj_track = '{$dj_track}';
+	var yacht_track = '{$yacht_track}';
+	var art_museum_track = '{$art_museum_track}';
+	var universalmsg = '{$universalmsg}';
+	{literal}
+	
+	universalmsg = 0;
+	
+	if(universalmsg == '1'){
+		$('#popupUniversalMSG').show();
+	}else{
+		$('#popupUniversalMSG').hide();
+	}
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-867847-31']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+{/literal}
+</body>
+</html>

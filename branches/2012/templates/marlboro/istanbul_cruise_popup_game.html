@@ -1,0 +1,107 @@
+{literal}
+<style type="text/css" media="screen"> 
+            object:focus { outline:none; }
+            #flashContent { display:none; }
+        </style>
+		
+{/literal}
+<div id="containers"  id="containers" style="height:900px; z-index:10000; position:absolute; left:50%; margin:0 0 0 -400px; width:800px;top:-38px">
+	
+		<div id="flashContent"  >
+					<p>
+						To view this page ensure that Adobe Flash Player version 
+						10.2.0 or greater is installed. 
+					</p>
+					{literal}
+					<script type="text/javascript"> 
+						var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
+						document.write("<a href='https://www.adobe.com/go/getflashplayer'><img src='" + pageHost + "www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png' alt='Get Adobe Flash player' /></a>" ); 
+					</script> 
+					{/literal}
+		</div>
+	</div>	
+<div id="popupGame" class="popupContainer popupGame" style="height:590px;">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#">&nbsp;</a>
+                <div class="poupContent">
+				
+	
+        
+        <noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="798" height="564" id="istanbulCruise">
+                <param name="movie" value="games/istanbulCruise/IstanbulCruise.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#ffffff" />
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="true" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="games/istanbulCruise/IstanbulCruise.swf" width="798" height="564">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                <!--<![endif]-->
+                <!--[if gte IE 6]>-->
+                    <p> 
+                        Either scripts and active content are not permitted to run or Adobe Flash Player version
+                        10.2.0 or greater is not installed.
+                    </p>
+                <!--<![endif]-->
+                    <a href="https://www.adobe.com/go/getflashplayer">
+                        <img src="https://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png" alt="Get Adobe Flash Player" />
+                    </a>
+                <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+        </noscript>    
+				
+				
+                </div><!-- end .poupContent -->
+            </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>
+
+{literal}
+	    <script type="text/javascript" src="games/istanbulCruise/swfobject.js"></script>
+        <script type="text/javascript">
+            // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
+            var swfVersionStr = "10.2.0";
+            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
+            var xiSwfUrlStr = "games/istanbulCruise/playerProductInstall.swf";
+            var flashvars = {};
+			{/literal}
+            flashvars.user_id = "{$user_id}";
+			{literal}
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#ffffff";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "istanbulCruise";
+            attributes.name = "istanbulCruise";
+            attributes.align = "middle";
+            swfobject.embedSWF(
+                "games/istanbulCruise/IstanbulCruise.swf", "flashContent", 
+                "798", "564", 
+                swfVersionStr, xiSwfUrlStr, 
+                flashvars, params, attributes);
+            // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            
+            
+     
+
+	
+		$("#popupGame").fadeIn();
+		$("#bgPopup").fadeIn();
+		
+		$(".closePopup").click(function(){
+			$("#bgPopup").fadeOut();
+			location.href="index.php?page=game";
+		});
+			
+		</script>
+{/literal}

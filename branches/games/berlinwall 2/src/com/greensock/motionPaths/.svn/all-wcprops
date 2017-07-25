@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths
+END
+Direction.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/Direction.as
+END
+MotionPath.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/MotionPath.as
+END
+CirclePath2D.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/CirclePath2D.as
+END
+PathFollower.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/PathFollower.as
+END
+RectanglePath2D.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/RectanglePath2D.as
+END
+LinePath2D.as
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/marlboro-connect/!svn/ver/388/branches/games/berlinwall/src/com/greensock/motionPaths/LinePath2D.as
+END

@@ -1,0 +1,70 @@
+
+                	<div id="flashContent" style=" background:#fff; position:absolute; width:798px; height:564px; padding:45px 10px 10px 10px; z-index:1000; left:50%; margin:0 0 0 -400px; top:0;">
+                            <div class="selotip"></div>
+                            <a class="closePopup" href="#" style="right:-30px;">&nbsp;</a>
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="798" height="564" id="BerlinWall">
+                                <param name="movie" value="flash/berlin/bin/BerlinWall.swf" />
+                                <param name="quality" value="high" />
+                                <param name="bgcolor" value="#000000" />
+                                <param name="allowScriptAccess" value="sameDomain" />
+                                <param name="allowFullScreen" value="true" />
+ 								 <param name="flashvars" value="user_id={$user_id}">
+                                  <param name="wmode" value="direct">
+                                <!--[if !IE]>-->
+                                <object type="application/x-shockwave-flash" data="flash/berlin/bin/BerlinWall.swf" width="798" height="564">
+                                    <param name="quality" value="high" />
+                                    <param name="bgcolor" value="#000000" />
+                                    <param name="allowScriptAccess" value="sameDomain" />
+                                    <param name="allowFullScreen" value="true" />
+ 									<param name="flashvars" value="user_id={$user_id}">
+                                     <param name="wmode" value="direct">
+                                    <!--<![endif]-->
+                                    <!--[if gte IE 6]>-->
+                                        <p> 
+                                            Either scripts and active content are not permitted to run or Adobe Flash Player version
+                                            10.2.0 or greater is not installed.
+                                        </p>
+                                    <!--<![endif]-->
+                                        <a href="http://www.adobe.com/go/getflashplayer">
+                                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                                        </a>
+                                    <!--[if !IE]>-->
+                                </object>
+                                <!--<![endif]-->
+                            </object>
+					</div>
+<div id="bgPopup"></div>
+{literal}
+	   <script src="flash/berlin/bin/js/swfobject.js"></script>
+        <script type="text/javascript">
+         var flashvars = {
+			{/literal}
+			user_id: "{$user_id}"
+			{literal}
+			};
+		var params = {
+		menu: "false",
+		scale: "noScale",
+		allowFullscreen: "true",
+		allowScriptAccess: "always",
+		bgcolor: "0x000000",
+		wmode: "direct" // can cause issues with FP settings & webcam
+	};
+	var attributes = {
+		id:"BerlinWall"
+	};
+//	swfobject.embedSWF(
+//		"flash/berlin/bin/BerlinWall.swf", 
+//		"flashContent", "798", "564", "10.0.0", 
+//		"flash/berlin/bin/expressInstall.swf", 
+//		flashvars, params, attributes);
+//	
+		$("#popupGame").fadeIn();
+		$("#bgPopup").fadeIn();
+		$(".closePopup").click(function(){
+		$("#bgPopup").fadeOut();
+			location.href="index.php?page=game";
+	});
+//			
+		</script>
+{/literal}

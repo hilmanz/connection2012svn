@@ -1,0 +1,15 @@
+<div id="unluckyBadgeUniversal" class="BadgeUniversal">
+    <div class="contentBadge">
+        <a class="popup-close toggleBox"></a>
+        <div class="head" style="text-align:center">
+            {if $uni eq 66}
+				<h3>YOU ARE UNLUCKY IN<br />
+            UNLOCKING THE BADGE TODAY</h3>
+			{else}
+			<h3>Congratulations <br />
+you have unlocked a badge</h3>
+			{/if}
+        </div>
+        <img src="images/badge/badge_universal.png" style="margin:0 auto;" />
+    </div>
+</div>

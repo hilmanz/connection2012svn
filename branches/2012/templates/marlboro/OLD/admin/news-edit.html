@@ -1,0 +1,52 @@
+<div style="padding:10px;">
+<h2>News Edit</h2>
+<hr>
+<form>
+<input type="hidden" name="id" value="{$_id}" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	{if $err}
+	<tr>
+		<td colspan="2"><font color="#ff0000"><b>{$err}</b></font></td>
+	</tr>
+	{/if}
+	<tr>
+		<td>Title</td>
+		<td><input type="text" name="title" maxlength="35" value="{$_title}" /></td>
+	</tr>
+	<tr>
+		<td>Brief</td>
+		<td><textarea name="brief" maxlength="200" cols="50">{$_brief}</textarea></td>
+	</tr>
+	<tr>
+		<td>Content</td>
+		<td><textarea name="content" cols="50" rows="7">{$_content}</textarea></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td>	
+            <select name="status">
+			{if $_status == 1}
+			<option value="0">Block</option>
+			<option value="1" selected="selected">Publish</option>
+			{else}
+			<option value="1">Published</option>
+            <option value="0" selected="selected">Block</option>
+			{/if}
+		</select>
+		</td>
+	</tr>
+	<tr>
+	  <td>Plain Text</td>
+	  <td><textarea name="ptext" cols="50" rows="7">{$_text}</textarea></td>
+	  </tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="update" value="1" />
+			<input type="hidden" name="s" value="news" />
+			<input type="hidden" name="act" value="update" />
+			<input type="submit" name="save" value=" Save " />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

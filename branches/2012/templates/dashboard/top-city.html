@@ -1,0 +1,63 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue">Top 10 City</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="title">
+             <h2>Registrant</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="registrantChart">
+                
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="title">
+             <h2>Participant</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="participantChart">
+              
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+
+
+
+<script type="text/javascript">
+var registrant = {$registrant};
+var participant={$participant};
+
+{literal}
+
+var Dataregistrant = new Array();
+var Categoriesregistrant = new Array();
+for(var dateregistrant in registrant){
+	Dataregistrant.push(parseInt(registrant[dateregistrant].registrant_num,10));
+	Categoriesregistrant.push(registrant[dateregistrant].city);
+}
+
+var Dataparticipant = new Array();
+var Categoriesparticipant = new Array();
+for(var dateparticipant in participant){
+	Dataparticipant.push(parseInt(participant[dateparticipant].new_num,10));
+	Categoriesparticipant.push(participant[dateparticipant].city);
+}
+
+
+
+
+
+$(document).ready(function() {
+		
+	gethighChart('column','Registrant Chart','registrantChart',Dataregistrant,Categoriesregistrant);
+	gethighChart('column','Participant Chart','participantChart',Dataparticipant,Categoriesparticipant);
+   
+
+    
+});
+		</script>
+        {/literal}

@@ -1,0 +1,215 @@
+<div id="placeBid" class="popupContainer popupBid">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#" onClick="clearBids()">&nbsp;</a>
+  
+                    <div class="poupContent">
+                        <h1>place bid for your "{$auction->item_name}"</h1>
+                        <h2>YOUR BADGES</h2>
+                        <div id="badgeListBid1" class="badgeListBid">
+						{section name=i loop=$have }
+                            <div class="badgeBox">
+                                <a class="badgesIcon" href="#"><img src="img/badge/{$have[i].image}" /> </a>
+                                <input type="text" class="badgesCount checkbadges" maxlength="2" value="{$have[i].total}" disabled="disabled" id="xbidvalue_{$have[i].id}" />
+                            </div><!-- end .badgeBox -->
+						{/section}
+							</div><!-- end #badgeList -->
+                        <h2>YOUR BID</h2>
+                        <div id="badgeListBid2" class="badgeListBid">
+							{section name=i loop=$have }                          
+								<div class="badgeBox">
+									<a class="badgesIcon" href="#"><img src="img/badge/{$have[i].image}" /> </a>
+									 {if $have[i].total==0 }
+									 <input type="text"  style="background-color:grey;color:black" class="badgesCount badgebid" badge_id="{$have[i].id}" id="bidvalue_{$have[i].id}"  value="0" maxlength="1" disabled />  
+									 {else}
+									 <input type="text" onKeyUp="countBids()" class="badgesCount badgebid" badge_image="{$have[i].image}" badge_id="{$have[i].id}" id="bidvalue_{$have[i].id}" badge_value="{$have[i].badge_value}" value="0" maxlength="2" name="bidvalue_{$have[i].id}" />
+									 {/if}
+									
+								</div><!-- end .badgeBox -->
+                       		{/section}
+                        </div><!-- end #badgeList -->
+                    </div><!-- end .poupContent -->
+                    <h2 class="currentBid">CURRENT HIGHEST BID : <span id="highestBidSpan">{$highestBid->value_total} </span></h2>
+                    <h2 class="yourBid">YOUR BID : <span id="myBids">0</span></h2>
+                    <!--<input type="submit" value="PLACE BID" class="btnPlaceBid" />-->
+					<input type="hidden" id="auction_id" value="{$auction->id}">
+					<input type="hidden" id="user_id" value="{$user.id}">
+                    <div id="canPlaceBid" style="display:none" ><a href="#popupFinishBid" class="btnPlaceBid"  onClick="placingBid()"  >PLACE BID</a></div>
+					<div id="cannotPlaceBid"><a href="javascript:void(0)" style="font-family:'BlackoutMidnight';float:right;font-size:40px;padding:10px 0;text-decoration:none;cursor:pointer;margin:10px 0" >PLACE BID</a></div>
+					<div style="clear:both"><span id="cptxBid"></span></div>
+            </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>
+
+<script>
+var minPlaceBid = {if $minPlaceBid}{$minPlaceBid}{else}0{/if};
+var currentHighestBid = {if $highestBid->value_total}{$highestBid->value_total}{else}0{/if};
+var highestUserBid = {if $highestUser->userid}{$highestUser->userid}{else}0{/if};
+{literal}
+var days = $(".day").attr("days");
+var hours = $(".hour").attr("hours");
+var minutes = $(".minute").attr("minutes");
+var seconds = $(".second").attr("seconds");
+
+$("#cannotPlaceBid").attr('style','display:block');
+$("#canPlaceBid").attr('style','display:none');
+
+
+if(currentHighestBid<5) {
+$('#bidvalue_11').attr('disabled','disabled');
+$('#bidvalue_11').attr('style','background-color:grey;color:black'); 
+}
+if(currentHighestBid<15) {
+$('#bidvalue_12').attr('disabled','disabled');
+$('#bidvalue_12').attr('style','background-color:grey;color:black'); 
+}
+var remainingTimes  =  setInterval(function(){ 
+		
+	if(seconds >0 && seconds<=60) seconds--;
+		else {
+		seconds = 60;
+			if(minutes > 0 && minutes<=60)minutes--;
+			else {
+				minutes= 59;
+				if(hours>0 && hours<=24) hours--;
+				else { hours=23; days--;	}
+			}
+		}
+		
+		if(days<0) {
+			days=0;
+			hours=0;
+			minutes=0;
+			seconds=0;
+			clearInterval(remainingTimes);
+			window.location="index.php?page=badges&act=auction";
+		}
+		
+		$(".day").html(days+"D");
+		$(".hour").html(hours+"H");
+		$(".minute").html(minutes+"M");
+		$(".second").html(seconds+"S");
+
+		}, 1000);
+
+	
+ function placingBid(){
+		$("#loadingBid").show();
+		$(".poupContent").hide();
+		$("#placingbidmessage").hide(); 
+		$("#popupfinishbidmessage").hide();
+		$("#popupfinishbidmessageCust").hide();
+		var popupfinishbidmessageCust = false;
+		var arrBid = [];
+		var auctionid = $('#auction_id').val();
+		var user_id = $('#user_id').val();
+		$(".badgebid").each(function (index, val) {
+			var badgeid = $(this).attr('badge_id');
+			var bidValue = $("#bidvalue_"+badgeid).val();
+			if(!bidValue) bidValue = 0;
+			arrBid.push(badgeid+"-"+bidValue);
+			});
+
+		//send array to  post bid
+
+		$.post("index.php?page=badges&act=submit_auction", { bid: "'"+arrBid+"'" , user_id:user_id ,auction_id:auctionid},
+			   function(data) {
+					$("#loadingBid").hide();
+					$(".poupContent").show();
+					if(data.status<=0) 	{
+						if(data.status==-5){
+							var popupfinishbidmessageCust = true;
+							$("#popupfinishbidmessageCust").html('You can add up to  '+data.data+' points from the current highest bid value. Please revise your bid! ');
+						}
+						if(data.status==-4){
+							var popupfinishbidmessageCust = true;
+							$("#popupfinishbidmessageCust").html('You are already the highest bidder and cannot outbid yourself. If someone places a higher bid, you will be able to enter a revised bid.');
+						}
+						if (popupfinishbidmessageCust == true) $("#popupfinishbidmessageCust").show();
+						else $("#popupfinishbidmessage").show();
+					}
+					
+					if(data.status>0) { 
+					$("#popupfinishbidmessage").hide();
+					$("#placingbidmessage").show(); 
+					var popupCloser  =  setInterval(function(){ 
+					window.location="index.php?page=badges&act=auction_bid&id="+auctionid
+					}, 5000);
+					}
+					
+				 
+		});
+		
+		clearBids();
+	}
+function countBids(){
+	var countTotalBids= 0;
+	var user_id = $('#user_id').val();
+	$(".badgebid").each(function(index,ele){
+	    var valueOfBadges = 0;
+		if($(this).val()!=0) valueOfBadges = (parseInt($(this).val(),10) * parseInt($(this).attr('badge_value'),10));
+		else valueOfBadges = 0;
+		countTotalBids += valueOfBadges;
+	});
+	if(isNaN(countTotalBids)) $("#myBids").html("Please Input Proper values Badges");
+	else $("#myBids").html(parseInt(countTotalBids,10));
+	if(highestUserBid!=user_id)	minBidding = countTotalBids - currentHighestBid ;
+	else minBidding=countTotalBids;
+	if(highestUserBid==user_id){
+		$("#cannotPlaceBid").attr('style','display:block');
+		$("#canPlaceBid").attr('style','display:none');
+		$("#cptxBid").html("You are already the highest bidder and cannot outbid yourself. If someone places a higher bid, you will be able to enter a revised bid.");
+	}
+	else if(minBidding>minPlaceBid) {
+		$("#cannotPlaceBid").attr('style','display:block');
+		$("#canPlaceBid").attr('style','display:none');
+		$("#cptxBid").html("You can add up to  "+minPlaceBid+" points from the current highest bid value. Please revise your bid! ");
+	}else  {
+		$("#canPlaceBid").attr('style','display:block');
+		$("#cannotPlaceBid").attr('style','display:none');
+		$("#cptxBid").html("");
+	}
+}
+
+function clearBids(){
+		$(".badgebid").each(function (index, val) {
+			var badgeid = $(this).attr('badge_id');
+			$("#bidvalue_"+badgeid).val(0);
+		
+			});
+		$("#myBids").html(0);
+		$("#cptxBid").html("");
+}
+
+function notEnoughBadges(){
+	alert("you don't have this badges");
+
+}
+
+var getHighestBid = setInterval(function(){ 
+var auctionid = $('#auction_id').val();
+$.post('?page=badges&act=ghb001', { auction_id : auctionid } , function(data) {
+	$('#highestBidSpan').html(data.total);
+	$('.boxTotalPoint').html(data.total);
+	//console.log(data);
+	$('#highestPict').attr('src',data.user.photourl);
+	$('.nameTrader').html(data.user.name);
+	$('.popProfile').attr('onclick','getUserProfile('+data.user.userid+')');
+	highestUserBid = data.user.userid;
+	currentHighestBid = data.total;
+	if(currentHighestBid>5) {
+		if($('#xbidvalue_11').val()>0){
+			$('#bidvalue_11').attr('disabled',false);
+			$('#bidvalue_11').attr('style',''); 
+		}
+	}
+	if(currentHighestBid>15) {
+		if($('#xbidvalue_12').val()>0){
+			$('#bidvalue_12').attr('disabled',false);
+			$('#bidvalue_12').attr('style',''); 
+		}
+	}
+ });
+}, 1000*5);
+</script>
+{/literal}

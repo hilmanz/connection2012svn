@@ -1,0 +1,74 @@
+<div id="content">
+	<div class="head">
+    	<h1 class="yellow">NUMBER OF LOGIN</h1>
+    </div><!-- end .head -->
+    <div class="title">
+    	<h2>Number of Logins per Day</h2>
+    </div><!-- end .title -->
+    <div class="whiteBox">
+    	<div class="chart" id="nlpd">
+        	
+        </div>
+    </div><!-- end .whiteBox -->
+    <div class="whiteBox col3">	
+    	<h3 class="titleChart">Registrant</h3>
+        <h1 class="f50 yellow">{$registrant_num}</h1>
+    </div><!-- end .whiteBox -->
+    <div class="whiteBox col3">	
+    	<h3 class="titleChart">Average Page View</h3>
+        <h1 class="f50 gold">{$avgPageView}</h1>
+    </div><!-- end .whiteBox -->
+ 	<div class="whiteBox col3 last">	
+    	<h3 class="titleChart">Average Time on Site</h3>
+        <h1 class="f50 blue">{$timeOnSite}</h1>
+    </div><!-- end .whiteBox -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableWhite">
+      <thead>
+          <tr>
+            <th align="left">Cumulative Tracking</th>
+            <th align="center">Registrant</th>
+            <th align="center">Logins</th>
+            <th align="center">Participants</th>
+            <th align="center">Conversion</th>
+          </tr>
+      </thead>
+      <tbody>
+		{section name=x loop=$comulative}
+          <tr>
+            <td align="left"> {if !$smarty.section.x.last} Week {$smarty.section.x.index+1} {else } Current Week {/if}</td>
+            <td align="center">{$comulative[x].registrant.registrant_num}</td>
+            <td align="center">{$comulative[x].login.logins_num}</td>
+            <td align="center">{$comulative[x].participant.new_num}</td>
+            <td align="center">{$comulative[x].login.logins_num/$comulative[x].registrant.registrant_num|number_format:2:".":","}%</td>
+          </tr>
+         {/section}
+      </tbody>
+    </table><!-- end .tableWhite -->
+</div><!-- end #content -->
+
+<script type="text/javascript">
+var login = {$login};
+
+{literal}
+
+var DataLoginNum = new Array();
+var DataLoginDate = new Array();
+for(var dateLogin in login){
+	DataLoginNum.push(login[dateLogin]);
+	DataLoginDate.push(String(dateLogin));
+}
+
+
+$(document).ready(function() {
+		
+
+	
+	//login chart
+	gethighChart('area','Login Chart','nlpd',DataLoginNum,DataLoginDate,7);
+
+   
+
+    
+});
+		</script>
+        {/literal}

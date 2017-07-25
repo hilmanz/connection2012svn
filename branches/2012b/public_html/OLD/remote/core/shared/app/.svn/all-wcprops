@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app
+END
+Constants.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/Constants.php
+END
+php4Executive.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/php4Executive.php
+END
+php5Executive.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/php5Executive.php
+END
+BasicActions.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/BasicActions.php
+END
+BasicGateway.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/BasicGateway.php
+END
+Globals.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/839/branches/2012/public_html/remote/core/shared/app/Globals.php
+END

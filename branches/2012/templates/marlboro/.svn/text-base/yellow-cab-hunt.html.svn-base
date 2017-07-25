@@ -1,0 +1,63 @@
+<div id="activity">
+    <div id="content">
+    	<div class="post postYellowCab">
+        	<div id="listActivity">
+                   {if $news}
+                  <ul id="first-carousel" class="listactivity jcarousel-skin-tango">
+				   {section name=i loop=$news}
+				   <li>
+                    	<div class="thumbPhoto">
+                        	<div class="crop"><img src="avatar/sample.jpg" /></div>
+                        </div>
+                        <div class="list">
+                            <p>{$news[i]->news_brief|truncate:100} <a class="seeDetail" href="#popupYellowCabMap" onCLick="getDetail({$news[i]->news_id})"  style="font-size:11px;">more</a></p>
+                        </div>
+                    </li>
+                   {/section}
+                  </ul>
+				   {else}
+                	  <div class="blank" style="margin:0 0 0 100px;"><span style="padding:50px 15px; font-size:16px;">There's no sign of Yellow Cab sightings at the moment. We'll be updating clues and the next location of the Yellow Cab so come back often!</span></div>
+				   {/if}
+          	</div><!-- end #listActivity -->
+            <div class="yellowTapes">
+            	<div class="yellowTape">
+                	<h3>Yellow Cab Hunt</h3>
+<p>Spot the cab, get the badge.</p>
+
+<p>Read the clues, get to the right locations,<br />
+find the Taxi Driver and mention the Magic Words. (Click "more" to get the words)</p>
+
+<p>The first five persons who got to the cab if you're aiming for the exclusive badge.</p>
+
+<p>Another surprise will be rewarded to those who come after the first three. Get yourself ready and start the hunt!</p>
+                </div><!-- end .yellowTape -->
+            </div><!-- end .yellowTapes -->
+            <div class="taxi"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_yellowCabMap.html"}
+
+
+{literal}
+<script>
+	function getDetail(id){
+		$.post("index.php?page=yellowCabHunt&act=huntingDetail", { id: id},
+			   function(data) {
+		//	alert(data.data.news_last_update);
+					if(data.status>0) { 
+					$('#titleUpdateClue').html(data.data.news_title);
+					$('.yellowTapePopUp').html(data.data.news_content);
+					$('#dateUpdateClue').html(data.data.news_last_update);
+					$('#thumbPeta').attr('src','contents/news/'+data.data.images);
+					$('#bigPeta').attr('href','contents/news/'+data.data.images);
+					$("#popupActivity").show(); 				
+					}else return false;
+					
+				 
+		});
+		
+	
+	}
+</script>
+{/literal}

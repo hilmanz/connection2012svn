@@ -1,0 +1,72 @@
+<div style="padding:10px;">
+<h2>REDEEM PRIZE</h2>
+<hr>
+<p><input type="button" value="Export To Excel" style="clear:both;display:block;" onclick="javascript:exportToExcel('?s=reporting&act=getCSV&data=social_redeem');" /></p>
+<form method="POST" action="index.php?s=reporting&act=social_redeem">
+<input type="hidden" name="status" value="{$status}" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>
+	<td colspan="4"><b>Status</b>&nbsp;&nbsp;
+		<select name="status" id="statusReport" style="width:100px;">
+			{if $_status == 0}
+				<option value="0" selected="selected">- All -</option>
+				<option value="1">Pending</option>
+				<option value="2">Redeem</option>
+			{elseif $_status == 1}
+			<option value="0" >- All -</option>
+			<option value="1" selected="selected">Pending</option>
+			<option value="2">Redeem</option>
+			{else}
+				<option value="0" >- All -</option>
+				<option value="1">Pending</option>
+				<option value="2" selected="selected">Redeem</option>
+			{/if}
+		</select>
+		</select>&nbsp;<input type="submit" value="Go"/>
+	</td>
+</tr>
+</table></br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>ID</strong></td>
+	<td><strong>Name</strong></td>
+	<td><strong>Email</strong></td>
+	<td><strong>Street</strong></td>
+	<td><strong>City</strong></td>
+	<td><strong>Province</strong></td>
+	<td><strong>Zip Code</strong></td>
+	<td><strong>Phone</strong></td>
+	<td><strong>Mobile</strong></td>
+	<td><strong>Prize</strong></td>
+	<td><strong>Submit Date</strong></td>
+	<td><strong>Status</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].id}</td>
+    <td>{$list[i].name}</td>
+    <td>{$list[i].email}</td>
+    <td>{$list[i].street}</td>
+    <td>{$list[i].city}</td>
+    <td>{$list[i].province}</td>
+    <td>{$list[i].complex}</td>
+    <td>{$list[i].phone}</td>
+    <td>{$list[i].mobile}</td>
+    <td>{$list[i].prize}</td>
+    <td>{$list[i].submit_date|date_format}</td>
+    <td>{if $list[i].n_status == 0} Pending {else} Redeem {/if}</td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+{literal}
+	<script type="text/javascript">
+	function exportToExcel(url){
+	var status = document.getElementById('statusReport').value;
+		document.location.href = url+'&status='+status;
+		return false;
+	}
+	</script>
+	{/literal}
+</form>
+</div>

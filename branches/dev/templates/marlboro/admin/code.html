@@ -1,0 +1,59 @@
+<form>
+	<input type="hidden" name="s" value="code" />
+<div>
+<label>Amount to Generate : </label>
+<input type="text" name="amount" value="" size="30"/> max : 10,000
+</div>
+<div>
+<label>Channel : </label>
+<select name="channel" id="channel">
+  <option value="1">Baliho</option>
+  <option value="2">Magazine</option>
+  <option value="3">POG</option>
+  <option value="4">Poster</option>
+  <option value="5">Tent Card</option>
+  <option value="6">Digital banners</option>
+  <option value="7">Rich Media Banners</option>
+  <option value="8">SBA</option>
+  <option value="9">DST</option>
+</select>
+</div>
+<div>
+<label>Tier : </label>
+<label for="tier"></label>
+<select name="tier" id="tier">
+  <option value="1">Low</option>
+  <option value="2">Medium</option>
+  <option value="3">High</option>
+</select>
+</div>
+<div>
+<label>Reusable ? </label>
+<label for="type"></label>
+<select name="type" id="type">
+  <option value="0">No</option>
+  <option value="1">Yes</option>
+</select>
+</div>
+<div>
+<label>Wildcard ? : </label>
+<select name="wildcard" id="wildcard">
+  <option value="0">No</option>
+  <option value="1">Yes</option>
+</select>
+</div>
+<div>
+<input type="submit" name="Generate" value="Generate"/>
+</div>
+</form>
+
+<div>
+  <p>&nbsp;</p>
+  <table width="24%" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="11%"><strong>No</strong>.</td>
+      <td width="89%"><strong>Kode</strong></td>
+    </tr>
+	{$code}
+    </table>
+</div>

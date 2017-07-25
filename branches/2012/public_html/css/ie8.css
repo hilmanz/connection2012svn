@@ -1,0 +1,29 @@
+/*
+Theme Name: MARLBORO CONNECTIONS IE 8
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+/*#term .light{
+	margin:298px 0 0 0;
+	right:100px;
+	display:none;
+}
+
+a.close-box{
+	right:520px;
+	top:285px;
+}
+#trade .light{
+	margin:298px 0 0 0;
+	right:100px;
+	display:none;
+}*/
+
+#navigation{
+    letter-spacing: -0.06em;
+}
+#navigation ul ul li{
+	letter-spacing:0.03em;
+	float:none;
+	margin:0;
+}

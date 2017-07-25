@@ -1,0 +1,49 @@
+<div id="header">
+<div id="logo">
+    <a class="logo" href="index.php">&nbsp;</a>
+</div>
+<div id="navigation">
+    <ul class="nav">
+        <li><a {if $page=='staticsabout' || $page=='staticsprizes' || $page=='staticshowtoplay' ||  $page=='staticstos' ||  $page=='' }class="current"{/if} href="index.php?page=statics&act=about">About Connections</a>
+            <ul>
+                <li><a {if $page=='staticsprizes' }class="current"{/if} href="index.php?page=statics&act=prizes">Prizes</a></li>
+                <li><a {if $page=='staticshowtoplay' }class="current"{/if} href="index.php?page=statics&act=howtoplay">How To Play</a></li>
+                <li><a {if $page=='staticstos' }class="current"{/if} href="index.php?page=statics&act=tos">Terms &amp; Conditions</a></li>
+            </ul>
+        </li>
+        <li><a {if $page=='updateclues' ||  $page=='updatecluesnews' ||  $page=='updatecluesactivity' ||$page=='yellowcabhunt' }class="current"{/if} {if $verified} href="index.php?page=updateclues" {else} href="#unverified"  class="seeDetail"{/if} >Update&nbsp;Clues</a>
+            <ul>
+                <li><a {if $page=='updatecluesnews' }class="current"{/if} {if $verified} href="index.php?page=updateclues&act=news"  {else} href="#unverified"  class="seeDetail"{/if}  >Clues &amp; Hot News</a></li>
+                <li><a {if $page=='updatecluesactivity' }class="current"{/if}  {if $verified} href="index.php?page=updateclues&act=activity"  {else} href="#unverified"  class="seeDetail"{/if}>Connections Activity</a></li>
+                <li><a {if $page=='yellowcabhunt' }class="current"{/if}  {if $verified} href="index.php?page=yellowCabHunt" {else} href="#unverified"  class="seeDetail"{/if}>Yellow Cab Hunt</a></li>
+            </ul>
+        </li> 
+		{*}
+		<li><a {if $page=='badges' || $page=='badgestrade' || $page=='badgesauction' || $page=='badgesauction_bid' || $page=='redeem'}class="current"{/if} {if $verified} href="index.php?page=badges" {else} href="#unverified"  class="seeDetail"{/if}>Badges</a>
+            <ul>
+                <li><a {if $page=='badgestrade' }class="current"{/if}  {if $verified}  {if $verified}  href="index.php?page=badges&act=trade" {else} href="#unverified"  class="seeDetail"{/if}>Badge Trade</a></li>
+                <li><a {if $page=='badgesauction' || $page=='badgesauction_bid'  }class="current"{/if}  {if $verified}    href="index.php?page=badges&act=auction" {else} href="#unverified"  class="seeDetail"{/if}>Badge Auction</a></li>
+                <li><a {if $page=='redeem' }class="current"{/if}   {if $verified}   href="index.php?page=redeem" {else}  href="#unverified"  class="seeDetail"{/if}>Redeem Prizes</a></li>
+            </ul>
+        </li>
+		{/*}
+        <li><a {if $page=='badges' || $page=='badgestrade' || $page=='badgesauction' || $page=='badgesauction_bid' || $page=='redeem'}class="current"{/if} href="#commingsoonBadges" class="seeDetail">Badges</a>
+            <ul>
+                <li><a {if $page=='badgestrade' }class="current"{/if} href="#commingsoonBadges" class="seeDetail">Badge Trade</a></li>
+                <li><a {if $page=='badgesauction' || $page=='badgesauction_bid'  }class="current"{/if} href="#commingsoonAuction" class="seeDetail">Badge Auction</a></li>
+                <li><a {if $page=='redeem' }class="current"{/if}  href="#commingsoonRedeem" class="seeDetail">Redeem Prizes</a></li>
+            </ul>
+        </li>
+        <li><a {if $page=='game' }class="current"{/if} {if $verified} href="index.php?page=game" {else}  href="#unverified"  class="seeDetail"{/if}>Games</a></li>
+        <li class="last"><a {if $page=='inputcode' } class="current" {/if} {if $verified}  href="index.php?page=inputCode" {else}  href="#unverified"  class="seeDetail"{/if}>Input Codes</a></li>
+    </ul>
+</div>
+</div><!-- end #header -->
+
+<div id="container">
+<div id="subnavigation">
+    <a  href="index.php?page=myprofile">My Profile</a>
+    <a {if $verified} href="index.php?page=myprofile&act=messages"  {else}  href="#unverified"  class="seeDetail"{/if}>Messages</a>
+    <a {if $verified} href="index.php?page=referfriend"  {else}  href="#unverified"  class="seeDetail"{/if}>Refer a Friend</a>
+    <a href="logout.php">Sign Out</a>
+</div>

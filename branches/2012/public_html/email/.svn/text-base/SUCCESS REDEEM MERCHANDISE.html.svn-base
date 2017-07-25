@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MARLBORO CONNECTION</title>
+</head>
+
+<body bgcolor="#555555">
+<table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td style="background:url(bg.jpg) no-repeat; height:420px;" headers="420" valign="top">
+    	<div style="font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; color:#666; padding:0 40px; width:300px; height:350px; position:relative;">
+        	<h1 style="font-family:'Arial Black', Gadget, sans-serif; font-size:30px; color:#ed1106; margin:40px 0 30px 0;">HI, {name}</h1>
+            <p>With this exclusively designed <strong>{item name}</strong>  you'll feel even closer to <strong>Berlin</strong>, <strong>Istanbul</strong> and <strong>New York</strong>!</p>
+
+<p>Shortly we will be shipping this to the address you specified when you registered.</p>
+
+<p>{ Delivery Address}</p>
+<p>While we deliver it to you, why not continue to search out more badges on <a href="http://www.marlboro.co.id" target="_blank" style="color:#ed1106; text-decoration:none;">marlboro.co.id</a> and add to your collection! Complete all badges and you may be one of our finalists.</p>
+
+<a href="http://www.marlboro.co.id" target="_blank" style="color:#ed1106; text-decoration:none; position:absolute; display:block; width:200px; height:50px; right:-322px; bottom:0;">&nbsp;</a>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="background:url(hw.jpg) no-repeat; height:75px" headers="75">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

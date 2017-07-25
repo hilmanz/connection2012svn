@@ -1,0 +1,82 @@
+<div style="padding:10px;">
+<h2>News Add New</h2>
+<hr>
+{if $msg}<div style="color:#cc0000;">{$msg}</div>{/if}
+<!-- <form id="formadd"> -->
+<form method="post" enctype="multipart/form-data" onsubmit="javascript: return validator();" id="formadd">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	<tr>
+		<td>Title</td>
+		<td><input type="text" name="title" maxlength="35"/></td>
+	</tr>
+	<tr>
+		<td>Category</td>
+		<td>
+			<select name="category" style="width:200px;">
+			{section name=i loop=$cat}
+			<option value="{$cat[i].id}">{$cat[i].name}</option>
+			{/section}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Brief</td>
+		<td><textarea name="brief" maxlength="200" cols="50"></textarea></td>
+	</tr>
+	<tr>
+		<td>Upload Images <em>(JPG, GIF and PNG)</em></td>
+		<td>
+			<p><input type="file" name="img1" size="50"/>&nbsp;<small>Minimal resolution 300x300 pixel</small></p>
+		</td>
+	</tr>
+	<tr>
+		<td>Content</td>
+		<td><textarea name="content" id='txtcontent' cols="50" rows="7"></textarea></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td>	
+			<select name="status">
+				<option value="0">Block</option>
+				<option value="1">Publish</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+	  <td>Plain Text</td>
+	  <td><textarea name="ptext" cols="50" rows="7"></textarea></td>
+	  </tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="save" value="1" />
+			<input type="hidden" name="s" value="news" />
+			<input type="hidden" name="act" value="add" />
+			<input type="submit" value="Save" />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>
+{literal}
+<script type="text/javascript">
+	
+	
+	
+function validator(){
+	//alert( 'sadsadsa' );
+	//return false;
+	tinyMCE.triggerSave();
+	if( $('#title').val() == '' ){
+		alert("Please fill title");
+		return false;
+	}else if( $('#brief').val() == '' ){
+		alert("Please fill brief");
+		return false;
+	}else if( $('#teditor').val() == '' ){
+		alert("Please fill desc");
+		return false;
+	}
+}	
+
+</script>
+{/literal}

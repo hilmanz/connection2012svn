@@ -1,0 +1,16 @@
+<div id="unverified" class="popupContainer centerText">
+	<div id="popupHead">
+    	<div id="popupBottom">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#">&nbsp;</a>
+                <div class="poupContent">
+                	<h1>Sorry, you haven't been verified.</h1>
+                    <h3 class="grey">Please wait for verification before you can continue your journey.</h3>
+                    <img src="img/badge_unverified.png" />
+                </div><!-- end .poupContent -->
+            </div><!-- end #poupContent -->
+        </div><!-- end #popupBottom -->
+    </div><!-- end #popupHead -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>

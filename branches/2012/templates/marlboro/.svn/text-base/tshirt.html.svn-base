@@ -1,0 +1,76 @@
+{*}
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-reedem-active">
+                  <h2><a href="#" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+    <div id="content">
+    	<div id="pick-tshirt">
+        	<div class="content">
+            <div style="position:relative;">
+            	<div class="tshirt-entry"> 
+                	<form id="formTshirt" class="picktshirt">
+                	<div class="tshirt-list">
+                    	<div class="tshirt-box">
+                        	<div class="tshirt-type">
+                            	<span>T001</span>
+                                <input type="radio" name="type" value="T001" checked="checked" />
+                            </div>
+                        	<img src="images/tshirt_1.png" />
+                        </div>
+                    	<div class="tshirt-box">
+                        	<div class="tshirt-type">
+                            	<span>T002</span>
+                                <input type="radio" name="type" value="T002" />
+                            </div>
+                        	<img src="images/tshirt_2.png" />
+                        </div>
+                    	<div class="tshirt-box">
+                        	<div class="tshirt-type">
+                            	<span>T003</span>
+                                <input type="radio" name="type" value="T003" />
+                            </div>
+                        	<img src="images/tshirt_3.png" />
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<label>PICK YOUR SIZE</label>
+                        <select name="size" class="size">
+                        	<option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+						<!--<input type="hidden" name="id" value="{$id}" />-->
+						<input type="hidden" name="prize" value="{$prize}" />
+						<input type="hidden" name="page" value="code" />
+						<input type="hidden" name="act" value="prize" />
+						<input type="submit" class="btn-reedem" value="&nbsp;" />
+                    </div>
+                    </form>
+                </div><!-- .reedem-entry -->
+				<div id="popupError" style="display:none;width:250px;height:100px;position:absolute;background:#fff;left:50%;margin-left:-125px;top:300px;border:2px solid #000;padding:10px;">
+					<p>Lorem ipsum</p>
+					<input id="popupClose" type="button" value="close" />
+				</div>
+			</div>
+            </div><!-- .content -->
+        </div><!-- #reedem -->
+    </div><!-- #content -->
+{/*}  

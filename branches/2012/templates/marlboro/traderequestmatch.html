@@ -1,0 +1,322 @@
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge-active">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            {*}
+            <div class="nav-reedem">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            {/*}
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+   <div id="content">
+    	<div id="news">
+        	<div class="content" style="position:relative;">
+        		<div>{if !$list}
+        			{literal}
+        			<script>
+        				$(".content").css("width","435px");
+					</script>
+            		{/literal}
+        			<h1 style="margin-bottom:0px">There's no match for your trade request now.</h1>
+        			<p style="margin:0; padding:0;">Once we've found the matched request, you'll be notify via message and the badge will be placed/added to your badge collection.</p>
+        			{else}
+        			<h1 style="margin-bottom:0px">Your trade request matches these people</h1>
+        			<p style="margin:0; padding:0;">Select who you would like to trade with</p>
+        			{/if}
+        		</div>
+            	<div class="newsfeed">  
+               	  <ul id="mycarousel" class="jcarousel jcarousel-skin-tango" style="list-style:none;">
+                    {if !$list}
+					<img src="images/no-trade.png" width="256" />
+					<br>
+					<a style="padding-left:60px;" href="index.php?page=code&act=trade">trade another badges >></a>
+					{/if}
+					<!-- START CONTENT LIST -->
+					{section name=i loop=$list}
+					<li>
+                        <div class="row" style="margin: 45px 0 70px;padding: 0 14px 0 0;position: relative;">
+                        	<img class="profileBadge" alt="" src="{$list[i].img}" width="80">
+                            <div class="entry" style="height: 17px; margin-left: 100px;">                           	
+                            	
+                            	<a href="#offerBox" class="toggleBox" no="{$list[i].register_id}" auction="{$list[i].auction_id}" style="background: none repeat scroll 0 0 #FFFFFF;border: 1px solid;height: 15px;width: 15px; float:left;margin: 0 10px 0 0;"></a>                               
+                               	<p style="float:left;">{$list[i].name|stripslashes}</p>
+                            </div>
+                        </div>
+                    </li>
+					{/section}
+					<!-- END CONTENT LIST -->
+					
+                  </ul>
+                  
+                 
+                </div>
+                
+                
+                <div id="offerBox" class="requestBadge box-1" style="z-index:751">
+                  <div class="profile" style=" margin: 55px 0 0 55px;">  
+                  <a class="popup-close toggleBox" no="1"></a>
+               		<div class="profile-card">
+                    	<div class="profile-entry">
+                         <form id="formOfferTrade">   
+                            <div class="photo">
+                                <img id="profileImg" src="images/pp.jpg" />
+                            </div>
+                            <div class="profile-info">
+                                <span>Name</span>
+                                <h2 id="profileName"></h2>
+                                <span>Age</span>
+                                <h2 id="profileAge"></h2>
+                                <span>Town</span>
+                                <h2 id="profileCity"></h2>
+                                
+                                <span>Connections Date</span>
+                                <h2 id="profileDate"></h2>
+                            </div>
+                            
+                            <div class="entry-text">
+                                <h2 id="profileDescription"></h2>
+                            </div>
+                           
+                           <img class="trader" alt="trader" src="images/content/trader.png" width="130">
+                           <input class="offerTrade" type="button" value="" no="1">
+                       </div>
+                       </form>
+                    </div><!-- .profile-card -->
+                    
+                    <div class="badge-row" id="profileBadge">
+						<!--
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge1.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>1</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge2.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>5</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge3_grey.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>0</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge4.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>3</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge5_grey.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>0</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge6.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>2</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge7_grey.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>0</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge8.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>4</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge9.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>2</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge10.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>5</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge11.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>3</span>
+                            </div>
+                        </div>
+                    	<div class="badge-box">
+                        	<div class="badge-img">
+                            	<img src="images/badge/badge12.png" width="65" />
+                            </div>
+                            <div class="badge-count">
+                            	<span>3</span>
+                            </div>
+                        </div>
+						-->
+                    </div><!-- .badge-row -->
+				</div><!-- .profile -->                  
+               </div>
+               
+			   <div id="badgeRequestConfirm" class="badge-box-medium" style="z-index:751;"">
+    				<div class="contentBadge">
+    					<a class="popup-close toggleBox2"></a>
+    					<div class="head" style="border: 0 none;">
+    						<h1>confirm trade</h1>
+    					</div>
+    					<form id="formRequestTradeConfirm2" action="#">
+    					<img id="confirmMineImg" class="kiri" alt="mine" src="images/badge/badge{$want}-big.png">
+    					<div class="absolute" style="left: 40px;top: 230px;"><span style="display: block;text-align: center;width: 120px;">{$name}</span></div>
+    					<img id="confirmYourImg" class="kanan" alt="yours" src="images/badge/badge{$badge}-big.png">
+    					<div class="absolute" style="left: 350px;top: 230px;"><span style="display: block;text-align: center;width: 120px;" id="traderName"></span></div>
+    					<div class="controlTrade">
+    						<img alt="Trade" src="images/content/arrow.png">
+    						<input class="offerSuccess" type="submit" value="">
+    					</div>
+    					</form>
+    				</div>
+    			</div>
+    			
+    			
+    			<div id="badgeRequestSuccess" class="badge-box-medium" style="z-index:751;">
+    				<div class="contentBadge">
+    					<a class="popup-close toggleBox3"></a>
+    					<div class="head" style="border: 0 none;margin: 19px 0 0;">
+    						<h1>congratulations! <span style="font-size:16px">Your trade was accepted.</span><br><br>
+    						<span style="font-size:16px">you have just obtained </span><br>
+    						<span style="display: block;font-size: 20px;width: 220px; text-align:center;" id="msgSuccess">The Berlin Bahn Badge!</span></h1>
+    						<p>This badge has been added to your collection</p>
+    					</div>
+    					
+    					<img alt="badge" id="badgeres" src="images/badge/badge12-super.png" style="position: absolute;right: 52px;top: -5px;">
+    					
+    				</div>
+    			</div>
+            </div><!-- .content -->
+             
+            <script>
+            {literal}
+            	$("a.toggleBox").click( function() {
+					var no = $(this).attr('no');
+					var auction = $(this).attr('auction');
+					
+					var rand = Math.floor((10-4)*Math.random()) + 5;
+					$.ajax({
+						type: "POST",
+						url: 'index.php?page=code&act=getmopprofile&ajax=1&rand='+rand,
+						data: {'regid':no},
+						dataType: "json",
+						success: function (data) {
+							//alert(data);
+							if( data.status > 0 ){
+								var profile = data.data;
+								$('#traderName').text(profile.name);
+								$('#profileName').text(profile.name);
+								$('#profileImg').attr('src',profile.img);
+								$('#profileAge').text(profile.age);
+								$('#profileCity').text(profile.kota);
+								$('#profileDate').text(profile.date);
+								$('#profileDescription').html(profile.description);
+								//sellerId = profile.register_id;
+								sellerId = auction;
+								
+								/* BADGE NGGA JADI DI TAMPILIN
+								var num = data.data.badge.length;
+								var htm='';
+								for(var i=0;i<num;i++){
+									htm += '<div class="badge-box">';
+									htm += '<div class="badge-img">';
+									htm += '<img src="images/badge/badge'+(i+1)+'.png" width="65" />';
+									htm += '</div>';
+									htm += '<div class="badge-count">';
+									htm += '<span>'+data.data.badge[i]+'</span>';
+									htm += '</div>';
+									htm += '</div>';
+								}
+								$('#profileBadge').html(htm);
+								*/
+								$("#offerBox").fadeToggle("slow");
+								
+							}else{
+								alert("Failed, please try again!");
+							}
+						},
+						error: function (res, status) {
+							if (status === "error") {
+								var errorMessage = $.parseJSON(res.responseText);
+								alert(errorMessage.Message);
+							}
+						}
+					});
+				
+				});
+				
+            	$(".offerTrade").click( function() {
+            		var no = $(this).attr('no');
+                    $(".box-"+no).fadeOut("slow");
+                    $("#badgeRequestConfirm").fadeIn("slow");
+            		});
+                $(".toggleBox2").click( function() {
+                    $("#badgeRequestConfirm").fadeOut("slow");
+            		});
+				/*
+                $(".offerSuccess").click( function() {
+            		
+                    $("#badgeRequestConfirm").fadeOut("slow");
+                    $("#badgeRequestSuccess").fadeIn("slow");
+            		});
+				*/
+                $(".toggleBox3").click( function() {
+                    //$("#badgeRequestSuccess").fadeOut("slow");
+					document.location.href = "index.php?page=profile";
+            	});
+            {/literal}
+			
+			confirmMine = {$badge};
+			confirmYour = {$want};
+            </script>
+        </div><!-- #news -->
+    </div><!-- #content -->
+    

@@ -1,0 +1,46 @@
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            {*}
+            <div class="nav-reedem">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            {/*}
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+    <div id="content">
+    	<div id="messages">
+        	<div class="content">
+            	<div class="messages">  
+                	<h1><img src="images/messages.png" /></h1>
+                    <div class="messagebox">
+                    	<h3>Read message</h3>
+<p>
+	<a href="index.php?page=message">inbox</a>&nbsp;|&nbsp;
+	
+</p>
+
+<p>From:&nbsp;{$rs.name}</p>
+<p>Subject:&nbsp;{$rs.message_subject}</p>
+<p>Send:&nbsp;{$rs.message_date}</p>
+<p>{$rs.message_text}</p>
+                    </div>
+                </div><!-- .messages -->
+            </div><!-- .content -->
+        </div><!-- #messages -->
+    </div><!-- #content -->
+

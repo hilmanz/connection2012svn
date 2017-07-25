@@ -1,0 +1,31 @@
+<div style="padding:10px;">
+<h2>AUCTION Management</h2>
+<hr>
+<a href="index.php?s=auction&act=add" style="text-decoration:none;"><input type="button" value="Add New" style="clear:both;display:block;" /></p></a>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Item name</strong></td>
+	<td><strong>Image</strong></td>
+	<td><strong>Start Date</strong></td>
+	<td><strong>End Date</strong></td>
+	<td><strong>Description</strong></td>
+   <td><strong>Status</strong></td>
+	<td  width="10%"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].item_name}</td>
+    <td><img style="width:150px" src="../../public_html/img/auction/{$list[i].img}" /></td>
+    <td>{$list[i].start_date}</td>
+    <td>{$list[i].end_date}</td>
+    <td width="20%">{$list[i].description}</td>
+	<td>{if $list[i].n_status==1 }<span style="color:green" >OPEN</span>{else}<span style="color:red" >CLOSED</span>{/if}</td>
+    <td>
+	<a href="?s=auction&act=edit&id={$list[i].id}" class="addSubPage">Edit</a>
+	<a onclick="return confirm('Are you sure want to delete this auction ?');" href="?s=auction&act=delete&id={$list[i].id}" class="deletePage">Delete</a>
+	</td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

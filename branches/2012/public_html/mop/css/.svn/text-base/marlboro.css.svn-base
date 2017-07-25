@@ -1,0 +1,426 @@
+/*
+Theme Name: MARLBORO REDRUSH MOP
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+
+body {
+	background:url(../images/bg_all.jpg) repeat;
+	font-size:16px;
+	color:#666;
+	margin:0;
+	padding:0 0 40px 0;
+	text-align:center;
+	font-family: 'Oswald', sans-serif;
+}
+body.landingPage {
+	background:url(../images/bg_all.jpg) repeat;
+}
+body.landingPage .mainPage {
+	text-align:center;
+	text-shadow:0 1px 1px #000;
+	background:none;
+}
+body.landingPage .formLanding {
+	background:url(../images/landing_text.png) no-repeat;
+	text-shadow:0 1px 1px #000;
+	position:relative;
+	width:1000px;
+	height:316px;
+	margin:100px 0 0 0;
+}
+body.landingPage .mainPage .content{
+	height:500px;
+}
+a {
+	color:#C00;
+	outline:none;
+}
+a:hover {
+	color:#F00;
+}
+h1, h2, h3 {
+	margin:8px 0;
+	font-weight:normal;
+	color:#333;
+	text-transform:capitalize;
+}
+h1 {
+	font-size:18px;
+}
+h2 {
+	font-size:16px;
+}
+h3 {
+	font-size:14px;
+}
+form {
+	margin:0;
+	padding:0;
+}
+.intro h1 {
+	font-size:35px;
+}
+.intro{
+	padding:0;
+}
+.mainPage {
+	background:url(../images/head.png) top no-repeat;
+	width:960px;
+	margin:auto auto;
+	text-align:left;
+	padding:0 0 50px 0;
+}
+.footer {
+	text-align:center;
+	font-size:18px;
+	text-shadow:none;
+}
+.footer ul {
+	margin:0;
+	padding:0;
+}
+.footer ul li {
+	display:inline;
+}
+.footer ul li a {
+	color:#C00;
+}
+.footer ul li a:hover {
+	color:#666;
+}
+fieldset, .r3UploadSection, .r3FaxSection {
+	margin:0;
+	padding:0;
+	background:url(../images/transparent-white.png) repeat;
+	border:none;
+}
+p.r3UploadSection {
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+	border:none;
+}
+fieldset h2, .r3UploadSection h2, .r3FaxSection h2,#forgottenPassword .content h2 {
+	padding:15px 20px 10px 30px;
+	margin:0;
+	color:#333;
+	background:url(../images/bg_title.png) no-repeat;
+	font-size:20px;
+	line-height:30px;
+}
+fieldset h2 p, .r3UploadSection h2 p, .r3FaxSection h2 p {
+	margin:0;
+}
+.header {
+	padding:0 0 20px 0;
+}
+.header p{
+	margin:3px 0;
+}
+.header p.intro{
+	padding:0;
+}
+.header h1{
+	text-transform:uppercase;
+}
+.r3UploadSection {
+	-moz-box-shadow:none;
+}
+.r3FaxSection ol {
+	display:block;
+	clear:both;
+	padding:15px 25px;
+	border-bottom:dashed 1px #666;
+	margin:0;
+}
+.r3FaxSection ol li {
+	margin-left:40px;
+	padding:20px 0;
+}
+#Form1 .row, p.r3UploadSection, .r3FaxSection p {
+	display:block;
+	clear:both;
+	padding:15px 25px;
+	border-bottom:dashed 1px #666;
+	overflow:hidden;
+	margin:0;
+}
+.row label, .col_left, .fullWidthLabel {
+	display:inline-block;
+	width:200px;
+	margin:0;
+}
+.row label.radio {
+	width:60px;
+}
+.row table td {
+	text-align:center;
+}
+.row table td input[type=radio] {
+	margin:0;
+}
+.row table {
+	display:inline-block;
+}
+input[type=radio] {
+	margin:0 20px 0 0;
+}
+input[type=text] {
+	background:#fff;
+	width:212px;
+	height:24px;
+	border:solid 1px #999;
+	padding:3px 4px;
+}
+input.dob {
+	width:50px;
+}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {
+}
+input[type=submit]:focus {
+}
+.navigation ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.navigation ul li {
+	display:inline;
+}
+.navigation ul li a {
+	padding:0 10px 0 0;
+}
+.error {
+	margin:0;
+	color:#F00;
+	font-size:10px;
+}
+.submit {
+	display:inline-block;
+	margin:0 0 20px 0;
+}
+#lnkSubmitBtn, #lnkEditBtn, #lnkBtnSaveForm, #lnkBtnPrintForm, #lnkBtnContinue,#lnkBtnEditProfile,#lnkBtnLoginPassword,#lnkBtnBackToCallingSite {
+	border:none;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:5px 15px;
+	display:block;
+	background:#666;
+	font-size:30px;
+}
+#lnkSubmitBtn:hover, #lnkEditBtn:hover, #lnkBtnSaveForm:hover, #lnkBtnPrintForm:hover, #lnkBtnContinue:hover,#lnkBtnEditProfile:hover,#lnkBtnLoginPassword:hover,#lnkBtnBackToCallingSite:hover {
+	background:#820600;
+}
+.phoneGroup, .example {
+	display: inline-block;
+}
+.example {
+	padding:0 10px;
+}
+.row label.checkboxLabel, row label.checkbox {
+	display: inline;
+	padding:0 0 0 10px;
+}
+#phPDFTitle br {
+	display:none;
+	margin:0;
+}
+#phRadBtn {
+	display:none;
+	visibility:hidden;
+}
+.loginBox {
+	width:254px;
+	height:100px;
+	margin:0 auto;
+	text-align:left;
+	padding:10px 0 0 0;
+	position:absolute;
+	top:340px;
+	right:280px;
+}
+.loginBox .row {
+    height: 50px;
+    position: relative;
+    width: 300px;
+}
+.loginBox .row label {
+	color:#666666;
+	font-size:22px;
+	text-shadow:none;
+	text-transform:uppercase;
+	position:absolute;
+}
+.loginBox h1 {
+	color:#000;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:20px 15px 0 15px;
+	margin:0;
+}
+.loginBox input[type=text], .loginBox input[type=password] {
+	background:url(../images/bg_input.jpg) #fff no-repeat;
+	width:218px;
+	height:22px;
+	border:none;
+	padding:3px 4px;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+	font-size:14px;
+	font-family: 'Oswald', sans-serif;
+	margin:0 0 0 130px;
+}
+.loginBox input[type=password]{
+	font-size:24px;
+}
+.loginBox .smSubmit a {
+}
+.smSubmit {
+	padding:0 15px;
+	display:block;
+	text-align:center;
+}
+.smSubmit a {
+	color:#000;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:5px 0;
+	display:block;
+	text-shadow:0 1px 0 #fff;
+}
+.loginBox .smSubmit {
+	position:absolute;
+	margin:-28px 0 0 213px;
+}
+.loginBox .smSubmit a, #lnkBtnRegister {
+	background:none;
+	border: none;
+	color:#666;
+	text-decoration:none;
+	padding:5px 0;
+	display:block;
+	font-weight:normal;
+	text-align:left;
+	width:50px;
+	font-size:16px;
+}
+#lnkBtnRegister{
+	margin:40px 0 0 0;
+}
+#lnkBtnRegister:hover{
+	color:#C00;
+}
+#lnkBtnSubmit{
+	background:url(../images/btn_submit.png) no-repeat;
+	width:38px; height:38px;
+	text-indent:-5000px;
+}
+#lnkBtnSubmit:hover{
+	background:url(../images/btn_submit_hover.png) no-repeat;
+}
+.loginBox .smSubmit a:hover, #lnkBtnRegister:hover, .forgottenpassword a:hover {
+	color:#000;
+}
+.loginBox a#lnkBtnSubmit{
+	background:url(../images/btn_login.png) no-repeat;
+	width:119px; height:39px;
+	display:block;
+	text-indent:-5000px;
+	position:absolute;
+	margin:-78px 0 0 140px;
+}
+.loginBox a#lnkBtnSubmit:hover{
+	background:url(../images/btn_login_hover.png) no-repeat;
+}
+.forgottenpassword {
+	padding:8px 0;
+	font-size:12px;
+	position:absolute;
+	top:90px;
+	right:-100px;
+}
+.forgottenpassword a {
+	display:inline-table;
+	text-decoration:none;
+	font-size:14px;
+	color:#666;
+	text-shadow:none;
+	text-transform:uppercase;
+}
+.registerBoxTitle {
+	display:none;
+}
+#divRegisterBox {
+	position:absolute;
+	right:165px;
+	top:275px;
+}
+#lnkButton,#lnkBtnCaptureContinue,#lnkBtnAccessWebCam,#lnkBtnUploadingContinue{
+    background: none repeat scroll 0 0 #CC0000;
+    color: #FFFFFF;
+    display: table;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#lnkBtnUploadingContinue p{
+	margin:0;
+	padding:0;
+	display:inline;
+}
+#chkConfirmAbove18{
+	float:left;
+}
+#ConfirmAbove18{
+	float:left;
+	margin:-5px 0 0 10px;
+        width: 820px;
+}
+.confirmations .row{
+	display:table;
+}
+.r3WebcamSection p,.r3UploadSection p,.r3FaxSection p{
+	text-align:left;
+	padding:0 15px;
+}
+.r3WebcamSection ,.r3UploadSection ,.r3FaxSection{
+	text-align:left;
+}
+#divLoginBox p{
+	margin:0;
+	line-height:18px;
+	font-size:12px;
+}
+#forgottenPassword .content{
+	margin:0;
+	padding:0;
+	background:url(../images/transparent-white.png) repeat;
+	border:none;
+}
+#lnkSubmit,#lnkBtnSubmit{
+    background: none repeat scroll 0 0 #CC0000;
+    color: #FFFFFF;
+    display: table;
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.row label.checkbox{
+	width:90px;
+}
+.landingPage .style1,.landingPage .style1 a{
+	color:#666;
+	text-decoration:none;
+}
+.landingPage .footer{
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+}

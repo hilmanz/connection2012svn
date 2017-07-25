@@ -1,0 +1,61 @@
+<div style="padding:10px;">
+<h2>Edit Badge</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr>
+    <td>Search Badge</td>
+    <td>
+		<form>
+			<span style="display:inline;">
+				<input type="hidden" name="s" value="code" />
+				<input type="hidden" name="act" value="edit-badge" />
+				<input type="text" name="code" />
+				<input type="submit" value=" GO " />
+			</span>
+		</form>
+	</td>
+    </tr>
+	{if $search eq '1'}
+		{if $list}
+		<tr class="head">
+			<td colspan="2">Result</td>
+		</tr>
+        <form>
+		<tr>
+			<td colspan="2">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+					<tr class="head">
+						<td>Code</td>
+						<td>Start date</td>
+						<td>End date</td>
+						<td>Description</td>
+					</tr>
+					{section name=i loop=$list}
+					<tr>
+						<td>{$list[i].kode}<input type="hidden" name="kd[]" value="{$list[i].kode}" /></td>
+						<td><input type="text" name="start[]" value="{$list[i].start_date}" /></td>
+						<td><input type="text" name="end[]" value="{$list[i].end_date}" /></td>
+						<td>{$list[i].description|stripslashes}</td>						
+					</tr>					
+					{/section}
+				</table> 
+                <p align="center">
+                <input type="submit" value=" Save " />
+                <input type="hidden" name="act" value="edit-badge" />
+                <input type="hidden" name="s" value="code" />
+                <input type="hidden" name="save" value="1" />
+                </p>                
+			</td>
+		</tr>
+		{else}
+		<tr class="head">
+			<td colspan="2">Result</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h2>No Result</h2></td>
+		</tr>
+		{/if}
+	{/if}
+    </form>
+</table>
+</div>

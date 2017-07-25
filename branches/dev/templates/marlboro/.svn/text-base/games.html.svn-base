@@ -1,0 +1,205 @@
+
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            {*}
+            <div class="nav-reedem">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            {/*}
+            <div class="nav-game-active">
+                 <h2><a href="#" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+    <div id="content">
+    	<div id="game">
+    		<div class="content">
+    			<div class="gamehome">
+    				<div class="game-desc">
+    					<span style="font-size:70px; color:#00357c;">HUNT  THE  BADGES!</span>
+    					<p>
+    						<strong>Need more badges?</strong><br>
+							Finish each level on all Marlboro Lights Connections games and get additional badges to add to your profile.</p>
+						<p>
+							Got the same badge? Go over to the trading section to hunt for more!
+						</p><p>
+							<strong>Good luck!</strong>
+    					</p>
+    				</div>
+    				<img class="map" src="images/game/map.png">
+    				<img class="route" src="images/game/route.png">
+    				
+    				<!-- Berlin -->
+    				<div class="popup-berlin">
+    				
+    					<!-- Berlin 1 -->
+    						<div class="thumb-b1">
+    							<a id="thumb-b1" class="play replay" href="#"></a>
+    						</div>
+    					
+    					<!-- Berlin 2 -->
+    						<div class="thumb-b2">
+    							<a id="thumbDJ" class="play replay" href="#"></a>
+    						</div>
+    						
+    					{*}
+    					<!-- Berlin 2 -->
+    						<div class="thumb-b2 hidden">
+    							<a class="play replay lock" href="#"></a>
+    						</div>
+    					{/*}
+    				</div>
+    				
+    				<!-- Newyork -->
+    				{*}
+    				<img class="lock-newyork" src="images/game/lock_game_newyork.png">
+    				{/*}
+    				<div class="popup-newyork">
+    				
+    					<!-- Newyork -->
+    						<div class="thumb-n">
+    							<a id="thumb-n" class="play" href="#"></a>
+    						</div>
+
+    				</div>
+    				
+    				
+    				<!-- Istanbul -->
+    				{*}
+    				<img class="lock-istanbul" src="images/game/lock_game_istanbul.png">
+    				{/*}
+    				<div class="popup-istanbul">
+    				
+    					<!-- Berlin 1 -->
+    						<div class="thumb-i">
+    							<a id="thumb-i" class="play replay" href="#"></a>
+    						</div>
+
+    				</div>
+    				
+    				<!-- My Rank -->
+    				<div class="myRank">{$myrank|intval}</div>
+    				
+    				<!-- Top 100 -->
+    				<a href="#top100">
+    					<img class="top100" src="images/game/btn_top100.png">
+    				</a>
+					<div id="top100" class="absolute" style="display:none; background:#e9f6f5; top:0; left:0; z-index:760; color: #2E507D;">
+						<div class="relative" style="padding: 10px 30px 30px;">	
+							<img class="btn-close absolute" src="images/game/btn_close.jpg" style="right: 0;top: -35px; cursor:pointer;">
+							<h1>TOP 100</h1>
+                            <div style="width:900px">
+                            <table cellpadding="0" cellspacing="0" border="0" style="float:left; margin-right:5px;margin-bottom: 30px;">
+                            <tr style="background:#879FC3;" height="37"><td style="text-align:center;" width="80">Rank</td><td width="140">Name</td></tr>
+                            {assign var=num value=1}
+							{section name=i loop=100}
+								{if $num > 25}
+									</table>
+									<table cellpadding="0" cellspacing="0" border="0" style="float:left; margin-right:5px;">
+									<tr style="background:#879FC3;" height="37"><td style="text-align:center;" width="80">Rank</td><td width="140">Name</td></tr>
+									{assign var=num value=1}
+								{/if}
+								<tr><td style="text-align:center;">{if $rank[i].rank eq ''}{$smarty.section.i.iteration}{else}{$rank[i].rank|intval}{/if}</td><td>{if $rank[i].name eq ''} - {else}{$rank[i].name|stripslashes}{/if}</td></tr>
+								{assign var=num value=$num+1}
+							{/section}						
+							</table>
+                           </div>
+						</div>
+					</div>	
+   					
+    			 
+    			</div>
+    		</div>
+    	</div>
+    	
+    </div><!-- #content -->
+
+
+  
+   			
+				<script>
+				
+				var userID = "{$register_id}";
+				{literal}
+						$("a#thumb-b1").click(function(){
+							$("#bgGame").fadeIn("slow");
+							$("#berlinWall").fadeIn("slow");
+							//$("#linkGameDJ").attr("value","flash/berlin/bin/BerlinWall.swf?user_id="+userID);
+							//$("#linkGameDJ2").attr("data","flash/berlin/bin/BerlinWall.swf?user_id="+userID);
+							$("#gameframeWall").attr("src","flash/berlin/berlin.php?user_id="+userID);
+							$('body').append('<img src=\'img.php?r='+berlin_wall_track+'\'/>');
+							
+							//$('body').append('<img src=\'img.php?r='+dj_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+art_museum_track+'\'/>');
+							
+						});
+						$("a#thumbDJ").click(function(){
+							$("#bgGame").fadeIn("slow");
+							$("#berlinDJ").fadeIn("slow");
+							//$("#linkGameDJ").attr("value","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							//$("#linkGameDJ2").attr("data","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							$("#gameframe").attr("src","flash/berlinDJ/berlinDJ.php?user_id="+userID);
+							$('body').append('<img src=\'img.php?r='+dj_track+'\'/>');
+							
+							//$('body').append('<img src=\'img.php?r='+dj_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+art_museum_track+'\'/>');
+							
+						});
+						$("a#thumb-i").click(function(){
+							$("#bgGame").fadeIn("slow");
+							$("#berlinDJ").fadeIn("slow");
+							//$("#linkGameDJ").attr("value","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							//$("#linkGameDJ2").attr("data","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							//$("#gameframe").attr("src","flash/berlinDJ/berlinDJ.php?user_id="+userID);
+							$("#gameframe").attr("src","flash/yacht/yacht.php?user_id="+userID);
+							$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');
+							
+							//$('body').append('<img src=\'img.php?r='+dj_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+art_museum_track+'\'/>');
+							
+						});
+						$("a#thumb-n").click(function(){
+							$("#bgGame").fadeIn("slow");
+							$("#berlinDJ").fadeIn("slow");
+							//$("#linkGameDJ").attr("value","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							//$("#linkGameDJ2").attr("data","flash/berlinDJ/bin/BerlinDJ.swf?user_id="+userID);
+							//$("#gameframe").attr("src","flash/berlinDJ/berlinDJ.php?user_id="+userID);
+							$("#gameframe").attr("src","flash/artQuest/ArtQuest.php?user_id="+userID);
+							//$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');							
+							//$('body').append('<img src=\'img.php?r='+dj_track+'\'/>');
+							//$('body').append('<img src=\'img.php?r='+yacht_track+'\'/>');
+							$('body').append('<img src=\'img.php?r='+art_museum_track+'\'/>');
+							
+						});
+						$(".top100").click(function(){
+							$("#top100").fadeIn("slow");							
+						});
+
+
+						$(".btn-close").click(function(){
+							$("#top100").fadeOut("slow");
+						});
+
+						
+						
+						
+				{/literal}
+				</script>
+	
+	
+	

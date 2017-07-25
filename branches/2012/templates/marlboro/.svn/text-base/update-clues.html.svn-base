@@ -1,0 +1,59 @@
+<div id="update-clues">
+    <div id="content">
+    	<div class="post postUpdateClues">
+        	<div id="listUpdateClues">
+                  <ul id="first-carousel" class="listnews jcarousel-skin-tango">
+					{if $news}
+				   {section name=i loop=$news}
+					<li>
+                        <div class="list">
+                            <p> {$news[i]->news_brief|truncate:100} <a class="seeDetail" href="#popupActivity" onCLick="getDetail({$news[i]->news_id})"  style="font-size:11px;"> more</a></p>
+                        </div>
+                    </li>
+                     {/section}
+					 {else}
+				    <li>
+                    	<div class="list">
+                            <p>Wait for Our News or Clues</p>
+                        </div>
+                    </li>
+				   {/if}
+                  </ul>
+          	</div><!-- end #listUpdateClues -->
+         
+            <div id="inputCode1">
+            	<form action="index.php?page=updateclues&act=inputCode" method="POST">
+				    <input type="text" name="code" class="inputCode1" maxlength="8" />
+						<div id="chaptcha"><img src="captcha.php" id="capcaClues"/></div>
+						<input type="text" name="captcha" id="inputCapcaClues" />
+                    <input type="submit" value="&nbsp;" class="btnsubmit" />
+                </form>
+            </div><!-- end #inputCode1 -->
+           
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #update-clues -->
+{if $popupInfo}{include file="marlboro/popup_landing.html"}{/if}
+{include file="marlboro/popup_activity.html"}
+{include file="marlboro/popup_yellowCab.html"}
+
+{literal}
+<script>
+	function getDetail(id){
+		$.post("index.php?page=updateclues&act=newsDetail", { id: id},
+			   function(data) {
+		//	alert(data.data.news_last_update);
+					if(data.status>0) { 
+					$('#titleUpdateClue').html(data.data.news_title);
+					$('#contentUpdateClue').html(data.data.news_content);
+					$('#dateUpdateClue').html(data.data.news_last_update);
+					$("#popupActivity").show(); 				
+					}else return false;
+					
+				 
+		});
+		
+	
+	}
+</script>
+{/literal}

@@ -1,0 +1,46 @@
+<div style="padding:10px;">
+<h2>News Add New</h2>
+<hr>
+<form>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	{if $err}
+	<tr>
+		<td colspan="2"><font color="#ff0000"><b>{$err}</b></font></td>
+	</tr>
+	{/if}
+	<tr>
+		<td>Title</td>
+		<td><input type="text" name="title" maxlength="35" /></td>
+	</tr>
+	<tr>
+		<td>Brief</td>
+		<td><textarea name="brief" maxlength="200" cols="50"></textarea></td>
+	</tr>
+	<tr>
+		<td>Content</td>
+		<td><textarea name="content" cols="50" rows="7"></textarea></td>
+	</tr>
+	<tr>
+		<td>Status</td>
+		<td>	
+			<select name="status">
+				<option value="0">Block</option>
+				<option value="1">Publish</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+	  <td>Plain Text</td>
+	  <td><textarea name="ptext" cols="50" rows="7"></textarea></td>
+	  </tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="add" value="1" />
+			<input type="hidden" name="s" value="news" />
+			<input type="hidden" name="act" value="add" />
+			<input type="submit" name="save" value=" Save " />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

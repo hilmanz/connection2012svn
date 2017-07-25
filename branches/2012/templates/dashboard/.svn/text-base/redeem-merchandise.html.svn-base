@@ -1,0 +1,109 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue">redeem merchandise</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="col2c">
+            <div class="title">
+                <h2>Table Clock</h2>
+            </div><!-- end .title -->
+            <div class="whiteBox">
+                <h3 class="titleChart">Total Redeem</h3>
+                <h1 class="f50 gold">{$redeemMerchandiseTotal.clock}</h1>
+            </div><!-- end .whiteBox -->
+        </div><!-- end .col2c -->
+        <div class="col2d">
+            <div class="title">
+                <div class="selectDates">
+					<form method="GET" action="" class="clockRangeDate">
+					<input type="text" class="from" name="from"  value="{$from}"  />
+					<label for="to">-</label>
+					<input type="text" class="to" name="to" value="{$to}"   />
+					<input type="hidden" name="s" value="redeem-merchandise" />
+					</form>
+                </div>
+            </div><!-- end .title -->
+            <div class="whiteBox">
+                <div class="chart" id="table_clock" style="width:400px;height:145px;">
+                    <!--<img src="sample_chart/7.jpg" align="middle" />-->
+                </div>
+            </div><!-- end .whiteBox -->
+       </div><!-- end .col2d -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="col2c">
+            <div class="title">
+                <h2>USB</h2>
+            </div><!-- end .title -->
+            <div class="whiteBox">
+                <h3 class="titleChart">Total Redeem</h3>
+                <h1 class="f50 red">{$redeemMerchandiseTotal.usb}</h1>
+            </div><!-- end .whiteBox -->
+        </div><!-- end .col2c -->
+        <div class="col2d">
+            <div class="title">
+                <div class="selectDates">
+                <form method="GET" action="" class="usbRangeDate">
+					<input type="text" class="from" name="from" value="{$from}"  />
+					<label for="to">-</label>
+					<input type="text" class="to" name="to" value="{$to}" />
+					<input type="hidden" name="s" value="redeem-merchandise" />
+					</form>
+                </div>
+            </div><!-- end .title -->
+            <div class="whiteBox">
+                <div class="chart" id="usb" style="width:400px;height:145px;">
+                    <!--<img src="sample_chart/8.jpg" align="middle" />-->
+                </div>
+            </div><!-- end .whiteBox -->
+       </div><!-- end .col2d -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+<script type="text/javascript">
+		
+var redeemMerchandise={$redeemMerchandise};
+
+{literal}
+
+
+//console.log(badges_percentage);
+$(document).ready(function() {
+//redeem badges
+var categorieClock = [];
+var dataClock  = [];
+var categorieUsb = [];
+var dataUsb  = [];
+//Array ( [berlin-prize-fd] => Array ( [2012-07-17] => 4 [2012-07-18] => 6 ) [istanbul-prize-clock] => Array ( [2012-07-17] => 7 [2012-07-18] => 1 ) ) 
+//idxPrize.push(String(idxPrize));
+//dataClock.push(parseInt(redeemMerchandise[idxPrize].trading_num,10));
+for(var idxPrize in redeemMerchandise ){
+		
+			for(var idxDate in redeemMerchandise[idxPrize]){
+			//	console.log(idxPrize);
+				if( idxPrize == 'istanbul-prize-clock' ){
+					categorieClock.push(String(idxDate));
+					dataClock.push(parseInt(redeemMerchandise[idxPrize][idxDate],10));
+				}
+				if( idxPrize == 'berlin-prize-fd' ){
+					categorieUsb.push(String(idxDate));
+					dataUsb.push(parseInt(redeemMerchandise[idxPrize][idxDate],10));
+				}
+			}
+		
+}
+	//console.log(dataUsb);
+	//console.log(dataClock);
+	//clock chart
+	gethighChart('area','Clock List','table_clock', dataClock, categorieClock,3,true,150,550);
+
+	//usb chart
+	gethighChart('area','USB Being trade','usb', dataUsb,categorieUsb,3,true,150,550);
+
+
+	
+
+    
+});
+</script>
+        {/literal}

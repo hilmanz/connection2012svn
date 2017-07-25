@@ -1,0 +1,94 @@
+<div id="content">
+	<div class="head">
+    	<h1 class="blue">Auction history</h1>
+    </div><!-- end .head -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableWhite">
+      <thead>
+          <tr>
+            <th align="left">Item  Name</th>
+			<th align="center">Winner</th>
+            <th align="center">Bid</th>
+            <th align="center"># User</th>
+			<th align="center">Period</th>
+          </tr>
+		</thead>
+      <tbody>
+		{section name=i loop=$auctionHistory}         
+		 <tr>
+            <td align="left">{$auctionHistory[i].item_name}</td>
+			<td align="center">{$auctionHistory[i].name}</td>
+            <td align="center">{$auctionHistory[i].bid_amount}</td>
+            <td align="center">{$auctionHistory[i].user}</td>			
+            <td align="center"> {$auctionHistory[i].start_date} - {$auctionHistory[i].end_date}</td>
+          </tr>
+          {/section}
+      </tbody>
+    </table><!-- end .tableWhite -->
+<h1>Highest Bidder</h1>
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tableWhite">
+      <thead>
+          <tr>
+            <th rowspan="2" align="left">Item Name</th>
+            <th rowspan="2" align="center">Bid</th>
+            <th colspan="2" align="center">USER</th>
+			<th rowspan="2" align="center">Period</th>
+          </tr>
+          <tr>
+    		<th align="center" >Highest Bidder</th>
+			<th align="center" style="border-right:1px solid #C2C2C2;">number of user </th>
+          </tr>
+			
+      </thead>
+      <tbody>
+		{section name=i loop=$highestData}         
+		 <tr>
+            <td align="left">{$highestData[i].item_name}</td>
+            <td align="center" class="{$highestData[i].auction_id}_totalAmount" >{$highestData[i].totalAmount}</td>
+            <td align="center" class="{$highestData[i].auction_id}_name">{$highestData[i].name}</td>
+			<td align="center" class="{$highestData[i].auction_id}_tUser">{$highestData[i].tUser}</td>
+			<td align="center"> {$highestData[i].start_date} - {$highestData[i].end_date}</td>
+          </tr>
+          {/section}
+      </tbody>
+    </table>
+	
+    {*}<div class="paging">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="80"><a href="#" class="prev">&lt;PREV</a></td>
+            <td><a href="#">1</a></td>
+            <td><a href="#">2</a></td>
+            <td><a href="#" class="current">3</a></td>
+            <td><a href="#">4</a></td>
+            <td><a href="#">5</a></td>
+            <td><a href="#">6</a></td>
+            <td><a href="#">7</a></td>
+            <td><a href="#">8</a></td>
+            <td width="80" align="right"><a href="#" class="prev">NEXT &gt;</a></td>
+          </tr>
+        </table>
+	</div>
+	{/*}
+</div><!-- end #content -->
+
+
+{literal}
+<script>
+
+var intervalHighest = setInterval(highest,1000*3);
+
+function highest(){
+	$.post('index.php?s=dashboard&act=getHighestBidder',function(data){
+			if(data){
+				for(var idxData in data){
+					$('.'+data[idxData].auction_id+'_totalAmount').html(data[idxData].totalAmount);
+					$('.'+data[idxData].auction_id+'_tUser').html(data[idxData].tUser);
+					$('.'+data[idxData].auction_id+'_name').html(data[idxData].name);
+				}
+			}
+	});
+}
+
+
+</script>
+{/literal}

@@ -1,0 +1,47 @@
+<div id="myprofile">
+    <div id="content">
+    	<div class="post postMyprofile">
+        	<div id="card">
+            	<div class="card">
+                	<div id="thumbPhoto">
+                    	<a href="#"><img src="{if $avatar_sm!='' }{$avatar_sm}{else}avatar/{if $sex == 'Female'}avatar-woman.jpg{else}avatar-man.jpg{/if}{/if}"  width="100%" /></a>
+                    </div><!-- end #thumbPhoto -->
+                    <div id="dataProfile">
+                    	<p class="bold">Name</p>
+                    	<p class="username">{$name}</p>
+                    	<p class="bold">AGE</p>
+                    	<p class="age">{$age}</p>
+                    	<p class="bold">TOWN</p>
+                    	<p class="towns">{$kota}</p>
+                    	<p class="bold">connection date</p>
+                    	<p class="connectDate">{$date}</p>
+                    	<p class="bold">BADGE VALUE</p>
+                    	{if $totalBadge}<p class="values">{$totalBadge}</p>{else}<p class="connectDate">you don't have any badge left</p>{/if}
+                    </div><!-- end #dataProfile -->
+                    <div id="piala">
+                    	{section name=j loop=$winningAuction }
+						<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p>YOU WIN 1 {$winningAuction[j]->auction_detail->item_name}</p><img style="width:50px;height:50px" src="img/auction/{$winningAuction[j]->auction_detail->img}" /></span></a>
+						{/section}
+                    </div><!-- end #piala -->
+						<div class="profileText">{$description}</div>
+					
+                </div><!-- end .card -->
+            </div><!-- end #card -->
+            <div id="actProfile">
+            	<a {if $allowChangePhoto} href="#popupPhoto"  class="changePhoto" {else}  href="#unverified"  class="seeDetail" {/if} >Change Photo</a>
+            	<a {if $allowChangePhoto} href="?page=myprofile&act=updateProfile" class="editProfile"  {else}  href="#unverified"  class="seeDetail" {/if} >Edit Profile</a> 
+                <a href="index.php?page=redeem" class="redeemBadge">REDEEM PRIZES</a>
+            </div><!-- end #activity -->
+            <div id="badgeList">
+				{section name=i loop=$badge }
+            	<div class="badgeBox">
+            		<a class="badgesIcon theTolltip" href="#" {if $badge[i].description!=''} title="{$badge[i].badgetitle} - {$badge[i].description}"{/if}><img src="img/badge/{$badge[i].image}" /></a>
+            		<div class="badgesCount">{$badge[i].total}</div>
+                </div><!-- end .badgeBox -->
+            	{/section}
+            </div><!-- end #badgeList -->
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_photo.html"}
+{if $idNews} {include file="marlboro/popup_activity_on_profile.html"} {/if}

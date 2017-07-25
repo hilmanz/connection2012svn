@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA
+END
+LUDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/LUDecomposition.php
+END
+CholeskyDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/CholeskyDecomposition.php
+END
+SingularValueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/SingularValueDecomposition.php
+END
+QRDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/QRDecomposition.php
+END
+EigenvalueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php
+END
+Matrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/PHPExcel/Shared/JAMA/Matrix.php
+END

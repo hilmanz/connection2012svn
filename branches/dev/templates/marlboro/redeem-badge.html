@@ -1,0 +1,59 @@
+{*}
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-reedem-active">
+                  <h2><a href="#" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+    <div id="content">
+    	<div id="reedem">
+        	<div class="content">
+            	<div class="reedem-entry"> 
+					<a class="btn-reedem" href="index.php?page=code&act=prize&prize=berlin-prize-brief" no="1"></a>
+					
+					{if $sudah < 1}
+						{if $total_1 < '16'}
+						<a class="btn-reedem" href="index.php?page=code&act=prize&prize=new-york-prize-brief-1" no="2"></a>
+						{else}
+						<a class="btn-reedem noprice" href="#" no="2"></a>
+						{/if}
+					{else}
+						<a class="btn-reedem noprice" href="#" no="2"></a>
+					{/if}
+					
+					{*}
+                	<a class="btn-reedem" href="index.php?page=code&act=prize&prize=instanbul-prize-brief" no="3"></a>
+                	{/*}
+                	<a class="btn-reedem noprice" href="#" no="3"></a>
+						
+					{if $sudah < 1}
+						{if $total_2 < '19'}
+						<a class="btn-reedem" href="index.php?page=code&act=prize&prize=new-york-prize-brief-2" no="4"></a>
+						{else}
+						<a class="btn-reedem noprice" href="#" no="4"></a>
+						{/if}
+					{else}
+						<a class="btn-reedem noprice" href="#" no="4"></a>
+					{/if}
+					
+				</div><!-- .reedem-entry -->
+            </div><!-- .content -->
+        </div><!-- #reedem -->
+    </div><!-- #content -->
+{/*}

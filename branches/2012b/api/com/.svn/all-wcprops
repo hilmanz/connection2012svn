@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/marlboro-connect/!svn/ver/840/branches/2012/api/com
+END
+BadgeAPI.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/marlboro-connect/!svn/ver/840/branches/2012/api/com/BadgeAPI.php
+END
+BaseAuth.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/marlboro-connect/!svn/ver/839/branches/2012/api/com/BaseAuth.php
+END
+MobileAPI.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/marlboro-connect/!svn/ver/839/branches/2012/api/com/MobileAPI.php
+END
+BadgeModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/marlboro-connect/!svn/ver/839/branches/2012/api/com/BadgeModel.php
+END

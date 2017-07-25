@@ -1,0 +1,93 @@
+<div id="activity">
+    <div id="content">
+    	<div class="post postActivity">
+        	<div id="listActivity">
+                  <ul id="first-carousel" class="listactivity jcarousel-skin-tango">
+                    {section name=i loop=$activity}
+					<li >
+                    	<div class="thumbPhoto">
+                        	<div class="crop"><img style="height:100%"  {if $activity[i]->userDetail.img=='' }{if $activity[i]->userDetail.sex == 'F'}src="avatar/thumb/small_avatar/avatar-woman.jpg"{else}src="avatar/thumb/small_avatar/avatar-man.jpg"{/if}{else}src="avatar/thumb/small_{$activity[i]->userDetail.img}"{/if} /></div>
+                        </div>
+                        <div class="list">
+                            <p><span class="getUserProfile" idUser="{$activity[i]->user_id}" badgeids="{$activity[i]->activity_values}"> {$activity[i]->tradenews_content}</span><a class="seeDetail" href="#popupActivity" onCLick="getDetail({$activity[i]->tradenews_id})" style="font-size:11px;"> more </a></p>
+                        </div>
+                    </li>
+                      {/section}
+                  </ul>   
+          	</div><!-- end #listActivity -->
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_activity.html"}
+{include file="marlboro/profile.html"}
+
+{literal}
+<script>
+	function getDetail(id){
+	
+		$.post("index.php?page=updateclues&act=activityDetail", { id: id },
+			   function(data) {
+			//alert(data.data.tradenews_content);
+					if(data.status>0) { 
+						var badgesHTML='';
+						$('#titleUpdateClue').html(data.data.tradenews_date);
+						$('#contentUpdateClue').html(data.data.tradenews_content);
+						//alert(data.data.activity_values);
+							if(data.data.badges!='' ){
+								if(data.data.activity_values!='0'){
+									for(var badgeIndex in data.data.badges){
+										badgesHTML+="<div style=clear:both;><img src=\"img/badge/big/"+data.data.badges[badgeIndex].img+"\" /><h2>"+data.data.badges[badgeIndex].name+"</h2><p>"+data.data.badges[badgeIndex].description+"</p></div>";
+									}
+								}
+							}
+						$("#badgesGot").html(badgesHTML);
+						$("#popupActivity").show(); 				
+					}else return false;
+					
+				 
+		});
+		
+	
+	}
+	
+$(".popup_profile").click(function(){
+getUserProfile($(this).parent(".getUserProfile").attr("idUser"));
+});
+
+function getUserProfile(id){
+
+$.post("index.php?page=myprofile&act=profilePopup", { register_id: id},
+			   function(data) {
+					var html='';
+					$("#usernameID").html(data.name); 
+					$("#ageID").html(data.age); 
+					$("#townsID").html(data.kota); 	
+					$("#connectDateID").html(data.date); 
+					$("#badgesValuesID").html(data.totalBadge); 
+					$("#imageAvatar").attr('src',data.avatar_sm);
+					$("#hasTradeCount").html("YOU HAVE TRADE "+data.totalTrade+" TIMES WITH "+data.name); 
+					$("#headerNameProfile").html(data.name+" PROFILE"); 
+					for (var i in data.badge){
+						html += "<div class='badgeBox'>";
+                        html += '<a class="badgesIcon tip_trigger" href="#"><img src="img/badge/'+data.badge[i].image+'" /><span class="tip"><span class="arrow"></span>Vulputate Ornare Dolor Risus</span></a>';
+                        html += '<div class="badgesCount">'+data.badge[i].total+'</div>';
+                        html += '</div>';
+					
+					}
+					var auctionReward ='';
+					for (var j in data.auctionwin){
+						auctionReward += '<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p> '+data.name+' WIN 1 IPAD</p><img src="img/auction/'+data.auctionwin[j].auction_detail.img+'" /></span></a>';
+                    }
+					$("#piala").html(auctionReward);
+					$("#badgeList").html(html);
+					$("#popupProfile").fadeIn();
+					$("#bgPopup").fadeIn();
+					
+		});
+
+
+}
+
+
+</script>
+{/literal}

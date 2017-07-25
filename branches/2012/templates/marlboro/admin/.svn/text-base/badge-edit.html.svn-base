@@ -1,0 +1,54 @@
+<div style="padding:10px;">
+<h2>Badge Edit</h2>
+<hr>
+<form action="index.php?s=badge&act=update" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="{$id}">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	{if $err}
+	<tr>
+		<td colspan="2"><font color="#ff0000"><b>{$err}</b></font></td>
+	</tr>
+	{/if}
+	<tr>
+		<td>Name</td>
+		<td><input type="text" name="name" maxlength="35" value="{$name}" /></td>
+	</tr>
+	<tr>
+		<td>Prob Rate</td>
+		<td><input type="text" name="rate" value="{$prob_rate}" /></td>
+	</tr>
+	<tr>
+		<td>Class</td>
+		<td>
+		{$tierValue}
+		<input name="tier" id="tier" type="hidden" value="{$tier}">
+		</tr>
+	<tr>
+		<td>Series</td>
+		<td>	
+			<select name="series">
+				{section name=i loop=$series}
+				<option value="{$series[i].id}" {if $series_type==$series[i].id}selected{/if} >{$series[i].name}</option>
+				{/section}
+			</select>
+		</td>
+	</tr>
+	<tr>
+	  <td>Images</td>
+	  <td>
+	  	<img src="../../public_html/img/badge/{$image}"><input type="hidden" name="currimg" value="{$image}" /><br>
+	  	<input type="file" name="img" id="img" /><br><small>Leave blank if dont want to change</small></td>
+	</tr>
+		<tr>
+		<td valign="top">Description</td>
+		<td><textarea name="description" cols="50" rows="10">{$description}</textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="update" value="1" />
+			<input type="submit" name="save" value=" Save " />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

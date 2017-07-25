@@ -1,0 +1,43 @@
+<div id="popupProfile" class="popupContainer popupProfile">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#">&nbsp;</a>
+				<div id="loadingProfile" style="display:none"><h1>Please wait while loading ..</h1></div>
+                <div class="poupContent">					
+                	<h1 id="headerNameProfile"></h1>
+                    <div id="card">
+                        <div class="card">
+                            <div id="thumbPhoto">
+                                <a href="#" class="tip_trigger"><img src="" id="imageAvatar" style="width:110px" /></a>
+                            </div><!-- end #thumbPhoto -->
+                            <div id="dataProfile">
+                                <p class="bold">Name</p>
+                                <p class="username" id="usernameID" ></p>
+                                <p class="bold">AGE</p>
+                                <p class="age"  id="ageID"></p>
+                                <p class="bold">TOWN</p>
+                                <p class="towns"  id="townsID"></p>
+                                <p class="bold">connection date</p>
+                                <p class="connectDate"  id="connectDateID"></p>
+                                <p class="bold">BADGE VALUE</p>
+                                <p class="values"  id="badgesValuesID"></p>
+                            </div><!-- end #dataProfile -->
+                            <div id="piala">
+                               
+                                
+                            </div><!-- end #piala -->
+                        </div><!-- end .card -->
+                    </div><!-- end #card -->
+                    <h2 id="hasTradeCount" >YOU HAVE TRADE  TIMES WITH </h2>
+                    <div id="badgeList">
+                        <div class="badgeBox">
+                            <a class="badgesIcon tip_trigger" href="#"><img src="img/badge/badge1.png" /><span class="tip"><span class="arrow"></span>Vulputate Ornare Dolor Risus</span></a>
+                            <div class="badgesCount">1</div>
+                        </div><!-- end .badgeBox -->
+                        
+                    </div><!-- end #badgeList -->
+                </div><!-- end .poupContent -->
+                  {*} <a href="index.php?page=badges&act=trade" class="btnTrade">TRADE BADGE</a>{/*}
+            </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>

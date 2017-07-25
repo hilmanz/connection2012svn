@@ -1,0 +1,61 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="blue2">Device Used</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="title">
+             <h2>Website</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="websiteChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="title">
+             <h2>Mobile Site</h2>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart"  id="mobileSiteChart">
+               
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+
+
+<script type="text/javascript">
+var deviceUsed = {$deviceUsed};
+var browser={$browser};
+
+{literal}
+
+var DataDeviceUsedNum = new Array();
+for(var idxdeviceUsed in deviceUsed){
+	var arrCategoryDevice = [String(idxdeviceUsed) , parseInt(deviceUsed[idxdeviceUsed],10)];
+	DataDeviceUsedNum.push(arrCategoryDevice);
+	
+}
+
+var Databrowser = new Array();
+var Categoriesbrowser = new Array();
+for(var browserIdx in browser){
+	Databrowser.push(parseInt(browser[browserIdx].num,10));
+	Categoriesbrowser.push(browser[browserIdx].browser_name);
+}
+
+
+$(document).ready(function() {
+		
+
+	//login chart
+	gethighChart('pie','channel  Chart','websiteChart',DataDeviceUsedNum,'',1,false,330,330)
+	gethighChart('column','browser Chart','mobileSiteChart',Databrowser,Categoriesbrowser);
+   
+
+    
+});
+		</script>
+        {/literal}

@@ -1,0 +1,35 @@
+<div style="padding:10px;">
+<h2> Add New Auction Items </h2>
+<hr>
+<form action="index.php?s=auction&act=add" method="post" enctype="multipart/form-data">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	{if $err}
+	<tr>
+		<td colspan="2"><font color="#ff0000"><b>{$err}</b></font></td>
+	</tr>
+	{/if}
+	<tr>
+		<td>Name</td>
+		<td><input type="text" name="item_name" maxlength="35" value="{$item_name}" /></td>
+	</tr>
+	<tr>
+		<td>Range Date</td>
+		<td><input type="text" name="start_date" value="{$start_date}" /> - <input type="text" name="end_date" value="{$end_date}" /></td>
+	</tr>
+	<tr>
+	  <td>Images</td>
+	  <td><input type="file" name="img" id="img" /> </td>
+	</tr>
+	<tr>
+	  <td>Description</td>
+	  <td><textarea name="description" id='txtcontent' cols="50" rows="7"></textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="add" value="1" />
+			<input type="submit" name="save" value=" Save " />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

@@ -1,0 +1,83 @@
+<div id="badgesRedeem">
+    <div id="content">
+    	<div class="post postRedeem">
+        	<h1>TRADE YOUR BADGES FOR COOL MERCHANDISES<br />FROM MARLBORO LIGHTS CONNECTIONS. </h1>
+            <div id="thePrize">
+			{section name=i loop=$merchandiseList}
+            	<div class="thumbPrize">
+                	<a class="seeDetail" href="#popupConfirmRedeem" onCLick="redeemThis('{$merchandiseList[i]->needBadge}',{$merchandiseList[i]->id},'{$merchandiseList[i]->img}')" >
+					<img src="img/redeem/{$merchandiseList[i]->img_small}" /></a>
+						
+                </div>
+					{foreach from=$merchandiseList[i]->needBadgeImage key=k item=v}
+					   <input type="hidden" name="badgeimg" id="badgeid_{$k}" value="{$v}">
+					{/foreach}
+						 <input type="hidden" name="issuficient_badge" id="issuficient_badge_{$merchandiseList[i]->id}" value="{$merchandiseList[i]->issuficient_badge}">
+						 <input type="hidden" name="currentStock" id="currentStock_{$merchandiseList[i]->id}" value="{$merchandiseList[i]->currentStock}">
+            {/section}
+            </div>
+            <div class="clickOn"></div>
+        	<div class="imgRedeem"></div>
+        	<div class="imgRedeem2"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_ConfirmRedeem.html"}
+
+
+{literal}
+<script>
+
+function redeemThis(needBadge,prizeId,imageRedeem){
+
+var arNeed = needBadge.split(',');
+var needBadgeList='';
+	for (var key in arNeed){
+		var badge = arNeed[key].split('_');
+		var imgBadge = $('#badgeid_'+badge[0]).val();
+		needBadgeList += '<img src="img/badge/'+imgBadge+'" />' ;
+	}
+
+$('#needBadge').html(needBadgeList);
+$('#redeemImage').attr('src','img/redeem/'+imageRedeem);
+$('.redeemForm').attr('href','index.php?page=redeem&act=form&prizeid='+prizeId);
+if($("#currentStock_"+prizeId).val()>=1) {
+if($("#issuficient_badge_"+prizeId).val()==1) {
+$("#redeemTextMerchandise").html("Full set required to redeem the prize. Play games and find codes to complete all the required badges! ");
+$("#redeemTextMerchandise").attr("style","visibility:visible");
+$(".redeemForm").attr("style","visibility:hidden");
+}else {
+$("#redeemTextMerchandise").html("You have completed the full set. Are you sure you want to redeem these badges with the prize?");
+$("#redeemTextMerchandise").attr("style","visibility:visible");
+$(".redeemForm").attr("style","");
+}
+}else{
+$("#redeemTextMerchandise").html("All the prizes available have been redeemed. <br /> Want more prizes? Use your badges to bid at the auctions! ");
+$("#redeemTextMerchandise").attr("style","visibility:visible");
+$(".poupContent").children("table").hide();
+$(".redeemForm").attr("style","visibility:hidden");
+}
+}
+
+
+function postTrade2(){
+$("#finishTradeMessage").hide(); 
+$.post("index.php?page=badges&act=submittrade", { have:myBadge , req:iWantBadge },
+			   function(data) {
+				
+					$("#finishMessageSub").html(data.message);
+					if(data.status>0) { 
+					$("#finishTradeMessage").show(); 
+					$("#tradeListUrl").attr('href','index.php?page=badges&act=tradeList&want='+iWantBadge+'&badge='+myBadge);
+					var popupCloser  =  setInterval(function(){ 
+					window.location="index.php?page=badges&act=trade&id="+auctionid
+					}, 5000);
+					}
+					 
+				 
+		});
+
+}
+
+</script>
+{/literal}

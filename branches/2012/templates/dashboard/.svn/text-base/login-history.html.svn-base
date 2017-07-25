@@ -1,0 +1,74 @@
+<div id="content" class="subPage"> 
+	<div class="head">
+    	<h1 class="gold2">login history</h1>
+    </div><!-- end .head -->
+    <div class="clear">
+        <div class="title">
+             <h2>Total Hours</h2>
+            <div class="selectDates">
+				<form method="GET" action="" class="loginRangeDate">
+                <input type="text" class="from" name="from" value="{$from}" />
+                <label for="to">-</label>
+                <input type="text" class="to" name="to" value="{$to}" />
+				<input type="hidden" name="s" value="login-history" />
+				</form>
+            </div>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="loginChartHours">
+              
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+   <div class="clear">
+        <div class="title">
+             <h2>Peak Hours</h2>
+           <div class="selectDates">
+				<form method="GET" action="" class="loginRangeDate">
+                <input type="text" class="from" name="from" value="{$from}" />
+                <label for="to">-</label>
+                <input type="text" class="to" name="to" value="{$to}" />
+				<input type="hidden" name="s" value="login-history" />
+				</form>
+            </div>
+        </div><!-- end .title -->
+        <div class="whiteBox">
+            <div class="chart" id="peakHourChart">
+                
+            </div>
+        </div><!-- end .whiteBox -->
+   </div><!-- end .clear -->
+</div><!-- end #content -->
+
+<script type="text/javascript">
+var login = {$login};
+var peak = {$peak};
+
+{literal}
+
+var DataLoginNum = new Array();
+var DataLoginDate = new Array();
+for(var dateLogin in login){
+	DataLoginNum.push(login[dateLogin]);
+	DataLoginDate.push(String(dateLogin));
+}
+
+
+var DataPeakNum = new Array();
+var DataPeakHour = new Array();
+for(var datePeak in peak){
+	DataPeakNum.push(peak[datePeak]);
+	DataPeakHour.push(String(datePeak));
+}
+
+$(document).ready(function() {
+		
+	//login chart
+	gethighChart('area','Login Chart','loginChartHours',DataLoginNum,DataLoginDate,3);
+	gethighChart('column','peak Chart','peakHourChart',DataPeakNum,DataPeakHour);
+   
+
+    
+});
+		</script>
+        {/literal}

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Admin
+END
+PluginManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Admin/PluginManager.php
+END
+UserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Admin/UserManager.php
+END
+DashboardManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Admin/DashboardManager.php
+END
+Admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/marlboro-connect/!svn/ver/4/branches/dev/engines/Admin/Admin.php
+END

@@ -1,0 +1,70 @@
+<div style="padding:10px;">
+{if $msg}
+<div style="color:red;">
+<h3>{$msg}</h3>
+</div>
+{/if}
+<h2>Trace a User</h2>
+<hr>
+<form method="get" enctype="application/x-www-form-urlencoded">
+Search by first name : 
+<input type="text" name="name" value=""/>
+<input type="submit" name="btn" value="Search"/>
+<input type="hidden" name="s" value="user"/>
+<input type="hidden" name="act" value="trace"/>
+<input type="hidden" name="search" value="1"/>
+</form>
+{section name=i loop=$search_result}
+<div>
+	<a href="?s=user&act=trace&show=1&user_id={$search_result[i].register_id}" 
+	title="{$search_result[i].email}">{$search_result[i].name} {$search_result[i].last_name}</a>
+</div>
+
+{/section}
+{if $show}
+<h3>Badge Redeemed from Code</h3>
+<table width="100%">
+	<tr class="head">
+		<td width="25%">Redeem Time</td><td width="20%">Kode</td><td>Badge</td>
+	</tr>
+	{section name=i loop=$redeem}
+	<tr>
+		<td>{$redeem[i].redeem_time}</td><td>{$redeem[i].kode}</td><td>{$redeem[i].badge_name}</td>
+	</tr>
+	{/section}
+</table>
+<h3>Badge Redeemed from Game</h3>
+<table width="100%">
+	<tr class="head">
+		<td width="25%">Redeem Time</td><td width="20%">Kode</td><td>Badge</td>
+	</tr>
+	{section name=i loop=$game}
+	<tr>
+		<td>{$game[i].redeem_time}</td><td>{$game[i].kode}</td><td>{$game[i].badge_name}</td>
+	</tr>
+	{/section}
+</table>
+<h3>Redeemed from DST (QUIZ)</h3>
+<table width="100%">
+	<tr class="head">
+		<td width="25%">Redeem Time</td><td width="20%">Kode</td><td width="20%">Badge</td><td width="15%">Surveyor</td><td>User Email</td>
+	</tr>
+	{section name=i loop=$quiz}
+	<tr>
+		<td>{$quiz[i].redeem_time}</td><td>{$quiz[i].kode}</td><td>{$quiz[i].badge_name}</td><td>{$quiz[i].surveyor}</td><td>{$quiz[i].email}</td>
+	</tr>
+	{/section}
+</table>
+<h3>Redeemed from DST (REGISTRATION)</h3>
+<table width="100%">
+	<tr class="head">
+		<td width="25%">Redeem Time</td><td width="20%">Kode</td><td width="20%">Badge</td><td width="15%">Surveyor</td><td>User Email</td>
+	</tr>
+	{section name=i loop=$registration}
+	<tr>
+		<td>{$registration[i].redeem_time}</td><td>{$registration[i].kode}</td><td>{$registration[i].badge_name}</td><td>{$registration[i].surveyor}</td><td>{$registration[i].email}</td>
+	</tr>
+	{/section}
+</table>
+{/if}
+</div>

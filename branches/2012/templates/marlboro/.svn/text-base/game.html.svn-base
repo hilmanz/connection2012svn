@@ -1,0 +1,52 @@
+<div id="game">
+    <div class="townGame"></div>
+    <div id="content">
+    	<div class="post postGame">
+        	<div class="boxGame" id="game1">
+            	<div class="contentGame">
+                    <a class="thumbGame" href="index.php?page=game&act=berlin_light"><img src="img/game/BerlinLightRail.jpg" /></a>
+                    <div class="titleGame"><h1>Berlin Light Rail</h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        	<div class="boxGame" id="game2">
+            	<div class="contentGame">
+		            <a class="thumbGame" href="index.php?page=game&act=berlin_wall"><img src="img/game/thewall.jpg" /></a>
+                    <div class="titleGame"><h1>The Wall - Berlin</h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        	<div class="boxGame" id="game3">
+            	<div class="contentGame">
+                    <a class="thumbGame" href="index.php?page=game&act=istanbul_chaser"><img src="img/game/timechaser.jpg" /></a>
+                    <div class="titleGame"><h1>Istanbul Time Chaser</h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        	<div class="boxGame" id="game4">
+            	<div class="contentGame">
+                    <a class="thumbGame" href="index.php?page=game&act=istanbul_cruise"><img src="img/game/cruise.jpg" /></a>
+                    <div class="titleGame"><h1>Istanbul Cruise</h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        	<div class="boxGame" id="game5">
+            	<div class="contentGame">
+					<img class="lockGame" src="img/game/lock.png" />
+                    <a class="thumbGame" href="#popupGame"><img src="img/game/nysky.jpg" /></a>
+                       {*}<a class="thumbGame" href="index.php?page=game&act=newyork_sky"><img src="img/game/nysky.jpg" /></a>{/*}
+                    <div class="titleGame"><h1>NY Skyline</h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        	<div class="boxGame" id="game6">
+            	<div class="contentGame">
+					<img class="lockGame" src="img/game/lock.png" />
+                    <a class="thumbGame" href="#popupGame"><img src="img/game/artquest.jpg" /></a>
+						{*}<a class="thumbGame" href="index.php?page=game&act=newyork_art"><img src="img/game/artquest.jpg" /></a>{/*}
+                    <div class="titleGame"><h1>Art Quest </h1></div>
+                </div><!-- end .contentGame -->
+            </div><!-- end .boxGame -->
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #game" -->
+{if $minigame_name}
+{include file="marlboro/$minigame_name.html"}
+{else}
+{include file="marlboro/popup_game.html"}
+{/if}

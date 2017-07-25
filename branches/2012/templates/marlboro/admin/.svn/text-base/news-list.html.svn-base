@@ -1,0 +1,43 @@
+<div style="padding:10px;">
+<h2>News Management</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr>&nbsp;</tr>
+<tr>
+	<td colspan="4"><b>News Category</b>&nbsp;&nbsp;
+		<select name="category" id="statusReport">
+		{if $category == 0}
+			<option value="0" selected="selected">- Category -</option>
+			<option value="1">News</option>
+			<option value="2">Hunting</option>
+		{elseif $category == 1}
+			<option value="0">- Category -</option>
+			<option value="1" selected="selected">News</option>
+			<option value="2">Hunting</option>
+		{else}
+			<option value="0">- Category -</option>
+			<option value="1">News</option>
+			<option value="2" selected="selected">Hunting</option>
+		{/if}
+		</select><input type="submit" value="Go" />
+	</td>
+</tr>
+</table></br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Title</strong></td>
+	<td><strong>Published Date</strong></td>
+	<td><strong>Brief</strong></td>
+	<td  width="10%"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].news_title}</td>
+    <td width="15%">{$list[i].news_published_date|date_format}<br><small>Last Update: {$list[i].news_last_update|date_format:"%b %e, %Y %H:%M:%S"}</small></td>
+    <td>{$list[i].news_brief}</td>
+    <td><a href="?s=news&act=edit&id={$list[i].news_id}" class="addSubPage">Edit</a><a onclick="return confirm('Are you sure want to delete this news ?');" href="?s=news&act=delete&id={$list[i].news_id}" class="deletePage">Delete</a></td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

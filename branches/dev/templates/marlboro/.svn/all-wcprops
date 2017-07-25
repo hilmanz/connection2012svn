@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/marlboro-connect/!svn/ver/837/branches/dev/templates/marlboro
+END
+news.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/news.html
+END
+prizes.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/prizes.html
+END
+inbox.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/inbox.html
+END
+howtoplay.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/howtoplay.html
+END
+compose-message.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/compose-message.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/750/branches/dev/templates/marlboro/header.html
+END
+popup-message-universal.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/807/branches/dev/templates/marlboro/popup-message-universal.html
+END
+read-message.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/read-message.html
+END
+redeem-input.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/redeem-input.html
+END
+profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/profile.html
+END
+daftar-pertanyaan.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/daftar-pertanyaan.html
+END
+redeem-badge.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/redeem-badge.html
+END
+terms-and-conditions.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/171/branches/dev/templates/marlboro/terms-and-conditions.html
+END
+games-berlin-wall.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/games-berlin-wall.html
+END
+popup-unlock-universal.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/marlboro-connect/!svn/ver/807/branches/dev/templates/marlboro/popup-unlock-universal.html
+END
+popup-badge-list-request.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/marlboro-connect/!svn/ver/803/branches/dev/templates/marlboro/popup-badge-list-request.html
+END
+badge.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/badge.html
+END
+about-marlboro-connections.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/about-marlboro-connections.html
+END
+popup-game.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/marlboro-connect/!svn/ver/691/branches/dev/templates/marlboro/popup-game.html
+END
+code.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/code.html
+END
+send-message.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/send-message.html
+END
+tshirt.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/tshirt.html
+END
+terms-and-condition.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/terms-and-condition.html
+END
+popup-success-universal.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/807/branches/dev/templates/marlboro/popup-success-universal.html
+END
+popup-badge-universal-list.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/marlboro-connect/!svn/ver/802/branches/dev/templates/marlboro/popup-badge-universal-list.html
+END
+edit-profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/edit-profile.html
+END
+popup-badge-request-confirm.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/803/branches/dev/templates/marlboro/popup-badge-request-confirm.html
+END
+popup-unlock-universal2.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/marlboro-connect/!svn/ver/799/branches/dev/templates/marlboro/popup-unlock-universal2.html
+END
+read-send-message.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/read-send-message.html
+END
+register.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/register.html
+END
+traderequestmatch.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/traderequestmatch.html
+END
+meta.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/524/branches/dev/templates/marlboro/meta.html
+END
+games-dj.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/games-dj.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/home.html
+END
+perihal-merokok.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/perihal-merokok.html
+END
+games-art-museum.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/games-art-museum.html
+END
+master.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/824/branches/dev/templates/marlboro/master.html
+END
+games.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/games.html
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/457/branches/dev/templates/marlboro/footer.html
+END
+syarat-ketentuan.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/syarat-ketentuan.html
+END
+popup-badge-submitted.html
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/121/branches/dev/templates/marlboro/popup-badge-submitted.html
+END
+games-yacht.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/games-yacht.html
+END
+popup-badge-universal-list2.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/marlboro-connect/!svn/ver/761/branches/dev/templates/marlboro/popup-badge-universal-list2.html
+END
+kontak-kami.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-connect/!svn/ver/4/branches/dev/templates/marlboro/kontak-kami.html
+END
+edit-description.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/edit-description.html
+END
+redeem-success.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/redeem-success.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/20/branches/dev/templates/marlboro/login.html
+END
+news-trade.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/marlboro-connect/!svn/ver/830/branches/dev/templates/marlboro/news-trade.html
+END

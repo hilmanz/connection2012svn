@@ -1,0 +1,55 @@
+{*}
+<div id="sidebar">
+        <div id="side-menu">
+            <div class="nav-about">
+              <h2><a href="index.php?page=about-marlboro-connections" class="about"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-whats">
+              <h2><a href="index.php?page=news" class="whats"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-code">
+              <h2><a href="index.php?page=code" class="code"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-badge">
+                  <h2><a href="index.php?page=code&act=trade" class="badge"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-reedem-active">
+                  <h2><a href="index.php?page=code&act=prize" class="reedem"><span>&nbsp;</span></a></h2>
+            </div>
+            <div class="nav-game">
+                 <h2><a href="index.php?page=games" class="game"><span>&nbsp;</span></a></h2>
+            </div>
+        </div>
+    </div><!-- #sidebar -->
+    <div id="content">
+    	<div id="reedem-success">
+        	<div class="content">
+            	<div class="reedem-success"> 
+                	<div class="head-text">
+                     <span>Your prize is being carefully prepared and we need to verified your data and we will 
+                     		confirm the prize before we ship it to your address.<br />
+							Please contact <a href="mailto:connections@marlboro.co.id">connections@marlboro.co.id</a></span>
+					</div>
+                    <div class="redeemsuccess">
+                        <div class="require-badges">
+						
+							{section name=i loop=$require}
+                        	<div class="box">
+                            	<a href="#"><img src="images/badge/badge{$require[i]}.png" /></a>
+                            </div>
+                        	{/section}
+							
+                        </div>
+                        <div class="reedem-prize">
+                            	<a href="#"><img src="{$prizeimage}" /></a>
+                        </div>
+                    </div>
+                    <div class="foot-text">
+                    	<span>The above badges have been removed 
+from your profile</span>
+                    </div>
+                </div><!-- .reedem-form -->
+            </div><!-- .content -->
+        </div><!-- #reedem-form -->
+    </div><!-- #content -->
+{/*}

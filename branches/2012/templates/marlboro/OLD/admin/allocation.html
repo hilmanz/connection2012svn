@@ -1,0 +1,32 @@
+<div style="padding:10px;">
+{if $msg}
+<div style="color:red;">
+<h3>{$msg}</h3>
+</div>
+{/if}
+<h2>Badge Allocation</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Badge</strong></td>
+	<td><strong>Probability Rate</strong></td>
+	<td><strong>Action</strong></td>
+	
+	</tr>
+  {section name=i loop=$list}
+  <form method="POST" enctype="application/x-www-form-urlencoded">
+  <tr>
+    <td>{$list[i].name}</td>
+    <td><input type="textfield" name='prob_rate' value='{$list[i].prob_rate*100}'/>%</td>
+    <td><input type="submit" name='btn' value="CHANGE"/>
+    	<input type="hidden" name="id" value="{$list[i].id|intval}"/>
+    	<input type="hidden" name="s" value="code"/>
+    	<input type="hidden" name="act" value="allocation"/>
+    	<input type="hidden" name="update" value="1"/>
+    	</td>
+    </tr>
+   </form>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

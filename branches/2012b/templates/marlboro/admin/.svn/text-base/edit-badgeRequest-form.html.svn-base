@@ -1,0 +1,71 @@
+<div style="padding:10px;">
+<p><h2>Edit Redeem Badge Request</h2></p>
+<br />
+<form>
+<input type="hidden" name="s" value="code" />
+<input type="hidden" name="act" value="edit-badgeRequest-form" />
+<input type="hidden" name="id" value="{$id}" />
+<input type="hidden" name="edit" value="1" />
+<input type="hidden" name="regid" value="{$regid}" />
+<input type="hidden" name="prize" value="{$Prize}" />
+<input type="hidden" name="transaction_id" value="{$transaction_id}" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	<tr>
+		<td>Nama User</td>
+		<td><input type="text" name="Street" value="{$Nama}" disabled/></td>
+	</tr>
+	<tr>
+		<td>Street</td>
+		<td><input type="text" name="Street" value="{$Street}" disabled/></td>
+	</tr>
+	<tr>
+		<td>Complex</td>
+		<td><input type="text" name="Complex" value="{$Complex}" disabled/></td>
+	</tr>
+	<tr>
+	  <td>Province</td>
+	  <td><input type="text" name="Complex" value="{$Province}" disabled/></td>
+	  </tr>
+	<tr>
+	  <td>City</td>
+	  <td><input type="text" name="City" value="{$City}" disabled/></td>
+	  </tr>
+	<tr>
+	<td>Phone</td>
+	  <td><input type="text" name="Phone" value="{$Phone}" disabled/></td>
+	  </tr>
+	<tr>
+	  <td>Mobile</td>
+	  <td><input type="text" name="Mobile" value="{$Mobile}" disabled/></td>
+	  </tr>
+	<tr>
+	  <td>Prize</td>
+	  <td><input type="text" name="Prize" value="{$Prize}" disabled/></td>
+	  </tr>
+	<tr>
+	  <td>Tanggal</td>
+	  <td><input type="text" name="Tanggal" value="{$Tanggal}" disabled/></td>
+	  </tr>
+	<tr>
+	  <td>Status</td>
+	  <td> <select name="Status">
+			{if $Status == 1}
+			<option value="0">Block</option>
+			<option value="1" selected="selected">Approve</option>
+			<option value="2">Cancel</option>
+			{elseif $Status == 2}
+			<option value="1">Approve</option>
+            <option value="0">Block</option>
+			<option value="2" selected="selected">Cancel</option>
+			{else}
+			<option value="0" selected="selected">Block</option>
+			<option value="1">Approve</option>
+			<option value="2">Cancel</option>
+			{/if}
+		</select></td>
+	  </tr>
+		<td colspan="2"><input type="submit" value=" Edit " /></td>
+	</tr>
+</table>
+</form>
+</div>

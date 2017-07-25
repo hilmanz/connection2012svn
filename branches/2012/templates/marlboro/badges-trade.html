@@ -1,0 +1,118 @@
+<div id="tradePage">
+    <div id="content">
+      <a class="post postTrades" href="#postTrades"></a>
+      <div class="post postTrade" id="postTrades" style="display:none;">
+        	<form>
+        	<table id="listBadges" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top">
+                	<div class="listBadges" id="badgeWillTrade">
+                        <div class="titleBar">
+                        <h1>MY BADGES</h1>
+                        </div>
+						{section name=i loop=$have max=10}
+                        <div class="boxBadges"  >
+                            <div class="theBadges"><img src="img/badge/{$have[i].image}" /></div>
+                            <div class="count">{$have[i].total}</div>
+                            <input type="radio" class="styled" name="badgeWillTrade" badge_id="{$have[i].id}" badgeImage="{$have[i].image}" />
+                        </div>
+						{/section}
+                      
+                    </div><!-- end .listBadges -->
+                </td>
+                <td>
+				<span id="errorMsg"></span>
+				<input type="button" class="tradeNowButton " id="tradeNowButton" onclick="tradeThis()" />
+				</td>
+                <td valign="top">
+                	<div class="listBadges BadgeNeed" id="badgeTrade">
+                        <div class="titleBar">
+                            <h1>WHAT I NEED?</h1>
+                        </div>
+						{section name=i loop=$have max=10}
+                        <div class="boxBadges" >
+                            <div class="theBadges"><img src="img/badge/{$have[i].image}" /></div>
+                            <input type="radio" class="styled" name="badgeTrade" badge_id="{$have[i].id}"  badgeImage="{$have[i].image}" />
+                        </div>
+						{/section}
+                       
+                    </div><!-- end .listBadges -->
+                </td>
+              </tr>
+            </table>
+			
+            </form>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_confirmTrade.html"}
+{include file="marlboro/popup_finishTrade.html"}
+
+{literal}
+<script>
+var myBadge ='' ;
+var iWantBadge ='';
+var myBadgeImage='';
+var iWantBadgeImage ='';
+function tradeThis(){
+
+$('#badgeWillTrade .boxBadges :radio').each(function(){
+	if($(this).attr('checked')){
+	myBadge = $(this).attr('badge_id');
+	myBadgeImage = $(this).attr('badgeImage');
+	$('#leftBadge').attr('src','img/badge/big/'+myBadgeImage+'');	
+	
+	}
+
+});
+
+$('#badgeTrade .boxBadges :radio').each(function(){
+	if($(this).attr('checked')){
+	iWantBadge = $(this).attr('badge_id');
+	iWantBadgeImage = $(this).attr('badgeImage');
+	$('#rightBadge').attr('src','img/badge/big/'+iWantBadgeImage+'');	
+
+	}
+
+});
+
+	if(myBadge=='' || iWantBadge=='') $("#errorMsg").html('Please Choose Your badge');
+	else {
+			$("#errorMsg").html('');
+			jQuery("#popupConfirmTrade").fadeIn();
+			jQuery("#bgPopup").fadeIn();
+	}
+}
+
+
+function postTrade(){
+$("#finishTradeMessage").hide(); 
+$('#noFound').hide();
+$("#found").hide(); 
+$.post("index.php?page=badges&act=submittrade", { have:myBadge , req:iWantBadge },
+			   function(data) {
+				
+					//$("#finishMessageSub").html(data.message);
+					if(data.status>0) { 
+						
+					
+					$("#tradeListUrl").attr('href','index.php?page=badges&act=tradeList&badge='+iWantBadge+'&want='+myBadge);
+						if(data.hasTrader>0){
+							$("#found").show(); 							
+						}else{
+							$("#noFound").show(); 
+							$("#finishTradeMessage").show(); 
+						}
+						$("#finishTradeMessage").show(); 
+					//var popupCloser  =  setInterval(function(){ 
+					//window.location="index.php?page=badges&act=trade"
+					//}, 5000);
+					}
+					 
+				 
+		});
+
+}
+
+</script>
+{/literal}

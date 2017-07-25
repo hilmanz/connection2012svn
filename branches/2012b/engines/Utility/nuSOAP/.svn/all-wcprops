@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP
+END
+class.soap_server.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soap_server.php
+END
+class.wsdl.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.wsdl.php
+END
+nusoapmime.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/nusoapmime.php
+END
+changelog
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/changelog
+END
+class.soap_fault.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soap_fault.php
+END
+class.soap_transport_http.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soap_transport_http.php
+END
+class.wsdlcache.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.wsdlcache.php
+END
+class.soap_parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soap_parser.php
+END
+class.nusoap_base.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.nusoap_base.php
+END
+class.soapclient.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soapclient.php
+END
+class.xmlschema.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.xmlschema.php
+END
+nusoap.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/nusoap.php
+END
+class.soap_val.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/marlboro-connect/!svn/ver/839/branches/2012/engines/Utility/nuSOAP/class.soap_val.php
+END

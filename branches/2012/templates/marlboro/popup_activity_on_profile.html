@@ -1,0 +1,52 @@
+<div id="popupActivity" class="popupContainer popupYellowCab" style="display:none">
+	<div id="popupHead">
+    	<div id="popupBottom">
+        	<div id="popupContent">
+            	<div class="selotip"></div>
+                <a class="closePopup" href="#">&nbsp;</a>
+                <div class="poupContent">
+					<input type="hidden" id="idNews" value="{$idNews.tradenews_id}" >
+					<h1><span id="titleUpdateClue"></span></h1>
+                    <h3><span  id="contentUpdateClue"> Loading ... </h3>
+                    <div class="entryDesc">
+						<span  id="badgesGot">
+						
+						</span>
+					</div>
+                	<p><span  id="dateUpdateClue"></span></p>
+                </div><!-- end .poupContent -->
+            </div><!-- end #poupContent -->
+        </div><!-- end #popupBottom -->
+    </div><!-- end #popupHead -->
+</div><!-- end .popupContainer -->
+<div id="bgPopup"></div>
+
+{literal}
+<script>
+var id = $('#idNews').val();
+$.post("index.php?page=updateclues&act=activityDetail", { id: id },
+			   function(data) {
+			//alert(data.data.tradenews_content);
+					if(data.status>0) { 
+						var badgesHTML='';
+						$('#titleUpdateClue').html(data.data.tradenews_date);
+						$('#contentUpdateClue').html(data.data.tradenews_content);
+						
+							if(data.data.badges!='' ){
+								if(data.data.activity_values!='0'){
+									for(var badgeIndex in data.data.badges){
+										badgesHTML+="<div style=clear:both;><img src=\"img/badge/big/"+data.data.badges[badgeIndex].img+"\" /><h2>"+data.data.badges[badgeIndex].name+"</h2><p>"+data.data.badges[badgeIndex].description+"</p></div>";
+									}
+								}
+							}
+						$("#badgesGot").html(badgesHTML);
+						$("#popupActivity").show(); 				
+					}else return false;
+					
+				 
+		});
+	$("#popupProfile").fadeIn();
+					$("#bgPopup").fadeIn();
+
+</script>
+{/literal}

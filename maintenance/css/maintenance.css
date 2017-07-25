@@ -1,0 +1,16 @@
+
+body{
+	background:url(../images/bg_white.jpg) repeat #eaeaea;
+	margin:0;
+	padding:0 0 120px 0;
+	font-family: 'Coda', cursive;
+	font-size:14px;
+	line-height:1.4;
+}
+#maintenance{
+	background:url(../images/maintenance-BA.jpg) no-repeat;
+	width:996px; height:566px;
+	margin:0 auto;
+	position:relative;
+	top:80px;
+}

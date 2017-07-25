@@ -1,0 +1,98 @@
+<div id="badgeAuction">
+    <div id="content">
+    	<div class="post postBadgeAuction" id="postBadgeAuction">
+            <div id="imgBadgesIcon"></div>
+        	<div id="boxhadiah">
+                <div class="boxhadiah"  style="text-align:center">
+					<a  class="theTolltip" title="{$auction->item_name} - {$auction->description}" ><img src="img/auction/{$auction->img}"/></a>
+                </div>
+            </div>
+            <a class="btnBack" href="index.php?page=badges&act=auction#postBadgeAuction">&lt;&lt; BACK</a>
+            <div id="halfBox">
+            	<div class="halfBox">
+                	<div class="totalPoint">TOTAL POINTS</div>
+                    <div class="boxTotalPoint">{$highestBid->value_total}</div>
+                    <div class="timeRemaining">
+                    	<h1>TIME REMAINING</h1>
+            			<h2>
+						<span class="day" days="{$remaining->days}" >{$remaining->days}D</span>
+						<span class="hour" hours="{$remaining->hours}" >{$remaining->hours}H</span>
+						<span class="minute"  minutes="{$remaining->minutes}" >{$remaining->minutes}M</span>
+						<span class="second" seconds="{$remaining->seconds}" >{$remaining->seconds}S</span>
+						</h2>
+                    </div>
+             	   <a href="#placeBid" class="bidNows">PLACE YOUR BID!</a>
+                </div><!-- end .boxBid -->
+            </div><!-- end #boxBid -->
+            <div id="currentBid">
+                <h2>CURRENT HIGHEST BID </h2>
+                {*}
+                <div id="badgeBid">
+                    {foreach from=$highestBid->data->bid key=idBadges item=val}
+                        <div class="boxBadges">
+                            <div class="theBadges"><img src="img/badge/badge{$idBadges}.png" /></div>
+                            <div class="countBid">{$val}</div>
+                        </div>
+                    {/foreach}
+                 </div><!-- end #badgeBid -->
+                 {/*}
+            </div><!-- end #currentBid -->
+            <div id="bidBy" class="smallBox">
+                <h2>BY</h2>
+                <div class="boxTrader">
+                    <div class="thumbTrader">
+                        <a href="#popupProfile" class="popProfile" onCLick="getUserProfile({$highestUser->userid})"><img id="highestPict" {if $highestUser->photourl=='' }{if $highestUser->sex== 'F'}src="avatar/thumb/small_avatar/avatar-woman.jpg"{else}src="avatar/thumb/small_avatar/avatar-man.jpg"{/if}{else}src="{$highestUser->photourl}"{/if}  /></a>
+                    </div><!-- end .thumbTrader -->
+                    <div class="boxName">
+                        <span class="nameTrader">{$highestUser->name}</span>
+                    </div><!-- end .boxName -->
+                </div><!-- end .boxTrader -->
+            </div><!-- end #bidBy -->
+ 		</div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/profile.html"}
+{include file="marlboro/placeBid.html"}
+{include file="marlboro/popup_finishBid.html"}
+
+{literal}
+<script>
+function getUserProfile(id){
+$("#loadingProfile").show();
+$(".poupContent").hide();
+$.post("index.php?page=myprofile&act=profilePopup", { id: id},
+			   function(data) {
+					$("#loadingProfile").hide();
+					$(".poupContent").show();
+					var html='';
+					$("#usernameID").html(data.name); 
+					$("#ageID").html(data.age); 
+					$("#townsID").html(data.kota); 	
+					$("#connectDateID").html(data.date); 
+					$("#badgesValuesID").html(data.totalBadge); 
+					$("#imageAvatar").attr('src',data.avatar_sm);
+					$("#hasTradeCount").html(""); 
+					$("#headerNameProfile").html(data.name+" PROFILE"); 
+					for (var i in data.badge){
+						html += "<div class='badgeBox'>";
+                        html += '<a class="badgesIcon tip_trigger" href="#"><img src="img/badge/'+data.badge[i].image+'" /><span class="tip"><span class="arrow"></span>Vulputate Ornare Dolor Risus</span></a>';
+                        html += '<div class="badgesCount">'+data.badge[i].total+'</div>';
+                        html += '</div>';
+					
+					}
+					var auctionReward ='';
+					for (var j in data.auctionwin){
+						auctionReward += '<a class="piala tip_trigger" href="#"><span class="tip"><span class="arrow"></span><p> '+data.name+' WIN 1 IPAD</p><img src="img/auction/'+data.auctionwin[j].auction_detail.img+'" /></span></a>';
+                    }
+					$("#piala").html(auctionReward);
+					$("#badgeList").html(html);
+					$("#popupProfile").fadeIn();
+					$("#bgPopup").fadeIn();
+		});
+
+
+}
+
+
+</script>
+{/literal}

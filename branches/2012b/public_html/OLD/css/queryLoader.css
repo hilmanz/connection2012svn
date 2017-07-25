@@ -1,0 +1,13 @@
+.QOverlay {
+	background-color: #000000;
+	z-index: 9999;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+.QLoader {
+	background-color: #CCCCCC;
+	height: 20px;
+}

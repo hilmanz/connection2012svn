@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/marlboro-connect/!svn/ver/961/branches/games/BerlinDJ/src
+END
+Preloader.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/marlboro-connect/!svn/ver/624/branches/games/BerlinDJ/src/Preloader.as
+END
+GameControllerComponent.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/marlboro-connect/!svn/ver/536/branches/games/BerlinDJ/src/GameControllerComponent.as
+END
+ItemStatus.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/marlboro-connect/!svn/ver/536/branches/games/BerlinDJ/src/ItemStatus.as
+END
+GameResources.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/marlboro-connect/!svn/ver/544/branches/games/BerlinDJ/src/GameResources.as
+END
+Main.as
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/marlboro-connect/!svn/ver/961/branches/games/BerlinDJ/src/Main.as
+END
+GameTickComponent.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/961/branches/games/BerlinDJ/src/GameTickComponent.as
+END
+ConfigComponent.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-connect/!svn/ver/543/branches/games/BerlinDJ/src/ConfigComponent.as
+END
+Level1.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-connect/!svn/ver/572/branches/games/BerlinDJ/src/Level1.as
+END
+SpriteRendererInterpolated.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/marlboro-connect/!svn/ver/536/branches/games/BerlinDJ/src/SpriteRendererInterpolated.as
+END
+Level2.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-connect/!svn/ver/572/branches/games/BerlinDJ/src/Level2.as
+END
+Level3.as
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/marlboro-connect/!svn/ver/572/branches/games/BerlinDJ/src/Level3.as
+END

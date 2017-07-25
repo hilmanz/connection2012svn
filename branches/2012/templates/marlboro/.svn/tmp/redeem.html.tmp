@@ -1,0 +1,19 @@
+<div id="badgesRedeem">
+    <div id="content">
+    	<div class="post postRedeem">
+        	<h1>TRADE YOUR BADGES FOR COOL MERCHANDISE<br />FROM MARLBORO LIGHTS CONNECTIONS. </h1>
+            <div id="thePrize">
+            	<div class="thumbPrize">
+                	<a class="seeDetail" href="#popupConfirmRedeem"><img src="img/prize/prize1.jpg" /></a>
+                </div>
+            	<div class="thumbPrize">
+                	<a class="seeDetail" href="#popupConfirmRedeem"><img src="img/prize/prize2.jpg" /></a>
+                </div>
+            </div>
+            <div class="clickOn"></div>
+        	<div class="imgRedeem"></div>
+        	<div class="pesawat2"></div>
+        </div><!-- end .post -->
+    </div><!-- end #content -->
+</div><!-- end #activity -->
+{include file="marlboro/popup_ConfirmRedeem.html"}

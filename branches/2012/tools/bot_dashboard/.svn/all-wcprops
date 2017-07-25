@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/marlboro-connect/!svn/ver/1167/branches/2012/tools/bot_dashboard
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/.project
+END
+bootstraps.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/bootstraps.php
+END
+semi_realtime_bot.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/semi_realtime_bot.php
+END
+.buildpath
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/.buildpath
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/1167/branches/2012/tools/bot_dashboard/config.php
+END
+daily_bot.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/daily_bot.php
+END
+run_test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/run_test.sh
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/marlboro-connect/!svn/ver/1166/branches/2012/tools/bot_dashboard/common.php
+END
